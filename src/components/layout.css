@@ -1,8 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto|EB+Garamond");
+@import url("https://fonts.googleapis.com/css?family=Libre+Baskerville|Roboto|EB+Garamond");
 
 :global html {
   background-color: #14262f;
   font-family: "EB Garamond", serif;
+  font-size: 1.25rem;
   color: #fff;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;

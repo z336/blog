@@ -5,15 +5,15 @@ import SEO from "../components/seo"
 
 const Index = ({ data }) => (
   <Layout>
-    <SEO title="Blog" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
-          <h1 style={{ fontFamily: `Roboto` }}>
+          <h2 style={{ fontFamily: `Libre Baskerville` }}>
             <Link to={post.node.frontmatter.path}>
               {post.node.frontmatter.title}
             </Link>
-          </h1>
+          </h2>
           <small>
             Posted by{" "}
             <Link to="/about" className="author">
