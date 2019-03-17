@@ -10,13 +10,17 @@ export default function Template({ data }) {
     <Layout>
       <SEO title="Blog Post" keywords={[`gatsby`, `application`, `react`]} />
       <div>
-        <Link to="/blog">Go Back</Link>
-        <hr />
-        <h1>{post.frontmatter.title}</h1>
+        <h1 style={{ fontFamily: `Roboto` }}>{post.frontmatter.title}</h1>
         <h4>
-          Posted by {post.frontmatter.author} on {post.frontmatter.date}
+          Posted by{" "}
+          <Link to="/about" style={{ color: `#66cdaa` }}>
+            {post.frontmatter.author}
+          </Link>{" "}
+          on {post.frontmatter.date}
         </h4>
+        <hr />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Link to="/">Back</Link>
       </div>
     </Layout>
   )

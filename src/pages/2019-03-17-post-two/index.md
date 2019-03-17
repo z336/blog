@@ -1,37 +1,14 @@
 ---
 path: "/post-two"
-date: "3/17/19"
-title: "My Second Post"
+date: "March 17th, 2019"
+title: "Second Post"
 author: "Jon Coleman"
 ---
 
-# Heading 1
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus quo facere nisi nostrum necessitatibus, blanditiis non amet minima ea repudiandae suscipit! Laudantium cum corrupti modi velit alias explicabo sed.
 
-## Heading 2
+Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus quo facere nisi nostrum necessitatibus, blanditiis non amet minima ea repudiandae suscipit! Laudantium cum corrupti modi velit alias explicabo sed.
 
-### Heading 3
-
-#### Heading 4
-
-##### Heading 5
-
-###### Heading 6
-
-_Italic_
-
-**Strong**
-
-- list
-- list
-- list
-
-> #### The quarterly results look great!
->
-> - Revenue was off the chart.
-> - Profits were higher than ever.
->
->   _Everything_ is going according to **plan**.
-
-1. list
-2. list
-3. list
+- lorem
+- ipsum
+- etc
