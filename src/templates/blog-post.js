@@ -10,9 +10,9 @@ export default function Template({ data }) {
     <Layout>
       <SEO title="Blog Post" keywords={[`gatsby`, `application`, `react`]} />
       <div>
-        <h2 style={{ fontFamily: `Libre Baskerville` }}>
+        <h1 style={{ fontFamily: `Libre Baskerville` }}>
           {post.frontmatter.title}
-        </h2>
+        </h1>
         <h5>
           Posted by{" "}
           <Link to="/about" className="author">

@@ -9,11 +9,11 @@ const Index = ({ data }) => (
     <div>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
-          <h2 style={{ fontFamily: `Libre Baskerville` }}>
+          <h3 style={{ fontFamily: `Libre Baskerville` }}>
             <Link to={post.node.frontmatter.path}>
               {post.node.frontmatter.title}
             </Link>
-          </h2>
+          </h3>
           <small>
             Posted by{" "}
             <Link to="/about" className="author">
