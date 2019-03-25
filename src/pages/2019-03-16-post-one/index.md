@@ -1,7 +1,7 @@
 ---
 path: "/post-one"
 date: "March 16th, 2019"
-title: "Lorem Ipsum"
+title: "First Post"
 author: "Jon Coleman"
 ---
 

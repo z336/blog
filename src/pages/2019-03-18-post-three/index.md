@@ -1,7 +1,7 @@
 ---
 path: "/post-three"
 date: "March 18th, 2019"
-title: "Check This Out"
+title: "Third Post"
 author: "Jon Coleman"
 ---
 
