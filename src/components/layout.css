@@ -64,4 +64,7 @@ p {
   html {
     font-size: 100%;
   }
+  .mobile-font {
+    font-size: 125%;
+  }
 }
