@@ -9,7 +9,7 @@ const Index = ({ data }) => (
     <div className="mobile-font">
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
-          <h3 style={{ fontFamily: `Libre Baskerville` }}>
+          <h3>
             <Link to={post.node.frontmatter.path}>
               {post.node.frontmatter.title}
             </Link>

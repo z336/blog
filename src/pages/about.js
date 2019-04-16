@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 const AboutPage = () => (
   <Layout>
     <SEO title="About" keywords={[`gatsby`, `application`, `react`]} />
-    <h2 style={{ fontFamily: `Libre Baskerville` }}>Jon Coleman</h2>
+    <h2>Jon Coleman</h2>
     <p>All about me</p>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates,

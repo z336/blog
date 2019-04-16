@@ -1,0 +1,9 @@
+header {
+  margin-bottom: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 672px;
+  padding: 1.5rem 1rem;
+}
