@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 const Index = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div className="mobile-font">
+    <div>
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
           <h3>
