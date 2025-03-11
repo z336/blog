@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+const allPosts = Object.values(
+  import.meta.glob("./writing/*.md", { eager: true }),
+);
+
+const pageTitle = "Writing";
+const heading = "Recent Posts";
+---
+
+<Layout pageTitle={pageTitle} heading={heading}>
+  <div class="wrapper region prose flow">
+    <p>This is where I will post about my journey learning Astro.</p>
+    <ul>
+      {
+        allPosts.map((post: any) => (
+          <li>
+            <a href={post.url}>{post.frontmatter.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

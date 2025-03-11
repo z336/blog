@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const allPosts = Object.values(
+  import.meta.glob("../writing/*.md", { eager: true }),
+);
+const tags = [
+  ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
+];
+const pageTitle = "Tag Index";
+const heading = "Tags";
+---
+
+<Layout pageTitle={pageTitle} heading={heading}>
+  <div class="wrapper region prose flow">
+    <ul>
+      {
+        tags.map((tag) => (
+          <li>
+            <a href={`/tags/${tag}`}>{tag}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</Layout>

@@ -1,16 +1,23 @@
 ---
+import Layout from "../layouts/Layout.astro";
 
+const pageTitle = "Home";
+const heading = "Hey, I'm Jon";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout pageTitle={pageTitle} heading={heading}>
+	<div class="wrapper region prose flow">
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+			minima, reiciendis nobis ut numquam aliquid mollitia consectetur hic
+			libero necessitatibus accusamus est totam vero ab quam eaque ullam
+			iure omnis!
+		</p>
+		<p>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
+			minima, <a href="https://google.com/">reiciendis</a> nobis ut numquam
+			aliquid mollitia consectetur hic libero necessitatibus accusamus est
+			totam vero ab quam eaque ullam iure omnis!
+		</p>
+	</div>
+</Layout>

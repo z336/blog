@@ -1,0 +1,115 @@
+body {
+  background: var(--color-light);
+  color: var(--color-dark);
+  display: flex;
+  flex-direction: column;
+  margin-inline: 0.75em;
+  font-family: Authentic, sans-serif;
+  font-size: var(--size-step-0);
+  line-height: 1.7;
+}
+
+main {
+  flex: auto;
+  position: relative;
+  &:focus {
+    outline: none;
+  }
+}
+
+header,
+footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding-block: var(--gutter);
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    &::selection {
+      color: var(--color-dark);
+      background-color: var(--color-light);
+    }
+  }
+}
+
+footer {
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: Authentic, sans-serif;
+  font-weight: 800;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--size-step-4);
+  max-width: 20ch;
+}
+
+h2 {
+  font-size: var(--size-step-3);
+  max-width: 28ch;
+}
+
+h3 {
+  font-size: var(--size-step-2);
+  max-width: 28ch;
+}
+
+:is(h1, h2, h3, blockquote) {
+  --flow-space: 1.5em;
+}
+
+:is(h1, h2, h3) + * {
+  --flow-space: 0.5em;
+}
+
+ul,
+ol {
+  padding-inline-start: 1em;
+}
+
+blockquote {
+  padding-inline-start: 1em;
+  border-inline-start: 0.3em solid;
+  font-size: var(--size-step-1);
+  max-width: 50ch;
+}
+
+a {
+  color: currentColor;
+  text-decoration-thickness: 0.3ex;
+  text-underline-offset: 0.3ex;
+  &:hover {
+    text-underline-offset: 0.7ex;
+  }
+  &:focus {
+    z-index: 999;
+    outline: 3px solid;
+    text-decoration: none;
+    padding: 0.25rem;
+    margin: -0.25rem;
+    word-wrap: none;
+  }
+}
+
+::selection {
+  color: var(--color-light);
+  background-color: var(--color-dark);
+}
+
+/* Needed when changing default focus styles so outline is not visible on mouse click */
+:focus:not(:focus-visible) {
+  outline: none;
+}
