@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
-const { frontmatter } = Astro.props;
+
+const { frontmatter, headings } = Astro.props;
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -19,8 +20,13 @@ const { frontmatter } = Astro.props;
 			<nav aria-label="article navigation">
 				<p>Table of contents</p>
 				<ol>
-					<li><a href="/">What I've Accomplished</a></li>
-					<li><a href="/">What's next</a></li>
+					{
+						headings.map((heading: any) => (
+							<li>
+								<a href={`#${heading.slug}`}>{heading.text}</a>
+							</li>
+						))
+					}
 				</ol>
 			</nav>
 		</div>

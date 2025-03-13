@@ -7,26 +7,23 @@ author: "Astro Learner"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public"]
+tags: ["tempeh", "falafel", "hummus"]
 ---
 
-Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond
-burger lentil soup. Spinach smoothie almond milk chia seeds falafel
-hummus tempeh. Cashew cheese black bean tacos, vegan pancakes,
-jackfruit pulled pork, and _oat milk lattes_, Roasted cauliflower, hemp
-seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant
-parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted
-vegetables, coconut yogurt parfait, plant-based protein, vegan cheese
-pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
+Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond burger lentil soup. Spinach smoothie almond milk chia seeds falafel hummus tempeh. Cashew cheese black bean tacos, vegan pancakes, jackfruit pulled pork, and oat milk lattes, Roasted cauliflower, hemp seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted vegetables, coconut yogurt parfait, plant-based protein, vegan cheese pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
 
-> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptates dolore veritatis placeat saepe optio beatae repellendus consectetur, alias sit maiores animi ipsa similique, provident incidunt labore. A repudiandae, officiis.
+## A heading
 
-## What I've accomplished
+Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond burger lentil soup. Spinach smoothie almond milk chia seeds falafel hummus tempeh. Cashew cheese black bean tacos, vegan pancakes, jackfruit pulled pork, and oat milk lattes, Roasted cauliflower, hemp seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted vegetables, coconut yogurt parfait, plant-based protein, vegan cheese pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
 
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
+Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond burger lentil soup. Spinach smoothie almond milk chia seeds falafel hummus tempeh. Cashew cheese black bean tacos, vegan pancakes, jackfruit pulled pork, and oat milk lattes, Roasted cauliflower, hemp seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted vegetables, coconut yogurt parfait, plant-based protein, vegan cheese pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
 
-## What's next
+- Kale
+- Salad
+- Motherfucker
 
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.
+Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond burger lentil soup. Spinach smoothie almond milk chia seeds falafel hummus tempeh. Cashew cheese black bean tacos, vegan pancakes, jackfruit pulled pork, and oat milk lattes, Roasted cauliflower, hemp seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted vegetables, coconut yogurt parfait, plant-based protein, vegan cheese pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
+
+### Another heading
+
+Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond burger lentil soup. Spinach smoothie almond milk chia seeds falafel hummus tempeh. Cashew cheese black bean tacos, vegan pancakes, jackfruit pulled pork, and oat milk lattes, Roasted cauliflower, hemp seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted vegetables, coconut yogurt parfait, plant-based protein, vegan cheese pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
