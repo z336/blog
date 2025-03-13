@@ -1,41 +1,32 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import data from "../data/links.json";
 
 const pageTitle = "Links";
 const heading = "Links";
 ---
 
-<Layout pageTitle={pageTitle} heading={heading}>
-	<div class="wrapper region prose flow">
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odio
-			fugit, ab rem officiis. Adipisci nisi aperiam nesciunt tempore
-			architecto pariatur totam, hic provident vero ducimus a aspernatur
-			in minima consequatur?
-		</p>
-		<h2>Lorem ipsum</h2>
-		<ul>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-		</ul>
-		<h2>Lorem ipsum</h2>
-		<ul>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-		</ul>
-		<h2>Lorem ipsum</h2>
-		<ul>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-			<li>lorem ipsum</li>
-		</ul>
+<Layout pageTitle={pageTitle}>
+	<div class="wrapper">
+		<h1>{heading}</h1>
+	<div class="prose flow">		
+		<p>Lorem ipsum dolor sit, amet consectetur adipisicing, elit. Architecto placeat voluptatem sunt velit, a amet quis, ratione provident perferendis, sed eum nisi tenetur veritatis ut eaque optio expedita? Aspernatur, numquam?</p>
+	</div>
+	</div>
+	<div class="wrapper region flow">
+		{
+			data.map((section) => {
+				return (
+					<>
+						<h2>{section.title}</h2>
+						<p>{section.description}</p>
+						{section.links.map((link) => (
+							<h3><a href={`${link.url}`}>{link.title}</a></h3>
+							<p>{link.description}</p>
+						))}
+					</>
+				);
+			})
+		}
 	</div>
 </Layout>

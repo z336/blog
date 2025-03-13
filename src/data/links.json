@@ -1,0 +1,86 @@
+[
+  {
+    "title": "Bikes",
+    "description": "Here is a description for this section.",
+    "links": [
+      {
+        "title": "Mountain Biking Essentials",
+        "url": "https://example.com/bikes/mountain-biking",
+        "description": "A guide to the essential gear and techniques for mountain biking."
+      },
+      {
+        "title": "Road Bike Reviews",
+        "url": "https://example.com/bikes/road-bike-reviews",
+        "description": "In-depth reviews of the best road bikes available this season."
+      },
+      {
+        "title": "Cycling for Beginners",
+        "url": "https://example.com/bikes/cycling-for-beginners",
+        "description": "Tips and advice for those new to cycling and bike maintenance."
+      }
+    ]
+  },
+  {
+    "title": "Design",
+    "description": "Here is a description for this section.",
+    "links": [
+      {
+        "title": "UX/UI Design Basics",
+        "url": "https://example.com/design/ux-ui-design",
+        "description": "Introduction to the fundamentals of user experience and user interface design."
+      },
+      {
+        "title": "Color Theory in Design",
+        "url": "https://example.com/design/color-theory",
+        "description": "A deep dive into how color influences design and user perception."
+      },
+      {
+        "title": "Responsive Web Design",
+        "url": "https://example.com/design/responsive-web",
+        "description": "Techniques and best practices for making websites responsive across all devices."
+      }
+    ]
+  },
+  {
+    "title": "Writing",
+    "description": "Here is a description for this section.",
+    "links": [
+      {
+        "title": "Creative Writing Prompts",
+        "url": "https://example.com/writing/creative-writing-prompts",
+        "description": "A collection of prompts to inspire creativity and kickstart your writing."
+      },
+      {
+        "title": "How to Write Compelling Fiction",
+        "url": "https://example.com/writing/compelling-fiction",
+        "description": "Tips on structuring and developing captivating fiction stories."
+      },
+      {
+        "title": "Grammar and Style Guide",
+        "url": "https://example.com/writing/grammar-style",
+        "description": "A comprehensive guide to improving grammar and writing style."
+      }
+    ]
+  },
+  {
+    "title": "Web Development",
+    "description": "Here is a description for this section.",
+    "links": [
+      {
+        "title": "JavaScript Fundamentals",
+        "url": "https://example.com/webdev/javascript-basics",
+        "description": "A beginner's guide to understanding the core concepts of JavaScript. A beginner's guide to understanding the core concepts of JavaScript. A beginner's guide to understanding the core concepts of JavaScript. A beginner's guide to understanding the core concepts of JavaScript."
+      },
+      {
+        "title": "HTML5 and CSS3 Best Practices",
+        "url": "https://example.com/webdev/html-css-best-practices",
+        "description": "Learn the best practices for writing clean and efficient HTML and CSS."
+      },
+      {
+        "title": "Building a Full-Stack Web App",
+        "url": "https://example.com/webdev/full-stack-web-app",
+        "description": "Step-by-step guide on how to create a full-stack web application using modern technologies."
+      }
+    ]
+  }
+]

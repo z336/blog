@@ -17,7 +17,7 @@
 /* Utility */
 
 .wrapper {
-  max-width: 120ch;
+  max-width: 160ch;
   margin-inline: auto;
   padding-inline: var(--gutter);
 }
@@ -36,6 +36,14 @@
 
 /* Block */
 
+.article-header {
+  padding-block-end: var(--space-m-l);
+  border-block-end: 0.3ex solid var(--color-less-dark);
+  & p {
+    color: var(--color-less-dark);
+  }
+}
+
 .skip-link {
   background: var(--color-dark);
   position: absolute;
@@ -52,6 +60,22 @@
     width: 1px;
     white-space: nowrap;
   }
+}
+
+.switcher {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.switcher > * {
+  flex-grow: 1;
+  flex-basis: calc((38rem - 100%) * 999);
+}
+
+.switcher > :nth-last-child(n + 4),
+.switcher > :nth-last-child(n + 4) ~ * {
+  flex-basis: 100%;
 }
 
 /* Exception */

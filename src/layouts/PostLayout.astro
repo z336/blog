@@ -3,21 +3,33 @@ import Layout from "./Layout.astro";
 const { frontmatter } = Astro.props;
 ---
 
-<Layout pageTitle={frontmatter.title} heading={frontmatter.title}>
+<Layout pageTitle={frontmatter.title}>
+	<div class="wrapper">
+		<div class="switcher article-header">
+			<div>
+				<h1>{frontmatter.title}</h1>
+				<p>Posted: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+			</div>
+			<div>
+				<p>Topics</p>
+				<ul>
+					{frontmatter.tags.map((tag: string) => <li>{tag}</li>)}
+				</ul>
+			</div>
+			<nav aria-label="article navigation">
+				<p>Table of contents</p>
+				<ol>
+					<li><a href="/">What I've Accomplished</a></li>
+					<li><a href="/">What's next</a></li>
+				</ol>
+			</nav>
+		</div>
+	</div>
 	<div class="wrapper region prose flow">
-		<p>{frontmatter.pubDate.toString().slice(0, 10)}</p>
-		<p class="lede"><em>{frontmatter.description}</em></p>
+		<p class="lede">
+			<em>{frontmatter.description}</em>
+		</p>
 		<slot />
-		<p>Tags:</p>
-		<ul>
-			{
-				frontmatter.tags.map((tag: string) => (
-					<li>
-						<a href={`/tags/${tag}`}>{tag}</a>
-					</li>
-				))
-			}
-		</ul>
 	</div>
 	<div class="wrapper prose flow">
 		<p><a href="#top">Back to top</a></p>

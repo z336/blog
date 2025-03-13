@@ -17,9 +17,6 @@ const { pageTitle, heading } = Astro.props;
     <Header />
     <main id="main" tabindex="-1">
       <article class="region">
-        <div class="wrapper">
-          <h1>{heading}</h1>
-        </div>
         <slot />
       </article>
     </main>

@@ -2,12 +2,12 @@
 layout: ../../layouts/PostLayout.astro
 title: "My First Blog Post"
 pubDate: 2022-07-01
-description: "This is the first post of my new Astro blog."
+description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptates dolore veritatis placeat saepe optio beatae repellendus consectetur, alias sit maiores animi ipsa similique, provident incidunt labore. A repudiandae, officiis."
 author: "Astro Learner"
 image:
   url: "https://docs.astro.build/assets/rose.webp"
   alt: "The Astro logo on a dark background with a pink glow."
-tags: ["astro", "blogging", "learning in public", "etc"]
+tags: ["astro", "blogging", "learning in public"]
 ---
 
 Kale quinoa tofu bowl avocado toast chickpea curry seitan beyond
@@ -18,6 +18,8 @@ seeds, spirulina, vegan sushi, quinoa stuffed peppers, eggplant
 parmigiana, beet burgers, cashew dressing, Sourdough bread, roasted
 vegetables, coconut yogurt parfait, plant-based protein, vegan cheese
 pizza, mushroom stroganoff, turmeric golden milk, tofu scramble.
+
+> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptates dolore veritatis placeat saepe optio beatae repellendus consectetur, alias sit maiores animi ipsa similique, provident incidunt labore. A repudiandae, officiis.
 
 ## What I've accomplished
 

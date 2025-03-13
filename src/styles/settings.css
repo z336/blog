@@ -1,6 +1,6 @@
 :root {
   --color-dark: #252525;
-  --color-very-dark: #000;
+  --color-less-dark: #666666;
   --color-light: #efefef;
   --wrapper-max-width: 1680px;
   --gutter: 1em;

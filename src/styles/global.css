@@ -53,17 +53,17 @@ h3 {
 }
 
 h1 {
-  font-size: var(--size-step-4);
+  font-size: var(--size-step-3);
   max-width: 20ch;
 }
 
 h2 {
-  font-size: var(--size-step-3);
+  font-size: var(--size-step-2);
   max-width: 28ch;
 }
 
 h3 {
-  font-size: var(--size-step-2);
+  font-size: var(--size-step-1);
   max-width: 28ch;
 }
 
@@ -82,21 +82,21 @@ ol {
 
 blockquote {
   padding-inline-start: 1em;
-  border-inline-start: 0.3em solid;
+  border-inline-start: 0.3em solid var(--color-less-dark);
   font-size: var(--size-step-1);
   max-width: 50ch;
 }
 
 a {
   color: currentColor;
-  text-decoration-thickness: 0.3ex;
+  text-decoration-thickness: 0.2ex;
   text-underline-offset: 0.3ex;
   &:hover {
     text-underline-offset: 0.7ex;
   }
   &:focus {
     z-index: 999;
-    outline: 3px solid;
+    outline: 2px solid;
     text-decoration: none;
     padding: 0.25rem;
     margin: -0.25rem;
