@@ -1,22 +1,30 @@
 [
   {
     "title": "Something I saw today",
+    "pubDate": "2022-01-12",
     "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
-    "url": "https://example.com/"
+    "url": "https://example.com/",
+    "urlText": "Describe the link"
   },
   {
     "title": "Something I saw today",
+    "pubDate": "2022-01-13",
     "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
-    "url": "https://example.com/"
+    "url": "",
+    "urlText": ""
   },
   {
     "title": "Something I saw today",
+    "pubDate": "2022-01-12",
     "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
-    "url": "https://example.com/"
+    "url": "https://example.com/",
+    "urlText": "Check it out"
   },
   {
     "title": "Something I saw today",
+    "pubDate": "2022-01-12",
     "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
-    "url": "https://example.com/"
+    "url": "https://example.com/",
+    "urlText": "lol amirite"
   }
 ]

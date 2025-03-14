@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import data from "../data/notes.json";
+import { dateFormatter } from "../utils/dateFormatter.mjs";
 
 const pageTitle = "Notes";
 const heading = "Notes";
@@ -9,20 +10,31 @@ const heading = "Notes";
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<h1>{heading}</h1>
-	</div>
-	<div class="wrapper region flow">
-		{
-			data.map((note) => {
-				return (
-					<>
-						<h2>{note.title}</h2>
-						<p>{note.description}</p>
-						<p>
-							<a href={`${note.url}`}>Link</a>
-						</p>
-					</>
-				);
-			})
-		}
+		<div class="prose flow">
+			<p>
+				Lorem ipsum dolor sit, amet consectetur adipisicing, elit.
+				Architecto placeat voluptatem sunt velit, a amet quis, ratione
+				provident perferendis, sed eum nisi tenetur veritatis ut eaque
+				optio expedita? Aspernatur, numquam?
+			</p>
+		</div>
+		<div class="wrapper region flow">
+			{
+				data.map((note) => {
+					return (
+						<>
+							<h2>{note.title}</h2>
+							<p>{dateFormatter(note.pubDate)}</p>
+							<p>{note.description}</p>
+							{note.url ? (
+								<p>
+									<a href={note.url}>{note.urlText}</a>
+								</p>
+							) : null}
+						</>
+					);
+				})
+			}
+		</div>
 	</div>
 </Layout>

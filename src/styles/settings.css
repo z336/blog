@@ -1,7 +1,7 @@
 :root {
-  --color-dark: #252525;
-  --color-less-dark: #666666;
-  --color-light: #efefef;
+  --color-dark: #2a2722;
+  --color-less-dark: #54524e;
+  --color-light: #fafafa;
   --wrapper-max-width: 1680px;
   --gutter: 1em;
   background: var(--color-dark);

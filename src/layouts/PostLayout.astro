@@ -1,5 +1,6 @@
 ---
 import Layout from "./Layout.astro";
+import { dateFormatter } from "../utils/dateFormatter.mjs";
 
 const { frontmatter, headings } = Astro.props;
 ---
@@ -9,7 +10,7 @@ const { frontmatter, headings } = Astro.props;
 		<div class="switcher article-header">
 			<div>
 				<h1>{frontmatter.title}</h1>
-				<p>Posted: {frontmatter.pubDate.toString().slice(0, 10)}</p>
+				<p>Posted: {dateFormatter(frontmatter.pubDate)}</p>
 			</div>
 			<div>
 				<p>Topics</p>
