@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import data from "../data/notes.json";
 
 const pageTitle = "Notes";
 const heading = "Notes";
@@ -9,20 +10,19 @@ const heading = "Notes";
 	<div class="wrapper">
 		<h1>{heading}</h1>
 	</div>
-	<div class="wrapper">
-		<div class="prose flow">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Sapiente minima, reiciendis nobis ut numquam aliquid mollitia
-				consectetur hic libero necessitatibus accusamus est totam vero
-				ab quam eaque ullam iure omnis!
-			</p>
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit.
-				Sapiente minima, <a href="https://google.com/">reiciendis</a> nobis
-				ut numquam aliquid mollitia consectetur hic libero necessitatibus
-				accusamus est totam vero ab quam eaque ullam iure omnis!
-			</p>
-		</div>
+	<div class="wrapper region flow">
+		{
+			data.map((note) => {
+				return (
+					<>
+						<h2>{note.title}</h2>
+						<p>{note.description}</p>
+						<p>
+							<a href={`${note.url}`}>Link</a>
+						</p>
+					</>
+				);
+			})
+		}
 	</div>
 </Layout>
