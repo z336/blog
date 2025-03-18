@@ -80,7 +80,7 @@
 
 /* Exception */
 
-/* Use with .wrapper to shorten */
+/* Use with .wrapper to shorten max-width */
 .prose {
   max-width: 60ch;
 }

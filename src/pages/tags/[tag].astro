@@ -24,10 +24,8 @@ const { posts } = Astro.props;
 ---
 
 <Layout pageTitle={tag}>
-  <div class="wrapper">
+  <div class="wrapper prose flow">
     <h1>{tag}</h1>
-  </div>
-  <div class="wrapper flow">
     <ul>
       {
         posts.map((post: any) => (
