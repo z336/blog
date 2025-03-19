@@ -1,26 +1,30 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
+import { dateFormatter } from "../../utils/dateFormatter.mjs";
 
+const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
 const pageTitle = "Writing";
 const heading = "Writing";
 ---
 
 <Layout pageTitle={pageTitle}>
-  <div class="wrapper flow">
-    <header class="page-header with-sidebar flow" data-wrapper-type="inner">
+  <div class="wrapper">
+    <header class="page-header flow" data-wrapper-type="inner">
       <h1>{heading}</h1>
-      <aside>
-        <p>This is where I will post about my journey learning Astro.</p>
-      </aside>
+      <p>This is where I will post about my journey learning Astro.</p>
     </header>
     <div data-wrapper-type="inner">
-      <h2>Category</h2>
-      <ul>
+      <ul class="posts stack">
         {
           allPosts.map((post: any) => (
-            <li>
-              <a href={post.url}>{post.frontmatter.title}</a>
+            <li class="flow">
+              <h2>
+                <a href={post.url}>{post.frontmatter.title}</a>
+              </h2>
+              <div>
+                <small>{dateFormatter(post.frontmatter.pubDate)}</small> |
+                <small>{post.frontmatter.category}</small>
+              </div>
             </li>
           ))
         }

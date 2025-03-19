@@ -38,12 +38,12 @@ h1 {
 
 h2 {
   font-size: var(--size-step-2);
-  max-width: 28ch;
+  /*  max-width: 28ch;*/
 }
 
 h3 {
   font-size: var(--size-step-1);
-  max-width: 28ch;
+  /*  max-width: 28ch;*/
 }
 
 /* Flow space is first defined by .flow */
@@ -77,12 +77,14 @@ a {
   }
   &:focus {
     z-index: 999;
-    outline: 2px solid;
+    outline: 3px solid;
     text-decoration: none;
-    padding: 0.25rem;
-    margin: -0.25rem;
     word-wrap: none;
   }
+}
+
+small {
+  color: var(--color-less-dark);
 }
 
 ::selection {

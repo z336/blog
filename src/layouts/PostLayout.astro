@@ -7,7 +7,7 @@ const { frontmatter, headings } = Astro.props;
 
 <Layout pageTitle={frontmatter.title}>
 	<div class="wrapper">
-		<div class="switcher article-header" data-wrapper-type="inner">
+		<header class="article-header switcher" data-wrapper-type="inner">
 			<div>
 				<p>{frontmatter.category}</p>
 				<h1>{frontmatter.title}</h1>
@@ -31,7 +31,7 @@ const { frontmatter, headings } = Astro.props;
 					}
 				</ol>
 			</nav>
-		</div>
+		</header>
 	</div>
 	<div class="wrapper region prose flow">
 		<p class="lede">
@@ -40,6 +40,6 @@ const { frontmatter, headings } = Astro.props;
 		<slot />
 	</div>
 	<div class="wrapper region prose flow">
-		<p><a href="#top">Back to top</a></p>
+		<p><a href="/writing/">Back to writing</a></p>
 	</div>
 </Layout>
