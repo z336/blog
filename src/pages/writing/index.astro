@@ -1,18 +1,18 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import { dateFormatter } from "../../utils/dateFormatter.mjs";
+import PageHeader from "../../components/PageHeader.astro";
 
 const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
 const pageTitle = "Writing";
 const heading = "Writing";
+const description =
+  "This is where I will post about my journey learning Astro.";
 ---
 
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
-    <header class="page-header flow" data-wrapper-type="inner">
-      <h1>{heading}</h1>
-      <p>This is where I will post about my journey learning Astro.</p>
-    </header>
+    <PageHeader heading={heading} description={description} />
     <div data-wrapper-type="inner">
       <ul class="posts stack">
         {
