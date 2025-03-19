@@ -2,23 +2,27 @@
 import Layout from "../layouts/Layout.astro";
 
 const pageTitle = "Home";
-const heading = "Hey, I'm Jon";
+const heading = "Jon Coleman";
 ---
 
 <Layout pageTitle={pageTitle}>
-	<div class="wrapper prose flow">
-		<h1>{heading}</h1>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-			minima, reiciendis nobis ut numquam aliquid mollitia consectetur hic
-			libero necessitatibus accusamus est totam vero ab quam eaque ullam
-			iure omnis!
-		</p>
-		<p>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-			minima, <a href="https://google.com/">reiciendis</a> nobis ut numquam
-			aliquid mollitia consectetur hic libero necessitatibus accusamus est
-			totam vero ab quam eaque ullam iure omnis!
-		</p>
+	<div class="wrapper flow">
+		<header class="page-header flow" data-wrapper-type="inner">
+			<h1>{heading}</h1>
+		</header>
+		<div class="prose flow" data-wrapper-type="inner">
+			<h2>About me</h2>
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
+				laborum quibusdam aut necessitatibus, quos facere quis quasi
+				earum ipsum commodi expedita reiciendis? Velit nobis qui quasi
+				molestiae, mollitia fugiat, assumenda.
+			</p>
+			<h2>Recent</h2>
+			<ul>
+				<li>one</li>
+				<li>two</li>
+			</ul>
+		</div>
 	</div>
 </Layout>

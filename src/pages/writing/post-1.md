@@ -3,10 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: "My First Blog Post"
 pubDate: 2022-07-01
 description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis voluptates dolore veritatis placeat saepe optio beatae repellendus consectetur, alias sit maiores animi ipsa similique, provident incidunt labore. A repudiandae, officiis."
-author: "Astro Learner"
-image:
-  url: "https://docs.astro.build/assets/rose.webp"
-  alt: "The Astro logo on a dark background with a pink glow."
+category: "Bikes"
 tags: ["tempeh", "falafel", "hummus"]
 ---
 

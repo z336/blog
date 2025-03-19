@@ -7,10 +7,11 @@ const { frontmatter, headings } = Astro.props;
 
 <Layout pageTitle={frontmatter.title}>
 	<div class="wrapper">
-		<div class="switcher article-header">
+		<div class="switcher article-header" data-wrapper-type="inner">
 			<div>
+				<p>{frontmatter.category}</p>
 				<h1>{frontmatter.title}</h1>
-				<p>Posted: {dateFormatter(frontmatter.pubDate)}</p>
+				<small>{dateFormatter(frontmatter.pubDate)}</small>
 			</div>
 			<div>
 				<p>Topics</p>
@@ -38,7 +39,7 @@ const { frontmatter, headings } = Astro.props;
 		</p>
 		<slot />
 	</div>
-	<div class="wrapper prose flow">
+	<div class="wrapper region prose flow">
 		<p><a href="#top">Back to top</a></p>
 	</div>
 </Layout>

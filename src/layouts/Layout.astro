@@ -1,6 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
+
 import "../styles/styles.css";
 const { pageTitle, heading } = Astro.props;
 ---
@@ -11,12 +12,12 @@ const { pageTitle, heading } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
+    <title>{pageTitle} | Jon Coleman</title>
   </head>
   <body>
     <Header />
     <main id="main" tabindex="-1">
-      <article class="region">
+      <article>
         <slot />
       </article>
     </main>

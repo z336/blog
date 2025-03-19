@@ -1,12 +1,9 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: My Second Blog Post
-author: Astro Learner
-description: "After learning some Astro, I couldn't stop!"
-image:
-  url: "https://docs.astro.build/assets/arc.webp"
-  alt: "The Astro logo on a dark background with a purple gradient arc."
+title: My Second Blog Pos
 pubDate: 2022-07-08
+description: "After learning some Astro, I couldn't stop!"
+category: "Bikes"
 tags: ["pizza", "tofu", "cashews"]
 ---
 

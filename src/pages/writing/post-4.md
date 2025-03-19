@@ -1,12 +1,9 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: My Fourth Blog Post with a Longish Title
-author: Astro Learner
-description: "This post will show up on its own!"
-image:
-  url: "https://docs.astro.build/default-og-image.png"
-  alt: "The word astro against an illustration of planets and stars."
 pubDate: 2022-08-08
+description: "This post will show up on its own!"
+category: "Writing"
 tags: ["toast", "salad"]
 ---
 

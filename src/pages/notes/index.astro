@@ -8,29 +8,32 @@ const heading = "Notes";
 ---
 
 <Layout pageTitle={pageTitle}>
-	<div class="wrapper prose flow">
-		<h1>{heading}</h1>
-		<p>
-			Lorem ipsum dolor sit, amet consectetur adipisicing, elit.
-			Architecto placeat voluptatem sunt velit, a amet quis, ratione
-			provident perferendis, sed eum nisi tenetur veritatis ut eaque optio
-			expedita? Aspernatur, numquam?
-		</p>
-		{
-			data.map((note) => {
-				return (
-					<>
-						<h2>{note.title}</h2>
-						<p>{dateFormatter(note.pubDate)}</p>
-						<p>{note.description}</p>
-						{note.url ? (
-							<p>
-								<a href={note.url}>{note.urlText}</a>
-							</p>
-						) : null}
-					</>
-				);
-			})
-		}
+	<div class="wrapper flow">
+		<header class="page-header with-sidebar flow" data-wrapper-type="inner">
+			<h1>{heading}</h1>
+			<aside>
+				<p>
+					Lorem ipsum dolor sit, amet consectetur adipisicing, elit.
+				</p>
+			</aside>
+		</header>
+		<div class="prose flow" data-wrapper-type="inner">
+			{
+				data.map((note) => {
+					return (
+						<>
+							<h2>{note.title}</h2>
+							<small>{dateFormatter(note.pubDate)}</small>
+							<p>{note.description}</p>
+							{note.url ? (
+								<p>
+									<a href={note.url}>{note.urlText}</a>
+								</p>
+							) : null}
+						</>
+					);
+				})
+			}
+		</div>
 	</div>
 </Layout>
