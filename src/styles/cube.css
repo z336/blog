@@ -14,6 +14,17 @@
   --flow-space: 2em;
 }
 
+.grid {
+  display: grid;
+  grid-gap: var(--space-xs-s);
+}
+
+@supports (width: min(350px, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+  }
+}
+
 /* Utility */
 
 .wrapper {
@@ -26,8 +37,9 @@
   }
 }
 
+/* Use when all that is needed is vertical space and the inner wrapper is already in use */
 .region {
-  padding-block: var(--space-m-xl);
+  padding-block: var(--space-s-l);
 }
 
 .repel {
@@ -42,21 +54,29 @@
 
 /*Styles for posts*/
 .article-header {
-  border-block-end: 0.3ex solid var(--color-less-light);
+  border-block-end: 0.3ex dotted var(--color-less-light);
 }
 
-.page-header {
-  border-block-end: 0.3ex solid var(--color-less-light);
-  h1 {
-    font-size: var(--size-step-5);
-    text-transform: uppercase;
+.card {
+  border: 0.3ex dotted var(--color-less-light);
+  padding: var(--space-s);
+  border-radius: 0.69rem;
+
+  list-style: none;
+}
+
+.links {
+  border-block-end: 0.3ex dotted var(--color-less-light);
+  &:last-child {
+    border-block-end: none;
   }
 }
 
-.posts {
-  padding: 0;
-  li {
-    list-style: none;
+.page-header {
+  border-block-end: 0.3ex dotted var(--color-less-light);
+  h1 {
+    font-size: var(--size-step-5);
+    text-transform: uppercase;
   }
 }
 
@@ -99,21 +119,6 @@
       background-color: var(--color-light);
     }
   }
-}
-
-/* Use with post list */
-.stack {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.stack > * {
-  margin-block: 0;
-}
-
-.stack > * + * {
-  margin-block-start: var(--space-xs-m);
 }
 
 /* Use with article header */

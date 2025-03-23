@@ -12,12 +12,18 @@ const description = "lorem ipsum description.";
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} description={description} />
-		<div class="prose flow" data-wrapper-type="inner">
-			{
-				data.map((note) => {
-					return (
-						<>
-							<h2>{note.title}</h2>
+		{
+			data.map((note) => {
+				return (
+					<article
+						class="links"
+						aria-label="note"
+						data-wrapper-type="inner"
+					>
+						<div class="prose flow">
+							<h2>
+								<a href={note.url}>{note.title}</a>
+							</h2>
 							<small>{dateFormatter(note.pubDate)}</small>
 							<p>{note.description}</p>
 							{note.url ? (
@@ -25,10 +31,10 @@ const description = "lorem ipsum description.";
 									<a href={note.url}>{note.urlText}</a>
 								</p>
 							) : null}
-						</>
-					);
-				})
-			}
-		</div>
+						</div>
+					</article>
+				);
+			})
+		}
 	</div>
 </Layout>

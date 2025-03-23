@@ -33,13 +33,15 @@ const { frontmatter, headings } = Astro.props;
 			</nav>
 		</header>
 	</div>
-	<div class="wrapper region prose flow">
-		<p class="lede">
-			<em>{frontmatter.description}</em>
-		</p>
-		<slot />
-	</div>
-	<div class="wrapper region prose flow">
-		<p><a href="/writing/">Back to writing</a></p>
-	</div>
+	<article>
+		<div class="wrapper region prose flow">
+			<p class="lede">
+				<em>{frontmatter.description}</em>
+			</p>
+			<slot />
+		</div>
+		<div class="wrapper region prose flow">
+			<p><a href="/writing/">Back to writing</a></p>
+		</div>
+	</article>
 </Layout>

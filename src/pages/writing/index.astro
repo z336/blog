@@ -13,22 +13,20 @@ const description =
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
     <PageHeader heading={heading} description={description} />
-    <div data-wrapper-type="inner">
-      <ul class="posts stack">
-        {
-          allPosts.map((post: any) => (
-            <li class="flow">
-              <h2>
-                <a href={post.url}>{post.frontmatter.title}</a>
-              </h2>
-              <div>
-                <small>{dateFormatter(post.frontmatter.pubDate)}</small> |
-                <small>{post.frontmatter.category}</small>
-              </div>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
+    {
+      allPosts.map((post: any) => (
+        <article class="links" data-wrapper-type="inner">
+          <div class="prose flow">
+            <h2>
+              <a href={post.url}>{post.frontmatter.title}</a>
+            </h2>
+            <div>
+              <small>{dateFormatter(post.frontmatter.pubDate)}</small> |
+              <small>{post.frontmatter.category}</small>
+            </div>
+          </div>
+        </article>
+      ))
+    }
   </div>
 </Layout>

@@ -2,9 +2,9 @@
   --color-dark: #2a2722;
   --color-less-dark: #54524e;
   --color-light: #fafafa;
-  --color-less-light: #e1e1e1;
+  --color-less-light: #c8c8c8;
   --wrapper-max-width: 1680px;
-  --gutter: 1em;
+  --gutter: var(--space-s);
   background: var(--color-dark);
   /* Fluid fonts */
   --size-step-0: clamp(1rem, calc(0.96rem + 0.22vw), 1.13rem);

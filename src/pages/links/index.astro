@@ -1,31 +1,39 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PageHeader from '../../components/PageHeader.astro';
+import PageHeader from "../../components/PageHeader.astro";
 import data from "./_links.json";
 
 const pageTitle = "Links";
 const heading = "Links";
-const description = "lorem description."
+const description = "lorem description.";
 ---
 
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} description={description} />
-		<div class="prose flow" data-wrapper-type="inner">
 		{
 			data.map((section) => {
 				return (
-					<>
-						<h2>{section.title}</h2>
-						<p>{section.description}</p>
-						{section.links.map((link) => (
-							<h3><a href={`${link.url}`}>{link.title}</a></h3>
-							<p>{link.description}</p>
-						))}
-					</>
+					<article
+						class="links"
+						aria-label="related links"
+						data-wrapper-type="inner"
+					>
+						<div class="prose flow">
+							<h2>{section.title}</h2>
+							<p>{section.description}</p>
+							<ul>
+								{section.links.map((link) => (
+									<li>
+										<a href={`${link.url}`}>{link.title}</a>{" "}
+										- {link.description}
+									</li>
+								))}
+							</ul>
+						</div>
+					</article>
 				);
 			})
 		}
-		</div>
 	</div>
 </Layout>

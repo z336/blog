@@ -9,7 +9,7 @@ const heading = "Jon Coleman";
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} />
-		<div class="prose flow" data-wrapper-type="inner">
+		<article class="prose flow" data-wrapper-type="inner">
 			<h2>About me</h2>
 			<p>
 				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad
@@ -17,11 +17,14 @@ const heading = "Jon Coleman";
 				earum ipsum commodi expedita reiciendis? Velit nobis qui quasi
 				molestiae, mollitia fugiat, assumenda.
 			</p>
-			<h2>Recent</h2>
-			<ul>
-				<li>one</li>
-				<li>two</li>
-			</ul>
-		</div>
+			<details>
+				<summary>Contact & elsewhere</summary>
+				<ul>
+					<li>Email</li>
+					<li>Resume</li>
+					<li>Other site</li>
+				</ul>
+			</details>
+		</article>
 	</div>
 </Layout>

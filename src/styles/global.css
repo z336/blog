@@ -75,11 +75,31 @@ a {
   &:hover {
     text-underline-offset: 0.7ex;
   }
-  &:focus {
-    z-index: 999;
-    outline: 3px solid;
-    text-decoration: none;
-    word-wrap: none;
+}
+
+/* Append any external links with an icon that indicates you're leaving the site */
+a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
+  display: inline-block;
+  width: 1.25em;
+  height: 1em;
+  background-image: url("/external-link.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% auto;
+  /* alternative text rules */
+  content: "(external link)";
+  overflow: hidden;
+  white-space: nowrap;
+  text-indent: 1.25em; /* the width of the icon */
+}
+
+details {
+  margin-block-start: var(--flow-space, 1em);
+  border: 0.3ex dotted var(--color-less-light);
+  padding: var(--space-s);
+  border-radius: 0.69rem;
+  summary {
+    cursor: pointer;
   }
 }
 
@@ -90,6 +110,13 @@ small {
 ::selection {
   color: var(--color-light);
   background-color: var(--color-dark);
+}
+
+:focus {
+  z-index: 999;
+  outline: 3px solid;
+  text-decoration: none;
+  word-wrap: none;
 }
 
 /* Needed when changing default focus styles so outline is not visible on mouse click */
