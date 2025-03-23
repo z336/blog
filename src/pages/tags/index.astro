@@ -1,6 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
+
 const allPosts = Object.values(
   import.meta.glob("../writing/*.md", { eager: true }),
 );

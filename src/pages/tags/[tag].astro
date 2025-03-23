@@ -28,7 +28,7 @@ const description = "All the posts witht his tag.";
 <Layout pageTitle={tag}>
   <div class="wrapper">
     <PageHeader heading={tag} description={description} />
-    <div data-wrapper-type="inner">
+    <article data-wrapper-type="inner">
       <ul>
         {
           posts.map((post: any) => (
@@ -39,6 +39,6 @@ const description = "All the posts witht his tag.";
         }
       </ul>
       <p>Or view all <a href="/tags/">Tags</a>.</p>
-    </div>
+    </article>
   </div>
 </Layout>

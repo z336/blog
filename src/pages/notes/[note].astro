@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import PageHeader from "../../components/PageHeader.astro";
+import data from "./_notes.json";
+
+export async function getStaticPaths() {
+	const allNotes = data;
+
+	// Generate the paths from the `title` of each note
+	const paths = allNotes.map((note) => ({
+		params: { note: note.title.toLowerCase().replace(/\s+/g, "-") }, // Using "note" as the dynamic parameter
+		props: { notes: allNotes },
+	}));
+
+	return paths;
+}
+
+const { note } = Astro.params; // Use "note" as the dynamic parameter
+const { notes } = Astro.props;
+
+// Find the original note object based on the slug (hyphenated version)
+const filteredNotes = notes.filter(
+	(noteItem) => noteItem.title.toLowerCase().replace(/\s+/g, "-") === note,
+);
+
+// Extract the original title from the first filtered note (assuming there's only one match)
+const originalTitle = filteredNotes[0]?.title;
+---
+
+<Layout pageTitle={originalTitle}>
+	<div class="wrapper">
+		<PageHeader heading={originalTitle} />
+		<article class="prose flow" data-wrapper-type="inner">
+			{filteredNotes.map((note) => <p>{note.description}</p>)}
+			<p><a href="/notes/">Back to the notes</a></p>
+		</article>
+	</div>
+</Layout>

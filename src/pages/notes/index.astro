@@ -3,6 +3,7 @@ import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import data from "./_notes.json";
 import { dateFormatter } from "../../utils/dateFormatter.mjs";
+import { slugGenerator } from "../../utils/slugGenerator.mjs";
 
 const pageTitle = "Notes";
 const heading = "Notes";
@@ -10,35 +11,30 @@ const description = "lorem ipsum description.";
 ---
 
 <Layout pageTitle={pageTitle}>
-	<div class="wrapper">
-		<PageHeader heading={heading} description={description} />
-		{
-			data.map((note) => {
-				return (
-					<article
-						class="border"
-						aria-label="note"
-						data-wrapper-type="inner"
-					>
-						<div class="prose flow">
-							{note.url ? (
-								<h2>
-									<a href={note.url}>{note.title}</a>
-								</h2>
-							) : (
-								<h2>{note.title}</h2>
-							)}
-							<small>{dateFormatter(note.pubDate)}</small>
-							<p>{note.description}</p>
-							{note.url ? (
-								<p>
-									<a href={note.url}>{note.title}</a>
-								</p>
-							) : null}
-						</div>
-					</article>
-				);
-			})
-		}
-	</div>
+  <div class="wrapper">
+    <PageHeader heading={heading} description={description} />
+    {
+      data.map((note) => {
+        const permalink = slugGenerator(note.title);
+        return (
+          <article class="border" aria-label="note" data-wrapper-type="inner">
+            <div class="prose flow">
+              {note.url ? (
+                <h2>
+                  <a href={note.url}>{note.title}</a>
+                </h2>
+              ) : (
+                <h2>{note.title}</h2>
+              )}
+              <small>{dateFormatter(note.pubDate)}</small>
+              <p>{note.description}</p>
+              <p>
+                <a href={`/notes/${permalink}`}>Permalink</a>
+              </p>
+            </div>
+          </article>
+        );
+      })
+    }
+  </div>
 </Layout>

@@ -33,15 +33,29 @@ const { frontmatter, headings } = Astro.props;
 			</nav>
 		</header>
 	</div>
-	<article>
-		<div class="wrapper region prose flow">
-			<p class="lede">
-				<em>{frontmatter.description}</em>
-			</p>
-			<slot />
-		</div>
-		<div class="wrapper region prose flow">
-			<p><a href="/writing/">Back to writing</a></p>
+	<article class="wrapper region prose flow">
+		<p class="lede">
+			<em>{frontmatter.description}</em>
+		</p>
+		<slot />
+		<div class="region prose flow">
+			<hr />
+			<div class="region prose flow">
+				<p>More on these topics:</p>
+				<ul>
+					{
+						frontmatter.tags.map((tag: string) => (
+							<li>
+								<a href={`/tags/${tag}`}>{tag}</a>
+							</li>
+						))
+					}
+				</ul>
+			</div>
+			<hr />
+			<div class="region prose flow">
+				<p><a href="/writing/">Back to writing</a></p>
+			</div>
 		</div>
 	</article>
 </Layout>

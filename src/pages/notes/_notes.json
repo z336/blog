@@ -2,25 +2,25 @@
   {
     "title": "Something I saw today",
     "pubDate": "2022-01-12",
-    "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
+    "description": "This is the first thing I saw.",
     "url": "https://example.com/"
   },
   {
-    "title": "Something I saw today",
+    "title": "Another thing I saw today",
     "pubDate": "2022-01-13",
-    "description": "No really, I saw this thing and here's a bunch more about it for no reason. No really, I saw this thing and here's a bunch more about it for no reason.",
+    "description": "This is the second thing I saw.",
     "url": ""
   },
   {
-    "title": "Something I saw today",
+    "title": "One more thing I saw",
     "pubDate": "2022-01-12",
-    "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
+    "description": "This is the third thing I saw.",
     "url": "https://example.com/"
   },
   {
-    "title": "Something I saw today",
+    "title": "Last thing",
     "pubDate": "2022-01-12",
-    "description": "No really, I saw this thing and here's a bunch more about it for no reason.",
-    "url": "https://example.com/"
+    "description": "This is the fourth and final thing.",
+    "url": ""
   }
 ]
