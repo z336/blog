@@ -3,6 +3,21 @@ import Layout from "./Layout.astro";
 import { dateFormatter } from "../utils/dateFormatter.mjs";
 
 const { frontmatter, headings } = Astro.props;
+
+const allPosts = Object.values(
+	import.meta.glob("../pages/writing/*.md", { eager: true }),
+);
+
+const allRelatedPosts = allPosts.filter((post: any) => {
+	return (
+		post.frontmatter.title !== frontmatter.title &&
+		post.frontmatter.tags.some((tag: string) =>
+			frontmatter.tags.includes(tag),
+		)
+	);
+});
+
+const relatedPosts = allRelatedPosts.slice(0, 3);
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -39,19 +54,23 @@ const { frontmatter, headings } = Astro.props;
 		</p>
 		<slot />
 		<div class="region prose flow">
-			<hr />
-			<div class="region prose flow">
-				<p>More on these topics:</p>
-				<ul>
-					{
-						frontmatter.tags.map((tag: string) => (
-							<li>
-								<a href={`/tags/${tag}`}>{tag}</a>
-							</li>
-						))
-					}
-				</ul>
-			</div>
+				{
+					relatedPosts.length > 0 ? (
+						<hr />
+						<div class="region prose flow">
+							<h2>Related</h2>
+								<ul>
+									{relatedPosts.map((post: any) => (
+										<li>
+											<a href={post.url}>
+												{post.frontmatter.title}
+											</a>
+										</li>
+									))}
+								</ul>
+						</div>
+					) : null
+				}
 			<hr />
 			<div class="region prose flow">
 				<p><a href="/writing/">Back to writing</a></p>
