@@ -73,7 +73,7 @@ a {
   text-decoration-thickness: 0.2ex;
   text-underline-offset: 0.3ex;
   &:hover {
-    text-underline-offset: 0.7ex;
+    text-underline-offset: 0.5ex;
   }
 }
 
@@ -95,8 +95,8 @@ a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
 
 details {
   margin-block-start: var(--flow-space, 1em);
-  border: 0.3ex dotted var(--color-less-light);
   padding: var(--space-s);
+  border: 0.3ex dotted var(--color-less-light);
   border-radius: 0.69rem;
   summary {
     cursor: pointer;
