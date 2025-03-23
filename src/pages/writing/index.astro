@@ -21,8 +21,12 @@ const description =
               <a href={post.url}>{post.frontmatter.title}</a>
             </h2>
             <div>
-              <small>{dateFormatter(post.frontmatter.pubDate)}</small> |
-              <small>{post.frontmatter.category}</small>
+              <small>
+                <time datetime={post.frontmatter.pubDate}>
+                  {dateFormatter(post.frontmatter.pubDate)}
+                </time>
+              </small>
+              | <small>{post.frontmatter.category}</small>
             </div>
           </div>
         </article>

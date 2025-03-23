@@ -26,7 +26,11 @@ const description = "lorem ipsum description.";
               ) : (
                 <h2>{note.title}</h2>
               )}
-              <small>{dateFormatter(note.pubDate)}</small>
+              <small>
+                <time datetime={note.pubDate}>
+                  {dateFormatter(note.pubDate)}
+                </time>
+              </small>
               <p>{note.description}</p>
               <p>
                 <a href={`/notes/${permalink}`}>Permalink</a>

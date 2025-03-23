@@ -2,6 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import data from "./_notes.json";
+import { dateFormatter } from "../../utils/dateFormatter.mjs";
 
 export async function getStaticPaths() {
 	const allNotes = data;
@@ -31,7 +32,18 @@ const originalTitle = filteredNotes[0]?.title;
 	<div class="wrapper">
 		<PageHeader heading={originalTitle} />
 		<article class="prose flow" data-wrapper-type="inner">
-			{filteredNotes.map((note) => <p>{note.description}</p>)}
+			{
+				filteredNotes.map((note) => (
+					<>
+						<small>
+							<time datetime={note.pubDate}>
+								{dateFormatter(note.pubDate)}
+							</time>
+						</small>
+						<p>{note.description}</p>
+					</>
+				))
+			}
 			<p><a href="/notes/">Back to the notes</a></p>
 		</article>
 	</div>
