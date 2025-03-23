@@ -14,17 +14,6 @@
   --flow-space: 2em;
 }
 
-.grid {
-  display: grid;
-  grid-gap: var(--space-xs-s);
-}
-
-@supports (width: min(350px, 100%)) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-  }
-}
-
 /* Utility */
 
 .wrapper {
@@ -52,32 +41,21 @@
 
 /* Block */
 
-/*Styles for posts*/
-.article-header {
-  border-block-end: 0.3ex dotted var(--color-less-light);
-}
-
-.card {
-  border: 0.3ex dotted var(--color-less-light);
-  padding: var(--space-s);
-  border-radius: 0.69rem;
-
-  list-style: none;
-}
-
-.links {
+.border {
   border-block-end: 0.3ex dotted var(--color-less-light);
   &:last-child {
     border-block-end: none;
   }
+  /* Apply border to the first and only child if there is only one */
+  &:first-child:only-child {
+    border-block-end: 0.3ex dotted var(--color-less-light);
+  }
 }
 
-.page-header {
-  border-block-end: 0.3ex dotted var(--color-less-light);
-  h1 {
-    font-size: var(--size-step-5);
-    text-transform: uppercase;
-  }
+/* Make h1s huge on pages but not posts */
+.page-title {
+  font-size: var(--size-step-5);
+  text-transform: uppercase;
 }
 
 .skip-link {

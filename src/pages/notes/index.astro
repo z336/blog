@@ -16,19 +16,23 @@ const description = "lorem ipsum description.";
 			data.map((note) => {
 				return (
 					<article
-						class="links"
+						class="border"
 						aria-label="note"
 						data-wrapper-type="inner"
 					>
 						<div class="prose flow">
-							<h2>
-								<a href={note.url}>{note.title}</a>
-							</h2>
+							{note.url ? (
+								<h2>
+									<a href={note.url}>{note.title}</a>
+								</h2>
+							) : (
+								<h2>{note.title}</h2>
+							)}
 							<small>{dateFormatter(note.pubDate)}</small>
 							<p>{note.description}</p>
 							{note.url ? (
 								<p>
-									<a href={note.url}>{note.urlText}</a>
+									<a href={note.url}>{note.title}</a>
 								</p>
 							) : null}
 						</div>

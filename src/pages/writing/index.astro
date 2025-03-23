@@ -15,7 +15,7 @@ const description =
     <PageHeader heading={heading} description={description} />
     {
       allPosts.map((post: any) => (
-        <article class="links" data-wrapper-type="inner">
+        <article class="border" data-wrapper-type="inner">
           <div class="prose flow">
             <h2>
               <a href={post.url}>{post.frontmatter.title}</a>
