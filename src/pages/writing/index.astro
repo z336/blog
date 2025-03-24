@@ -4,6 +4,10 @@ import { dateFormatter } from "../../utils/dateFormatter.mjs";
 import PageHeader from "../../components/PageHeader.astro";
 
 const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
+// Sort the posts in most recent first order
+const sortedPosts = allPosts.sort((a: any, b: any) => {
+  return b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate);
+});
 const pageTitle = "Writing";
 const heading = "Writing";
 const description = "Essays, guides, and generally polished content.";
@@ -13,7 +17,7 @@ const description = "Essays, guides, and generally polished content.";
   <div class="wrapper">
     <PageHeader heading={heading} description={description} />
     {
-      allPosts.map((post: any) => (
+      sortedPosts.map((post: any) => (
         <article class="border" data-wrapper-type="inner">
           <div class="prose flow">
             <h2>

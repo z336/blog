@@ -44,7 +44,7 @@
 /* Code block styles */
 .astro-code {
   padding: var(--gutter);
-  border: 0.3ex solid var(--color-less-light);
+  border: 0.1ex solid var(--color-less-light);
 }
 
 .border {
