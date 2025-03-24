@@ -58,6 +58,11 @@
   }
 }
 
+.card {
+  border: 0.3ex dotted var(--color-less-light);
+  border-radius: 0.69rem;
+}
+
 /* Make h1s huge on pages but not posts */
 .page-title {
   font-size: var(--size-step-5);

@@ -47,13 +47,50 @@ const hasRelatedPosts = relatedPosts.length > 0;
 			<nav aria-label="article navigation">
 				<p>Table of contents</p>
 				<ol>
+					<!-- This long block checks for h2 and h3 headings. If there are h3's, a nested list is added to the TOC to accommodate, if there aren't, the nested list is ignored. It's only checking up to h3's.  -->
 					{
-						headings.map((heading: any) => (
-							<li>
-								<a href={`#${heading.slug}`}>{heading.text}</a>
-							</li>
-						))
+						headings.map((heading: any) => {
+							if (heading.depth === 2) {
+								const subHeadings = headings.filter(
+									(subHeading: any) =>
+										subHeading.depth === 3 &&
+										headings.indexOf(subHeading) >
+											headings.indexOf(heading),
+								);
+
+								return (
+									<li>
+										<a href={`#${heading.slug}`}>
+											{heading.text}
+										</a>
+
+										{subHeadings.length > 0 && (
+											<ol>
+												{subHeadings.map(
+													(subHeading: any) => {
+														return (
+															<li>
+																<a
+																	href={`#${subHeading.slug}`}
+																>
+																	{
+																		subHeading.text
+																	}
+																</a>
+															</li>
+														);
+													},
+												)}
+											</ol>
+										)}
+									</li>
+								);
+							}
+
+							return null; // Only process h2's if there are no h3's
+						})
 					}
+					<!-- And this block adds a related posts section to the TOC if they exist -->
 					{
 						hasRelatedPosts && (
 							<li>
