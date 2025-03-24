@@ -5,4 +5,9 @@ import { defineConfig } from "astro/config";
 // TODO: update with actual site once deployed
 export default defineConfig({
   site: "https://example.com/",
+  markdown: {
+    shikiConfig: {
+      theme: "none",
+    },
+  },
 });

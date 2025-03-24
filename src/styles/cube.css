@@ -41,6 +41,12 @@
 
 /* Block */
 
+/* Code block styles */
+.astro-code {
+  padding: var(--gutter);
+  border: 0.3ex solid var(--color-less-light);
+}
+
 .border {
   border-block-end: 0.3ex dotted var(--color-less-light);
   &:last-child {

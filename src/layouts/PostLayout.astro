@@ -4,10 +4,12 @@ import { dateFormatter } from "../utils/dateFormatter.mjs";
 
 const { frontmatter, headings } = Astro.props;
 
+// Get all of the posts
 const allPosts = Object.values(
 	import.meta.glob("../pages/writing/*.md", { eager: true }),
 );
 
+// Find all of the posts that have at least one tag in common with the current post
 const allRelatedPosts = allPosts.filter((post: any) => {
 	return (
 		post.frontmatter.title !== frontmatter.title &&
@@ -17,7 +19,11 @@ const allRelatedPosts = allPosts.filter((post: any) => {
 	);
 });
 
+// Only show 3 related posts
 const relatedPosts = allRelatedPosts.slice(0, 3);
+
+// Check if there are related posts so that the section can be appended to the table of contents
+const hasRelatedPosts = relatedPosts.length > 0;
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -27,8 +33,9 @@ const relatedPosts = allRelatedPosts.slice(0, 3);
 				<p>{frontmatter.category}</p>
 				<h1>{frontmatter.title}</h1>
 				<small>
-					<time datetime={frontmatter.pubDate}>{dateFormatter(frontmatter.pubDate)}
-					</time>
+					<time datetime={frontmatter.pubDate}
+						>{dateFormatter(frontmatter.pubDate)}</time
+					>
 				</small>
 			</div>
 			<div>
@@ -47,6 +54,13 @@ const relatedPosts = allRelatedPosts.slice(0, 3);
 							</li>
 						))
 					}
+					{
+						hasRelatedPosts && (
+							<li>
+								<a href="#related-posts">Related posts</a>
+							</li>
+						)
+					}
 				</ol>
 			</nav>
 		</header>
@@ -57,23 +71,25 @@ const relatedPosts = allRelatedPosts.slice(0, 3);
 		</p>
 		<slot />
 		<div class="region prose flow">
-				{
-					relatedPosts.length > 0 ? (
+			{
+				hasRelatedPosts ? (
+					<>
 						<hr />
 						<div class="region prose flow">
-							<h2>Related</h2>
-								<ul>
-									{relatedPosts.map((post: any) => (
-										<li>
-											<a href={post.url}>
-												{post.frontmatter.title}
-											</a>
-										</li>
-									))}
-								</ul>
+							<h2 id="related-posts">Related posts</h2>
+							<ul>
+								{relatedPosts.map((post: any) => (
+									<li>
+										<a href={post.url}>
+											{post.frontmatter.title}
+										</a>
+									</li>
+								))}
+							</ul>
 						</div>
-					) : null
-				}
+					</>
+				) : null
+			}
 			<hr />
 			<div class="region prose flow">
 				<p><a href="/writing/">Back to writing</a></p>
