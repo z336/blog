@@ -59,7 +59,6 @@ ol {
 }
 
 blockquote {
-  background-color: var(--color-yellow);
   padding-inline-start: 1em;
   border-inline-start: 0.3em solid var(--color-less-dark);
   font-size: var(--size-step-1);
@@ -99,6 +98,10 @@ details {
   summary {
     cursor: pointer;
   }
+}
+
+code {
+  font-family: MonoLisa, monospace;
 }
 
 small {

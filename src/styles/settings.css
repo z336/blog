@@ -3,7 +3,7 @@
   --color-less-dark: #54524e;
   --color-light: #fafafa;
   --color-less-light: #c8c8c8;
-  --color-yellow: #ffef99;
+  --color-yellow: #fff2ad;
   --wrapper-max-width: 1680px;
   --gutter: var(--space-s);
   background: var(--color-dark);
@@ -52,4 +52,9 @@
 @font-face {
   font-family: "Alte";
   src: local("Alte"), url("../assets/AlteHaasGroteskBold.ttf");
+}
+
+@font-face {
+  font-family: "MonoLisa";
+  src: local("MonoLisa"), url("../assets/MonoLisa-Regular.woff");
 }
