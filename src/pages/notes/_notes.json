@@ -2,13 +2,13 @@
   {
     "title": "Export a Google Sheet as a minimal HTML table",
     "pubDate": "2025-03-24",
-    "description": "Open a Sheet and add the <code>file_id</code> and <code>gid</code> of a tab to this handy URL: <code>https://docs.google.com/spreadsheets/d/&lt;FILE_ID&gt;/gviz/tq?tqx=out:html&tq&gid=&lt;TAB_GID&gt;</code>",
+    "description": "Save some time when someone hands you a Sheet and asks you to turn it into a doc.",
     "url": "https://stackoverflow.com/questions/27764318/extracting-data-from-google-spreadsheet-into-a-html-table"
   },
   {
     "title": "Set innerHTML in Astro",
     "pubDate": "2025-03-24",
-    "description": "Use <code>set:html</code> to inject an HTML string into an element — for example, I wanted to pass HTML markup in JSON.",
+    "description": "Use <code>set:html</code> to inject an HTML string into an element — for example, I used this to pass HTML markup in JSON.",
     "url": "https://docs.astro.build/en/reference/directives-reference/#sethtml"
   }
 ]
