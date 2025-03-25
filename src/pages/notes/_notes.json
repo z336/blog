@@ -3,7 +3,7 @@
     "title": "Export a Google Sheet as a minimal HTML table",
     "pubDate": "2025-03-24",
     "description": "Save some time when someone hands you a Sheet and asks you to turn it into a doc.",
-    "url": "https://stackoverflow.com/questions/27764318/extracting-data-from-google-spreadsheet-into-a-html-table"
+    "url": "https://stackoverflow.com/a/38648475"
   },
   {
     "title": "Set innerHTML in Astro",
