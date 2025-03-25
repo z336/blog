@@ -3,6 +3,7 @@
   --color-less-dark: #54524e;
   --color-light: #fafafa;
   --color-less-light: #c8c8c8;
+  --color-yellow: #ffef99;
   --wrapper-max-width: 1680px;
   --gutter: var(--space-s);
   background: var(--color-dark);

@@ -29,6 +29,7 @@ h4 {
   font-weight: 800;
   line-height: 1.2;
   text-wrap: balance;
+  letter-spacing: 3px;
 }
 
 h1 {
@@ -62,6 +63,7 @@ ol {
 }
 
 blockquote {
+  background-color: var(--color-yellow);
   padding-inline-start: 1em;
   border-inline-start: 0.3em solid var(--color-less-dark);
   font-size: var(--size-step-1);

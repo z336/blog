@@ -1,26 +1,14 @@
 [
   {
-    "title": "Something I saw today",
-    "pubDate": "2025-01-13",
-    "description": "This is the first thing I saw.",
-    "url": "https://example.com/"
+    "title": "Export a Google Sheet as a minimal HTML table",
+    "pubDate": "2025-03-24",
+    "description": "Open a Sheet and add the <code>file_id</code> and <code>gid</code> of a tab to this handy URL: <code>https://docs.google.com/spreadsheets/d/&lt;FILE_ID&gt;/gviz/tq?tqx=out:html&tq&gid=&lt;TAB_GID&gt;</code>",
+    "url": "https://stackoverflow.com/questions/27764318/extracting-data-from-google-spreadsheet-into-a-html-table"
   },
   {
-    "title": "Another thing I saw today",
-    "pubDate": "2025-01-12",
-    "description": "This is the second thing I saw.",
-    "url": ""
-  },
-  {
-    "title": "One more thing I saw",
-    "pubDate": "2025-01-11",
-    "description": "This is the third thing I saw.",
-    "url": "https://example.com/"
-  },
-  {
-    "title": "Last thing",
-    "pubDate": "2025-01-10",
-    "description": "This is the fourth and final thing.",
-    "url": ""
+    "title": "Set innerHTML in Astro",
+    "pubDate": "2025-03-24",
+    "description": "Use <code>set:html</code> to inject an HTML string into an element — for example, I wanted to pass HTML markup in JSON.",
+    "url": "https://docs.astro.build/en/reference/directives-reference/#sethtml"
   }
 ]

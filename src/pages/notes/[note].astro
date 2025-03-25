@@ -40,7 +40,8 @@ const originalTitle = filteredNotes[0]?.title;
 								{dateFormatter(note.pubDate)}
 							</time>
 						</small>
-						<p>{note.description}</p>
+						{/*set:html allows passing HTML from the JSON string*/}
+						<p set:html={note.description} />
 					</>
 				))
 			}

@@ -28,8 +28,8 @@ const description = "Essays, guides, and generally polished content.";
                 <time datetime={post.frontmatter.pubDate}>
                   {dateFormatter(post.frontmatter.pubDate)}
                 </time>
+                | {post.frontmatter.category}
               </small>
-              | <small>{post.frontmatter.category}</small>
             </div>
           </div>
         </article>

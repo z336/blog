@@ -31,7 +31,8 @@ const description = "Microblogs and today I learned (TIL).";
                   {dateFormatter(note.pubDate)}
                 </time>
               </small>
-              <p>{note.description}</p>
+              {/*set:html allows passing HTML from the JSON string*/}
+              <p set:html={note.description} />
               <p>
                 <a href={`/notes/${permalink}`}>Permalink</a>
               </p>
