@@ -1,17 +1,40 @@
 ---
+import Navigation from "../components/Navigation.astro";
+
 const date = new Date().toLocaleDateString("en-US", {
   year: "numeric",
 });
 ---
 
-<footer class="site-top-and-bottom">
-  <div class="wrapper repel">
-    <p>Site and words by Jon Coleman.</p>
-    <nav aria-label="secondary navigation">
-      <ul>
-        <li><a href="#top">Back to top</a></li>
-        <li><a href="/rss.xml/">RSS</a></li>
-      </ul>
+<footer class="footer">
+  <div class="wrapper region flow">
+    <nav class="grid" aria-label="footer navigation">
+      <div>
+        <h3>Here</h3>
+        <Navigation />
+      </div>
+      <div>
+        <h3>Elsewhere</h3>
+        <ul>
+          <li>
+            Existential Mayonnaise
+            <small>(soon)</small>
+          </li>
+          <li>
+            The Final Void
+            <small>(soon)</small>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3>Meta</h3>
+        <ul>
+          <li><a href="/contact/">Contact</a></li>
+          <li><a href="/rss.xml/">RSS</a></li>
+        </ul>
+      </div>
     </nav>
+    <p>Site and words by Jon Coleman</p>
+    <p><a href="#top">Back to top</a></p>
   </div>
 </footer>

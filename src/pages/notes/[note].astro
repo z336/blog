@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PageHeader from "../../components/PageHeader.astro";
 import data from "./_notes.json";
 import { dateFormatter } from "../../utils/dateFormatter.mjs";
 
@@ -25,12 +24,15 @@ const filteredNotes = notes.filter(
 );
 
 // Extract the original title from the first filtered note (assuming there's only one match)
-const originalTitle = filteredNotes[0]?.title;
+const title = filteredNotes[0]?.title;
 ---
 
-<Layout pageTitle={originalTitle}>
+<Layout pageTitle={title}>
 	<div class="wrapper">
-		<PageHeader heading={originalTitle} />
+		<!-- Making an exception here to NOT use the PageHeader component — it is simpler than writing a bunch of logic just to change the h1 font size on individual Notes. -->
+		<header class="border flow" data-wrapper-type="inner">
+			<h1>{title}</h1>
+		</header>
 		<article class="prose flow" data-wrapper-type="inner">
 			{
 				filteredNotes.map((note) => (

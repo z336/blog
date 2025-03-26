@@ -14,6 +14,17 @@
   --flow-space: 2em;
 }
 
+.grid {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+@supports (width: min(250px, 100%)) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  }
+}
+
 /* Utility */
 
 .wrapper {
@@ -31,21 +42,7 @@
   padding-block: var(--space-s-l);
 }
 
-.repel {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: space-between;
-}
-
 /* Block */
-
-/* Code block styles */
-.astro-code {
-  padding: var(--gutter);
-  border: 0.1ex solid var(--color-less-light);
-}
 
 .border {
   border-block-end: 0.3ex dotted var(--color-less-light);
@@ -56,11 +53,6 @@
   &:first-child:only-child {
     border-block-end: 0.3ex dotted var(--color-less-light);
   }
-}
-
-.card {
-  border: 0.3ex dotted var(--color-less-light);
-  border-radius: 0.69rem;
 }
 
 /* Make h1s huge on pages but not posts */
@@ -88,11 +80,8 @@
 }
 
 /* Use with site header and footer styles */
-.site-top-and-bottom {
-  background: var(--color-dark);
-  color: var(--color-light);
+.header {
   padding-block: var(--gutter);
-  padding-inline: var(--space-3xs-xl);
   ul {
     display: flex;
     flex-direction: row;
@@ -102,11 +91,16 @@
     margin: 0;
     padding: 0;
   }
-  a {
-    &::selection {
-      color: var(--color-dark);
-      background-color: var(--color-light);
-    }
+}
+
+.header,
+.footer {
+  background: var(--color-dark);
+  color: var(--color-light);
+  padding-inline: var(--space-3xs-xl);
+  ::selection {
+    color: var(--color-dark);
+    background-color: var(--color-light);
   }
 }
 

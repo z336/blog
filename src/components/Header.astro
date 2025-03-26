@@ -2,7 +2,11 @@
 import Navigation from "./Navigation.astro";
 ---
 
-<header class="site-top-and-bottom" id="top">
+<header class="header" id="top">
 	<a href="#main" class="skip-link">Skip to content</a>
-	<Navigation />
+	<nav aria-label="main">
+		<div class="wrapper">
+			<Navigation />
+		</div>
+	</nav>
 </header>
