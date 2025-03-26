@@ -3,19 +3,20 @@ import Layout from "../../layouts/Layout.astro";
 import data from "./_notes.json";
 import { dateFormatter } from "../../utils/dateFormatter.mjs";
 
+// Get all of the notes and generate paths based on the title
+
 export async function getStaticPaths() {
 	const allNotes = data;
 
-	// Generate the paths from the `title` of each note
 	const paths = allNotes.map((note) => ({
-		params: { note: note.title.toLowerCase().replace(/\s+/g, "-") }, // Using "note" as the dynamic parameter
+		params: { note: note.title.toLowerCase().replace(/\s+/g, "-") },
 		props: { notes: allNotes },
 	}));
 
 	return paths;
 }
 
-const { note } = Astro.params; // Use "note" as the dynamic parameter
+const { note } = Astro.params;
 const { notes } = Astro.props;
 
 // Find the original note object based on the slug (hyphenated version)
@@ -29,7 +30,6 @@ const title = filteredNotes[0]?.title;
 
 <Layout pageTitle={title}>
 	<div class="wrapper">
-		<!-- Making an exception here to NOT use the PageHeader component — it is simpler than writing a bunch of logic just to change the h1 font size on individual Notes. -->
 		<header class="border flow" data-wrapper-type="inner">
 			<h1>{title}</h1>
 		</header>
@@ -44,6 +44,11 @@ const title = filteredNotes[0]?.title;
 						</small>
 						{/*set:html allows passing HTML from the JSON string*/}
 						<p set:html={note.description} />
+						{note.url && (
+							<p>
+								<a href={note.url}>Link</a>
+							</p>
+						)}
 					</>
 				))
 			}

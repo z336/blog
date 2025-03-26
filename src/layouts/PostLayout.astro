@@ -4,26 +4,29 @@ import { dateFormatter } from "../utils/dateFormatter.mjs";
 
 const { frontmatter, headings } = Astro.props;
 
+// Logic to find and display 3 related posts:
+
 // Get all of the posts
 const allPosts = Object.values(
 	import.meta.glob("../pages/writing/*.md", { eager: true }),
 );
 
-// Find all of the posts that have at least one tag in common with the current post
-const allRelatedPosts = allPosts.filter((post: any) => {
-	return (
-		post.frontmatter.title !== frontmatter.title &&
-		post.frontmatter.tags.some((tag: string) =>
-			frontmatter.tags.includes(tag),
-		)
-	);
-});
-
-// Only show 3 related posts
-const relatedPosts = allRelatedPosts.slice(0, 3);
-
-// Check if there are related posts so that the section can be appended to the table of contents
-const hasRelatedPosts = relatedPosts.length > 0;
+// 1. Filter for posts that have one tag in common with the current post
+// 2. Sort the filtered posts in descending order
+// 3. Only show the 3 most recent related posts
+const relatedPosts = allPosts
+	.filter((post: any) => {
+		return (
+			post.frontmatter.title !== frontmatter.title &&
+			post.frontmatter.tags.some((tag: string) =>
+				frontmatter.tags.includes(tag),
+			)
+		);
+	})
+	.sort((a: any, b: any) => {
+		return b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate);
+	})
+	.slice(0, 3);
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -47,15 +50,15 @@ const hasRelatedPosts = relatedPosts.length > 0;
 			<nav aria-label="article navigation">
 				<p>Table of contents</p>
 				<ol>
-					<!-- This long block checks for h2 and h3 headings. If there are h3's, a nested list is added to the TOC to accommodate, if there aren't, the nested list is ignored. It's only checking up to h3's.  -->
 					{
+						// Find all of the headings and subheadings (h2s and h3s) and display them in a list of links. A nested list is created for h3's.
 						headings.map((heading: any) => {
 							if (heading.depth === 2) {
 								const subHeadings = headings.filter(
 									(subHeading: any) =>
 										subHeading.depth === 3 &&
 										headings.indexOf(subHeading) >
-											headings.indexOf(heading),
+											headings.indexOf(heading), // Check that the h3 comes after the h2 so as to not pull h3s from other sections
 								);
 
 								return (
@@ -64,7 +67,7 @@ const hasRelatedPosts = relatedPosts.length > 0;
 											{heading.text}
 										</a>
 
-										{subHeadings.length > 0 && (
+										{subHeadings.length > 0 && ( // If there are h3s to show, put them in a nested list
 											<ol>
 												{subHeadings.map(
 													(subHeading: any) => {
@@ -87,12 +90,13 @@ const hasRelatedPosts = relatedPosts.length > 0;
 								);
 							}
 
-							return null; // Only process h2's if there are no h3's
+							return null; // Don't make the nested ol if there aren't h3's to show
 						})
 					}
-					<!-- And this block adds a related posts section to the TOC if they exist -->
+
 					{
-						hasRelatedPosts && (
+						// If there are related posts, show a link to the section, otherwise null
+						relatedPosts.length > 0 && (
 							<li>
 								<a href="#related-posts">Related posts</a>
 							</li>
@@ -102,35 +106,30 @@ const hasRelatedPosts = relatedPosts.length > 0;
 			</nav>
 		</header>
 	</div>
-	<article class="wrapper region prose flow">
-		<p class="lede">
-			<em>{frontmatter.description}</em>
-		</p>
-		<slot />
-		<div class="region prose flow">
-			{
-				hasRelatedPosts ? (
-					<>
-						<hr />
-						<div class="region prose flow">
-							<h2 id="related-posts">Related posts</h2>
-							<ul>
-								{relatedPosts.map((post: any) => (
-									<li>
-										<a href={post.url}>
-											{post.frontmatter.title}
-										</a>
-									</li>
-								))}
-							</ul>
-						</div>
-					</>
-				) : null
-			}
-			<hr />
-			<div class="region prose flow">
-				<p><a href="/writing/">Back to writing</a></p>
-			</div>
+	<article class="wrapper prose">
+		<div class="region border flow">
+			<p class="lede">
+				<em>{frontmatter.description}</em>
+			</p>
+			<slot />
+		</div>
+		{
+			// If there are related posts, show this section, otherwise null
+			relatedPosts.length > 0 && (
+				<div class="region border flow">
+					<h2 id="related-posts">Related posts</h2>
+					<ul>
+						{relatedPosts.map((post: any) => (
+							<li>
+								<a href={post.url}>{post.frontmatter.title}</a>
+							</li>
+						))}
+					</ul>
+				</div>
+			)
+		}
+		<div class="region flow">
+			<p><a href="/writing/">Back to writing</a></p>
 		</div>
 	</article>
 </Layout>
