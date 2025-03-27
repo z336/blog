@@ -9,11 +9,11 @@ const date = new Date().toLocaleDateString("en-US", {
 <footer class="footer">
   <div class="wrapper region flow">
     <nav class="grid" aria-label="footer navigation">
-      <div>
+      <div class="flow">
         <h3>Here</h3>
         <Navigation />
       </div>
-      <div>
+      <div class="flow">
         <h3>Elsewhere</h3>
         <ul>
           <li>
@@ -26,11 +26,13 @@ const date = new Date().toLocaleDateString("en-US", {
           </li>
         </ul>
       </div>
-      <div>
+      <div class="flow">
         <h3>Meta</h3>
         <ul>
           <li><a href="/contact/">Contact</a></li>
-          <li><a href="/rss.xml/">RSS</a></li>
+          <li><a href="/rss-writing.xml/">RSS - Writing</a></li><li>
+            <a href="/rss-notes.xml/">RSS - Notes</a>
+          </li>
         </ul>
       </div>
     </nav>

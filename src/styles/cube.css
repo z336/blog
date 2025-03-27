@@ -98,6 +98,10 @@
   background: var(--color-dark);
   color: var(--color-light);
   padding-inline: var(--space-3xs-xl);
+  ul {
+    list-style: none;
+    padding: 0;
+  }
   ::selection {
     color: var(--color-dark);
     background-color: var(--color-light);

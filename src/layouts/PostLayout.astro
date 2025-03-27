@@ -11,9 +11,9 @@ const allPosts = Object.values(
 	import.meta.glob("../pages/writing/*.md", { eager: true }),
 );
 
-// 1. Filter for posts that have one tag in common with the current post
-// 2. Sort the filtered posts in descending order
-// 3. Only show the 3 most recent related posts
+// 1. Filter for posts that have one tag in common with the current post, excluding the current post
+// 2. Sort the filtered posts in descending order by pubDate
+// 3. Only keep the 3 most recent posts
 const relatedPosts = allPosts
 	.filter((post: any) => {
 		return (

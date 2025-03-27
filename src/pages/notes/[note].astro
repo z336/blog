@@ -34,23 +34,23 @@ const url = filteredNotes[0]?.url;
 <Layout pageTitle={title}>
   <div class="wrapper">
     <header class="border flow" data-wrapper-type="inner">
-      {
-        url ? (
-          <h1>
-            <a href={url}>{title}</a>
-          </h1>
-        ) : (
-          <h1>{title}</h1>
-        )
-      }
+      <h1>{title}</h1>
     </header>
     <article>
-      <div class="border region flow" data-wrapper-type="inner">
+      <div class="border region prose flow" data-wrapper-type="inner">
         <small>
           <time datetime={pubDate}>{dateFormatter(pubDate)}</time>
         </small>
-        {/*set:html allows passing HTML from the JSON string*/}
+        {/* set:html allows passing HTML from the JSON string */}
         <p set:html={description} />
+        {
+          /* Only show external link if it exists in the JSON file */
+          url && (
+            <p>
+              <a href={url}>{url}</a>
+            </p>
+          )
+        }
       </div>
       <div class="region flow" data-wrapper-type="inner">
         <p><a href="/notes/">Back to the notes</a></p>

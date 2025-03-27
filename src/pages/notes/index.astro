@@ -15,27 +15,30 @@ const description = "Microblogs and today I learned (TIL).";
     <PageHeader heading={heading} description={description} />
     {
       data.map((note) => {
-        const permalink = slugGenerator(note.title);
+        const slug = slugGenerator(note.title);
         return (
           <article class="border" aria-label="note" data-wrapper-type="inner">
             <div class="prose flow">
-              {note.url ? (
-                <h2>
-                  <a href={note.url}>{note.title}</a>
-                </h2>
-              ) : (
-                <h2>{note.title}</h2>
-              )}
-              <small>
-                <time datetime={note.pubDate}>
-                  {dateFormatter(note.pubDate)}
-                </time>
-              </small>
+              <h2>
+                <a href={`/notes/${slug}`}>{note.title}</a>
+              </h2>
+              <div>
+                <small>
+                  <time datetime={note.pubDate}>
+                    {dateFormatter(note.pubDate)}
+                  </time>
+                </small>
+              </div>
               {/*set:html allows passing HTML from the JSON string*/}
               <p set:html={note.description} />
-              <p>
-                <a href={`/notes/${permalink}`}>Permalink</a>
-              </p>
+              {
+                /* Only show external link if it exists in the JSON file */
+                note.url && (
+                  <p>
+                    <a href={note.url}>{note.url}</a>
+                  </p>
+                )
+              }
             </div>
           </article>
         );

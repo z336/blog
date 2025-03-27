@@ -7,7 +7,7 @@ export async function GET(context) {
 
   return rss({
     title: "Jon Coleman",
-    description: "My digital garden",
+    description: "Writing",
     site: context.site,
     items: await Promise.all(
       posts.map(async (post) => ({
