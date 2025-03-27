@@ -51,38 +51,45 @@ const relatedPosts = allPosts
 				<p>Table of contents</p>
 				<ol>
 					{
-						// Find all of the headings and subheadings (h2s and h3s) and display them in a list of links. A nested list is created for h3's.
-						headings.map((heading: any) => {
+						// Map headings
+						headings.map((heading: any, index: number) => {
+							// Only process h2 headings
 							if (heading.depth === 2) {
-								const subHeadings = headings.filter(
-									(subHeading: any) =>
-										subHeading.depth === 3 &&
-										headings.indexOf(subHeading) >
-											headings.indexOf(heading), // Check that the h3 comes after the h2 so as to not pull h3s from other sections
-								);
+								// Find all h3 headings that come after the current h2
+								let subHeadings: any[] = [];
+								for (
+									let i = index + 1;
+									i < headings.length;
+									i++
+								) {
+									const subHeading = headings[i];
+									// Stop getting h3s when another h2 is found
+									if (subHeading.depth === 2) break;
+									if (subHeading.depth === 3)
+										subHeadings.push(subHeading);
+								}
 
+								// Only show a nested list if there are h3 subheadings
 								return (
 									<li>
 										<a href={`#${heading.slug}`}>
 											{heading.text}
 										</a>
 
-										{subHeadings.length > 0 && ( // If there are h3s to show, put them in a nested list
+										{subHeadings.length > 0 && (
 											<ol>
 												{subHeadings.map(
-													(subHeading: any) => {
-														return (
-															<li>
-																<a
-																	href={`#${subHeading.slug}`}
-																>
-																	{
-																		subHeading.text
-																	}
-																</a>
-															</li>
-														);
-													},
+													(subHeading: any) => (
+														<li>
+															<a
+																href={`#${subHeading.slug}`}
+															>
+																{
+																	subHeading.text
+																}
+															</a>
+														</li>
+													),
 												)}
 											</ol>
 										)}
@@ -90,12 +97,12 @@ const relatedPosts = allPosts
 								);
 							}
 
-							return null; // Don't make the nested ol if there aren't h3's to show
+							return null;
 						})
 					}
 
 					{
-						// If there are related posts, show a link to the section, otherwise null
+						// Show a link to related posts if there are any
 						relatedPosts.length > 0 && (
 							<li>
 								<a href="#related-posts">Related posts</a>
@@ -114,7 +121,7 @@ const relatedPosts = allPosts
 			<slot />
 		</div>
 		{
-			// If there are related posts, show this section, otherwise null
+			// Show related posts if there are any
 			relatedPosts.length > 0 && (
 				<div class="region border flow">
 					<h2 id="related-posts">Related posts</h2>

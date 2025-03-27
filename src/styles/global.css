@@ -116,6 +116,28 @@ small {
   color: var(--color-less-dark);
 }
 
+/* Required for accessibility according to Mozilla 
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del#accessibility */
+
+del::before,
+del::after {
+  clip-path: inset(100%);
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+del::before {
+  content: " [deletion start] ";
+}
+
+del::after {
+  content: " [deletion end] ";
+}
+
 ::selection {
   color: var(--color-light);
   background-color: var(--color-dark);
