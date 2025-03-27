@@ -16,7 +16,7 @@ export async function GET({ site }) {
       pubDate: new Date(note.pubDate),
       description: note.description,
       content:
-        note.description + `<p><a href="' + note.url + '">${note.url}</a></p>`, // Append external URL in the description,
+        note.description + `<p><a href="${note.url}">${note.url}</a></p>`, // Append external URL in the description,
     };
   });
 
