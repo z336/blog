@@ -3,30 +3,6 @@ import Layout from "./Layout.astro";
 import { dateFormatter } from "../utils/dateFormatter.mjs";
 
 const { frontmatter, headings } = Astro.props;
-
-// Logic to find and display 3 related posts:
-
-// Get all of the posts
-const allPosts = Object.values(
-	import.meta.glob("../pages/writing/*.md", { eager: true }),
-);
-
-// 1. Filter for posts that have one tag in common with the current post, excluding the current post
-// 2. Sort the filtered posts in descending order by pubDate
-// 3. Only keep the 3 most recent posts
-const relatedPosts = allPosts
-	.filter((post: any) => {
-		return (
-			post.frontmatter.title !== frontmatter.title &&
-			post.frontmatter.tags.some((tag: string) =>
-				frontmatter.tags.includes(tag),
-			)
-		);
-	})
-	.sort((a: any, b: any) => {
-		return b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate);
-	})
-	.slice(0, 3);
 ---
 
 <Layout pageTitle={frontmatter.title}>
@@ -51,63 +27,17 @@ const relatedPosts = allPosts
 				<p>Table of contents</p>
 				<ol>
 					{
-						// Map headings
-						headings.map((heading: any, index: number) => {
-							// Only process h2 headings
-							if (heading.depth === 2) {
-								// Find all h3 headings that come after the current h2
-								let subHeadings: any[] = [];
-								for (
-									let i = index + 1;
-									i < headings.length;
-									i++
-								) {
-									const subHeading = headings[i];
-									// Stop getting h3s when another h2 is found
-									if (subHeading.depth === 2) break;
-									if (subHeading.depth === 3)
-										subHeadings.push(subHeading);
-								}
-
-								// Only show a nested list if there are h3 subheadings
+						/* Check the h2s in the article and list them as links */
+						headings.map((heading: any) => {
+							if (heading.depth === 2)
 								return (
 									<li>
 										<a href={`#${heading.slug}`}>
 											{heading.text}
 										</a>
-
-										{subHeadings.length > 0 && (
-											<ol>
-												{subHeadings.map(
-													(subHeading: any) => (
-														<li>
-															<a
-																href={`#${subHeading.slug}`}
-															>
-																{
-																	subHeading.text
-																}
-															</a>
-														</li>
-													),
-												)}
-											</ol>
-										)}
 									</li>
 								);
-							}
-
-							return null;
 						})
-					}
-
-					{
-						// Show a link to related posts if there are any
-						relatedPosts.length > 0 && (
-							<li>
-								<a href="#related-posts">Related posts</a>
-							</li>
-						)
 					}
 				</ol>
 			</nav>
@@ -120,21 +50,6 @@ const relatedPosts = allPosts
 			</p>
 			<slot />
 		</div>
-		{
-			// Show related posts if there are any
-			relatedPosts.length > 0 && (
-				<div class="region border flow">
-					<h2 id="related-posts">Related posts</h2>
-					<ul>
-						{relatedPosts.map((post: any) => (
-							<li>
-								<a href={post.url}>{post.frontmatter.title}</a>
-							</li>
-						))}
-					</ul>
-				</div>
-			)
-		}
 		<div class="region flow">
 			<p><a href="/writing/">Back to writing</a></p>
 		</div>
