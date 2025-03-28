@@ -106,6 +106,10 @@
     color: var(--color-dark);
     background-color: var(--color-light);
   }
+  /* Use the light svg for the footer */
+  a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
+    background-image: url("/external-link-inverse.svg");
+  }
 }
 
 /* Use with article header */
