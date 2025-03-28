@@ -4,14 +4,14 @@ import PageHeader from "../components/PageHeader.astro";
 
 const pageTitle = "404";
 const heading = "Page not found";
-const description = "Mistyped address?"
+const description = "Mistyped address?";
 ---
 
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} description={description} />
-		<div class="prose flow" data-wrapper-type="inner">
+		<article class="prose flow" data-wrapper-type="inner">
 			<p>Here is the <a href="/">home page</a>.</p>
-		</div>
+		</article>
 	</div>
 </Layout>
