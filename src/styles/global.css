@@ -72,7 +72,7 @@ a {
   color: currentColor;
   text-decoration-thickness: 0.2ex;
   text-underline-offset: 0.3ex;
-  max-width: 20ch;
+  word-wrap: break-word;
   &:hover {
     text-underline-offset: 0.5ex;
   }
