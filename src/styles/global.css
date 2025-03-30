@@ -1,7 +1,3 @@
-:root {
-  background-color: var(--color-dark);
-}
-
 body {
   background: var(--color-light);
   color: var(--color-dark);
