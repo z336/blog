@@ -6,11 +6,11 @@
 
 .lede {
   font-family: MonoLisa, monospace;
-  text-wrap: balance;
+  /*  font-size: var(--size-step-1);*/
 }
 
 .lede + * {
-  --flow-space: 3em;
+  --flow-space: 2em;
 }
 
 .grid {

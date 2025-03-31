@@ -17,6 +17,10 @@ main {
   }
 }
 
+header p {
+  color: var(--color-less-dark);
+}
+
 h1,
 h2,
 h3,

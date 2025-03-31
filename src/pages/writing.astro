@@ -10,6 +10,7 @@ const allPosts = Object.values(
 const sortedPosts = allPosts.sort((a: any, b: any) => {
   return b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate);
 });
+
 const pageTitle = "Writing";
 const heading = "Writing";
 const description = "Essays, guides, and generally polished content.";
