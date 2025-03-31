@@ -102,13 +102,12 @@ details {
 
 pre {
   padding: var(--gutter);
-  border: 0.1ex solid var(--color-less-light);
-  background-color: var(--color-yellow);
+  background-color: var(--color-less-light);
 }
 
 code {
   font-family: MonoLisa, monospace;
-  background-color: var(--color-yellow);
+  background-color: var(--color-less-light);
 }
 
 small {
