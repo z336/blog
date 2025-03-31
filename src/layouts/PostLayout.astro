@@ -45,9 +45,12 @@ const { frontmatter, headings } = Astro.props;
 	</div>
 	<article class="wrapper prose">
 		<div class="region border flow">
-			<p class="lede">
-				<em>{frontmatter.description}</em>
-			</p>
+			{
+				/* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. set:html so HTML elements can be passed. */
+				frontmatter.lede && (
+					<p set:html={frontmatter.lede} class="lede" />
+				)
+			}
 			<slot />
 		</div>
 		<div class="region flow">

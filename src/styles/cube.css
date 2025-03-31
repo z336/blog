@@ -5,13 +5,12 @@
 }
 
 .lede {
-  font-size: var(--size-step-1);
-  max-width: 50ch;
+  font-family: MonoLisa, monospace;
   text-wrap: balance;
 }
 
 .lede + * {
-  --flow-space: 2em;
+  --flow-space: 3em;
 }
 
 .grid {
