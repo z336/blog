@@ -41,20 +41,20 @@ const { frontmatter, headings } = Astro.props;
 					}
 				</ol>
 			</nav>
-		</header>
+		</header>	
+		<article class="wrapper prose" data-wrapper-type="inner">
+			<div class="region border flow">
+				{
+					/* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. set:html so HTML elements can be passed. */
+					frontmatter.lede && (
+						<p set:html={frontmatter.lede} class="lede" />
+					)
+				}
+				<slot />
+			</div>
+			<div class="region flow">
+				<p><a href="/writing/">Back to writing</a></p>
+			</div>
+		</article>
 	</div>
-	<article class="wrapper prose">
-		<div class="region border flow">
-			{
-				/* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. set:html so HTML elements can be passed. */
-				frontmatter.lede && (
-					<p set:html={frontmatter.lede} class="lede" />
-				)
-			}
-			<slot />
-		</div>
-		<div class="region flow">
-			<p><a href="/writing/">Back to writing</a></p>
-		</div>
-	</article>
 </Layout>
