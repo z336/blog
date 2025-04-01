@@ -31,7 +31,6 @@
 
 .lede {
   font-family: MonoLisa, monospace;
-  font-size: var(--size-step-1);
 }
 
 .lede + * {
