@@ -1,27 +1,41 @@
 /* Composition */
 
+/* Use with article header */
+.article-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 48rem) {
+  .article-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
 .flow > * + * {
   margin-block-start: var(--flow-space, 1em);
 }
 
-.lede {
-  font-family: MonoLisa, monospace;
-  /*  font-size: var(--size-step-1);*/
-}
-
-.lede + * {
-  --flow-space: 2em;
-}
-
-.grid {
+.footer-grid {
   display: grid;
   grid-gap: 1rem;
 }
 
 @supports (width: min(250px, 100%)) {
-  .grid {
+  .footer-grid {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
+}
+
+.lede {
+  font-family: MonoLisa, monospace;
+  font-size: var(--size-step-1);
+}
+
+.lede + * {
+  --flow-space: 2em;
 }
 
 /* Utility */
@@ -109,23 +123,6 @@
   a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
     background-image: url("/external-link-inverse.svg");
   }
-}
-
-/* Use with article header */
-.switcher {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--gutter);
-}
-
-.switcher > * {
-  flex-grow: 1;
-  flex-basis: calc((38rem - 100%) * 999);
-}
-
-.switcher > :nth-last-child(n + 4),
-.switcher > :nth-last-child(n + 4) ~ * {
-  flex-basis: 100%;
 }
 
 /* Exception */

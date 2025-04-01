@@ -34,7 +34,7 @@ h4 {
 
 h1 {
   font-size: var(--size-step-3);
-  max-width: 20ch;
+  /*  max-width: 20ch;*/
 }
 
 h2 {
