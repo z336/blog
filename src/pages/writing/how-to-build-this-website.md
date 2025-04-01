@@ -12,7 +12,7 @@ I love building websites. I spent some time working as a front-end developer bef
 
 I approach documentation from an almost visual point of view. A help article (web page) is a bunch of boxes and landmarks with a lot of words and details placed in between. If a help article is poorly presented and not accessible for everyone, it doesn't matter what you write — your audience's understanding will suffer.
 
-With all that said, let's take a look at how I built this website:
+With all that said, let's take a look at how to build this website:
 
 ## Set goals for the project
 
