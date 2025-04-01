@@ -12,7 +12,7 @@ I love building websites. I spent some time working as a front end developer bef
 
 With all that said, let's talk about my goals, tools, and design choices that went into building this website:
 
-## Set some goals
+## Set the goals for the site
 
 I had some straight forward goals for building this site:
 
@@ -32,7 +32,7 @@ I choose my tools based on a variety of reasons, and sometimes those reasons do 
 
 At the time of writing, I work on a Mac. With each passing day I dream of going full Linux in an effort to decouple myself from large corporations and further alienate myself from everyone else (kidding on that last one, _kinda_).
 
-## Design the site
+## Design
 
 I like to think I have an eye for design but I am not a designer. So step 0 for me is to shop around for inspiration. It's probably step 0 for a lot of folks, but it's very important for me. I can humbly submit that these sites are excellent and they heavily inspired what I wanted to do here:
 
