@@ -13,6 +13,7 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#2a2722" />
+    <title>{pageTitle} | Jon Coleman</title>
     <link
       rel="preload"
       href="/AUTHENTICSans-90.woff"
@@ -31,7 +32,6 @@ const { pageTitle } = Astro.props;
       as="font"
       crossorigin="anonymous"
     />
-    <title>{pageTitle} | Jon Coleman</title>
   </head>
   <body>
     <Header />

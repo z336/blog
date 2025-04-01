@@ -8,49 +8,46 @@ description: "Set goals, choose tools, design, and build the site."
 lede: "<em>This is an opinionated, conversational, how-to guide for building this website. You're more than welcome to disagree with any of this — my ideas were influenced by experiences that may not overlap with yours!</em>"
 ---
 
-I love building websites. I spent some time working as a front end developer before settling in to technical writing as my career. My experience working on the front end still shapes my opinions and understanding for everything else that I do. I approach documentation from an almost visual point of view — a help article (web page) is a bunch of boxes, landmarks, images, and colors with a lot of words and details placed in between. If a help article is poorly presented and not accessible for everyone, the audience's understanding will suffer.
+I love building websites. I spent some time working as a front end developer before settling in to technical writing. My experience working on the front end still shapes my opinions and understanding for everything that I do. I approach documentation from an almost visual point of view. A help article (web page) is a bunch of boxes and landmarks with a lot of words and details placed in between. If a help article is poorly presented and not accessible for everyone, it doesn't matter what you write — the audience's understanding will suffer.
 
-With all that said, let's talk about my goals, tools, and design choices that went into building this website:
+With all that said, let's take a look at how I built this website:
 
-## Set the goals for the site
+## Set goals for the project
 
-I had some straight forward goals for building this site:
+Before I did anything, I wrote down my goals:
 
 - The site should be as accessible for everyone as I can possibly make it.
-- The site should be stylish — sometimes I begin with aesthetics and work my way backwards toward functionality (shrug).
-- I want to tend a digital garden that I can maintain for a long time — I love looking at blogs that were obviously created in like 1999 and have been lovingly updated through the years.
+- The site should be stylish — sometimes I begin with aesthetics and work my way backwards toward functionality.
+- I want a space that I can maintain for a long time — I love looking at blogs that were obviously created many years ago and have been lovingly updated over the years.
 
-## Choose the tools
+## Choose the (right?) tools
 
-I choose my tools based on a variety of reasons, and sometimes those reasons do not include "because it's the best." I use some tools because they are more data privacy focused, or I happen to like them, or I'm just used to them. All that said, here are my tools:
+I choose my tools for a variety of reasons, and sometimes those reasons do not include "because it's the best." I make choices based on data privacy concerns, or I happen to like the tool, or I'm already confident using tool. Let's take a look:
 
-1. [Sublime Text](https://www.sublimetext.com/): I started out using Sublime Text because it was the best text editor of its day (I missed out on being a Notepad ++ maniac). After many years of favoring Visual Studio Code, I'm trying to quit. VS Code is robust but bloated, and I'm just so tired of Microsoft. It might take some hacking around and the ecosystem is not as robust, but Sublime Text is still one svelte editor.
-2. [Obsidian](https://obsidian.md/): I use Obsidian for lots of things, but it's nice for authoring Markdown content for a site. If I work entirely in a traditional text editor, I may wander off and start refactoring code instead of creating copy.
-3. [Hyper](https://hyper.is/): It looks good and works great for me. You should enjoy the square you stare at for many hours a day.
-4. [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): I'm kind of a Firefox lifer, even though they seem to be selling out at the time of writing. I'm not even sure what the Developer Edition offers beyond the standard edition at this point, but the developer tools are top notch. And they let me continue to use [uBlock Origin](https://ublockorigin.com/).
-5. [Astro](https://www.astro.build/): A flexible JavaScript framework for building websites. It feels familiar if you have ever built anything with React, but unlike React, it does not ship any JavaScript to the client unless you intentionally add it. This is great for speed and accessibility!
+1. [Sublime Text](https://www.sublimetext.com/): I started using Sublime Text years ago because it was recommended. Then I switched to Visual Studio Code because it is "the best." Now I'm back to Sublime Text. VS Code is robust but bloated, and I'm just so tired of Microsoft tracking everything I do. It might take some hacking and the ecosystem is not as robust, but Sublime Text is still one svelte editor.
+2. [Hyper](https://hyper.is/): You should enjoy the square you stare at for many hours a day.
+3. [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): I'm kind of a Firefox lifer, even though they seem to be selling out at the time of writing. The developer tools are top notch and they let me continue to use [uBlock Origin](https://ublockorigin.com/).
+4. [Astro](https://www.astro.build/): It feels familiar if you have ever built anything with React, but unlike React, it does not ship any JavaScript to the client unless you intentionally add it. This is great for speed and accessibility!
 
-At the time of writing, I work on a Mac. With each passing day I dream of going full Linux in an effort to decouple myself from large corporations and further alienate myself from everyone else (kidding on that last one, _kinda_).
+## Design in HTML and CSS
 
-## Design
-
-I like to think I have an eye for design but I am not a designer. So step 0 for me is to shop around for inspiration. It's probably step 0 for a lot of folks, but it's very important for me. I can humbly submit that these sites are excellent and they heavily inspired what I wanted to do here:
+I like to think I have an eye for design but I am not a designer. So step 0 for me is to shop around for inspiration and see if I can use it to create something new. These sites look great and maybe obviously inspired what I've got here:
 
 - [HeydonWorks](https://heydonworks.com/)
 - [Henry from Online](https://henry.codes/)
 - [MAXIMUM ROCKNROLL](https://www.maximumrocknroll.com/)
 
-I typically design my projects with a text editor and a browser because this is where I feel the most confident. Designing this way has the following side-effects:
+With some ideas in mind, I designed this site with a text editor and a browser. I design most of my projects like this because it is where I feel the most confident. Designing this way has the following side-effects:
 
-1. I can write semantic HTML without any distractions — I'm not worried about how a framework handles something or how I'm going to break things out into reusable components — I'm worried about making sure I'm designing to put independent, self-contained content in an <code>&lt;article&gt;</code>.
-2. I can write most of my base styles, do some basic layout work, and generally knock out the CSS for how I want the site to look.
-3. I don't have to translate designs to code. I know that this process is better and better, eh.
+1. I can write semantic HTML without any distractions — let's worry about what a framework wants later.
+2. I can write pretty much all of my CSS, though surprises and changes are inevitable.
+3. I don't have to translate designs to code.
 
-This method is not foolproof! Without fail, I always have much more to work out when I move to the actual project than I probably would with full prototypes. Also, if I were building websites _for a living_, I would absolutely invest in more design skills. But this works for my small projects.
+This method is not foolproof! Without fail, I always have more to work out when I move to the framework than I probably would using traditional design methods. Also, if I were building websites _for a living_, I would simply invest in more design skills. But this works for my small projects.
 
 ## Create the project
 
-At this point, I'm ready to create the project. Astro has a [great tutorial](https://docs.astro.build/en/tutorial/0-introduction/) you can follow for exact steps, but here is the path I took:
+With goals and designs in hand, I created the project in Astro. Check out this [tutorial](https://docs.astro.build/en/tutorial/0-introduction/) for exact steps, but here are my steps:
 
 1. Run the setup wizard
 2. Create pages, layouts, and components
@@ -70,13 +67,12 @@ Astro also supports <code>pnpm</code> and <code>Yarn</code>, so knock yourself o
 
 ### Create pages, layouts, and components
 
-I created the directories and files for the content I intended to have on the site. Here is a simplified version of the directories:
+I created the directories and files for the content. Here is a simplified version of the directories:
 
 ```plaintext
 /
 ├── public/
 └── src/
-    ├── assets/
     ├── components/
     ├── layouts/
     └── pages/
@@ -87,19 +83,18 @@ I created the directories and files for the content I intended to have on the si
     └── utils/
 ```
 
-Note that there are many other files and folders up and down the tree, but generally these are what I worked with. Some of these are absolutely required and some are used out of convention. See [Project structure](https://docs.astro.build/en/basics/project-structure/) for Astro's more detailed explanation of these folders from their perspective. Here's what I use these for:
+Note that there are many other files and folders up and down the tree, but generally these are what I worked with. Some of these are absolutely required and some are used out of convention. See [Project structure](https://docs.astro.build/en/basics/project-structure/) for a more detailed explanation. Here's what I use these for:
 
-- <code>public/</code>: Unprocessed files and assets, such as <code>favicon.svg</code>.
-- <code>src/assets/</code>: _Processed_ files and assets, such as the font files.
-- <code>src/components/</code>: Reusable pieces of code, such as a <code>&lt;Header /&gt;</code>, I want to use in many places. This is a familiar concept if you have worked with React.
+- <code>public/</code>: Unprocessed files and assets, such as <code>favicon.svg</code> and font files.
+- <code>src/components/</code>: Reusable pieces of code I want to use in many places. This is a familiar concept if you have worked with React.
 - <code>src/layouts/</code>: Reusable layouts. I have two — a layout for all of my pages and a layout that extends the base layout for blog posts.
-- <code>/src/pages/</code>: All of my pages and blog posts are here. I keep links and notes in JSON files next to page and update those to add more content.
-- <code>/src/styles/</code>: CSS all lives here. I go into detail about how I style my sites below.
-- <code>/src/utils/</code>: Any reusable functions I might need throughout the site go here. For example, I have a function to format dates and a function that generates slugs from strings.
+- <code>/src/pages/</code>: All of my pages and blog posts are here. I keep links and notes in JSON files next to their respective pages.
+- <code>/src/styles/</code>: CSS lives here. I go into detail about how I style my sites below.
+- <code>/src/utils/</code>: Reusable utility functions go here. For example, I have a function to format dates and a function that generates slugs from strings.
 
 ### Add styles
 
-Now that I have directories and some basic pages created in the project, it's time to style the site. Where I begin the style work can vary in practice sometimes, because I find it difficult to add functionality or copy without _some_ idea for how the site will look — so this isn't always a straight line to the finish.
+Now that I had directories and some basic pages created in the project, it was time to style the site. Where I begin the style work can vary in practice sometimes, because I find it difficult to add functionality or copy without _some_ idea for how the site will look — so this isn't always a straight line to the finish.
 
 I may write a dedicated CSS post in the future because it's where I feel I have the most to say. For now, here is the file tree:
 
@@ -113,13 +108,13 @@ src/
     └── styles.css
 ```
 
-- <code>cube.css</code>: The specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/).
-- <code>global.css</code>: Styles applied primarily to _element selectors_ such as <code>&lt;p&gt;</code> — I want these styles to apply a the top level and be used everywhere.
+- <code>cube.css</code>: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/).
+- <code>global.css</code>: Styles applied primarily to _element selectors_ such as <code>&lt;p&gt;</code> — I want these styles to apply a the top level and be used everywhere. You know, like a <em>cascade</em>.
 - <code>reset.css</code>: A CSS reset using Andy Bell's [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/).
-- <code>settings.css</code>: This is where I create CSS variables and apply them to <code>:root</code>.
+- <code>settings.css</code>: CSS variables applied to <code>:root</code>. Think
 - <code>styles.css</code>: And finally, this is where I import all of the other CSS files. This is the file I add to the <code>&lt;head&gt;</code>.
 
-I import all of these files in <code>styles.css</code> in a specific order:
+I imported all of these files into <code>styles.css</code> in a specific order:
 
 ```css
 @import url("reset.css");
@@ -128,10 +123,10 @@ I import all of these files in <code>styles.css</code> in a specific order:
 @import url("cube.css");
 ```
 
-I want to work with CSS and utilize its best skill: the cascade. So what I'm saying with the import is to apply the reset, add the settings (variables) the other files will use, apply element selector styles, and then finally all of the specific CUBE styles. This way, if there is a slow connection, the styles are applied in the preferred order.
+I want to use the best CSS feature: the cascade. So this import order applies the reset, adds the settings (variables) the other files will use, applies universal element selector styles, and then adds all of the specific CUBE styles. This way, the styles are applied in the preferred order to the document.
 
-Note that you can apply CSS in an Astro project in seemingly limitless ways, including using SASS. I still love SASS but I never used any of the more complicated features, so vanilla CSS is often good enough for me these days.
+Note that you can apply CSS in an Astro project in many ways, including using SASS, CSS-in-JS solutions (gross), etc. I love SASS but vanilla CSS is so good these days I wanted to give it a try.
 
 ## Deploy
 
-A website is maybe never complete for me, but at some point I decided to deploy the site out of GitHub using Netlify. Since this is a digital garden, I may update this post, change the styles, move content around, etc. But for now, this is about as done as it gets!
+A website is never complete, but at some point I decided to deploy the site out of GitHub using Netlify. Since this is a digital garden, I may update this post, change the styles, move content around, etc. But for now, this is about as done as it gets.
