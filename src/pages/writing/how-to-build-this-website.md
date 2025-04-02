@@ -5,7 +5,7 @@ pubDate: 2025-04-01
 update: 2025-04-02
 category: "How-to"
 tags: ["HTML", "CSS", "Accessibility"]
-description: "A limited and opinionated chat about the broad strokes."
+description: "A limited and opinionated guide."
 lede: "This is an opinionated and conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts."
 ---
 
