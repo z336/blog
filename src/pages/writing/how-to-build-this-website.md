@@ -53,9 +53,9 @@ This method is not foolproof! Without fail, I always have more to figure out whe
 
 Check out this [tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to build your own Astro blog. Below are the broad strokes for my own process:
 
-1. Run the setup wizard
-2. Create pages, layouts, and components
-3. Add styles
+1. [Run the setup wizard](#run-the-setup-wizard)
+2. [Create pages, layouts, and components](#create-pages-layouts-and-components)
+3. [Add styles](#add-styles)
 
 Let's break these down:
 
