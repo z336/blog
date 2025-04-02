@@ -135,6 +135,6 @@ I want to use the [CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS
 
 Note that you can apply CSS in an Astro project in many ways, including using SASS, CSS-in-JS solutions (gross), etc. I love SASS but vanilla CSS is so good these days.
 
-## Deploy
+## Deploy the site
 
 A website is never complete, but at some point I [deploy the site from GitHub using Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/).
