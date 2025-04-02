@@ -1,5 +1,11 @@
 [
   {
+    "title": "Docs and AI",
+    "pubDate": "2025-04-02",
+    "description": "&ldquo;Augmentation? Yes. Substitution? Not gonna happen&rdquo;",
+    "url": "https://passo.uno/whats-wrong-ai-generated-docs/"
+  },
+  {
     "title": "Reconsidering setting a base font size",
     "pubDate": "2025-03-31",
     "description": "This post is challenging what I thought I knew about fluid typography.",
