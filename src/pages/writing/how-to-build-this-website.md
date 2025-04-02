@@ -5,8 +5,8 @@ pubDate: 2025-04-01
 update: 2025-04-02
 category: "How-to"
 tags: ["HTML", "CSS", "Accessibility"]
-description: "A limited and opinionated guide."
-lede: "This is an opinionated and conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts."
+description: "A limited and subjective guide."
+lede: "This is a conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts. Feel free to disagree with any of this — my opinions may not overlap with yours!"
 ---
 
 I love building websites. I spent some time working as a front-end developer before settling in to technical writing. My experience working on the front end still shapes my opinions and understanding of everything that I do.
