@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/PostLayout.astro
 title: "How to build this website"
-pubDate: 2025-03-30
+pubDate: 2025-04-01
 category: "How-to"
 tags: ["HTML", "CSS", "Accessibility"]
 description: "Set goals, choose tools, design, and build the site."
@@ -30,12 +30,12 @@ Here are the tools I use often:
 
 1. [Sublime Text](https://www.sublimetext.com/): I'm back on my Sublime Text bullshit after years of Visual Studio Code. VS Code is robust, but bloated, and I'm tired of Microsoft tracking everything I do. It might require some hacking here and there but Sublime Text is still one sharp editor.
 2. [Hyper](https://hyper.is/): You should enjoy the terminal you stare at for many hours a day.
-3. [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): I'm kind of a Firefox lifer, even though they seem to be selling out at the time of writing. The developer tools are top notch and they still let use [uBlock Origin](https://ublockorigin.com/).
+3. [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): I'm kind of a Firefox lifer, even though they seem to be selling out at the time of writing. The developer tools are top notch and they still let me use [uBlock Origin](https://ublockorigin.com/).
 4. [Astro](https://www.astro.build/): It feels familiar if you have ever built anything with React, but unlike React, it does not ship any JavaScript to the client unless you intentionally add it.
 
 ## Design in HTML and CSS
 
-I like to think I have an eye for design but I am not a designer. So step 0 is to shop around for inspiration and see if it can inspre me to create something new. These sites look great and (perhaps obviously) inspire the design here on my own site:
+I like to think I have an eye for design but I am not a designer. So step 0 is to shop around for inspiration and see if it can help me to create something new. These sites look great and (perhaps obviously) inspire the design here on my own site:
 
 - [HeydonWorks](https://heydonworks.com/)
 - [Henry from Online](https://henry.codes/)
