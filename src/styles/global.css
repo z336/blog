@@ -83,7 +83,9 @@ a {
 }
 
 /* Append any external links with an icon that indicates you're leaving the site */
-a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
+a:not([href*="joncoleman.me/"]):not([href^="mailto:"]):not([href^="#"]):not(
+    [href^="/"]
+  ):after {
   display: inline-block;
   width: 1.25em;
   height: 1em;
