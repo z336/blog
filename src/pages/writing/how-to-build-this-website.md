@@ -87,7 +87,7 @@ I create the directories and files for the content. Here is a simplified version
     └── utils/
 ```
 
-Note that there are many other files and folders up and down the tree, but generally these are what I work with. Some of these are absolutely required (<code>pages/</code>, for example) and some are used out of convention. See [Project structure](https://docs.astro.build/en/basics/project-structure/) for a more detailed explanation from Astro.
+Note that there are many other files and folders up and down the tree, but generally these are what I work with in a project like this. Some of these are absolutely required (<code>src/pages/</code>, for example) and some are used out of convention. See [Project structure](https://docs.astro.build/en/basics/project-structure/) for a more detailed explanation from Astro.
 
 Here's what I use these directories for:
 
@@ -102,9 +102,9 @@ You can see [this project on GitHub](https://github.com/z336/blog) for finer det
 
 ### Add styles
 
-After I have directories and some basic pages in the project, it is time to style the site. Where I begin the style work can vary in practice sometimes, because I find it difficult to add functionality or copy without _some_ idea for how the site will look — so this isn't always a straight line to the finish.
+It is time to style the site. Though, where I truly begin the style work can vary in practice sometimes, because I find it difficult to add functionality or copy without _some_ idea for how the site will look.
 
-I may write a dedicated CSS post in the future because it's where I feel I have the most to say. For now, here is the file tree:
+Here is the file tree for the CSS:
 
 ```plaintext
 src/
@@ -131,10 +131,10 @@ I import all of these files into <code>styles.css</code> in a specific order:
 @import url("cube.css");
 ```
 
-I want to use the [https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade](CSS cascade) to my advantage. So this import order applies the reset, adds the settings (variables) the other files will use, applies universal element selector styles, and then adds all of the specific CUBE styles. This way, the styles are applied in the preferred order to the document.
+I want to use the [CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade) to my advantage, so this import order applies the reset, adds the settings (variables), applies universal element selector styles, and then adds all of the specific CUBE styles. The result is the styles are applied in the preferred order to the document when it loads.
 
 Note that you can apply CSS in an Astro project in many ways, including using SASS, CSS-in-JS solutions (gross), etc. I love SASS but vanilla CSS is so good these days.
 
 ## Deploy
 
-A website is never complete, but at some point I deploy the site from GitHub using Netlify. Since this is a digital garden, I may update this post, change the styles, move content around, etc. But for now, this is about as done as it gets.
+A website is never complete, but at some point I [deploy the site from GitHub using Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/).
