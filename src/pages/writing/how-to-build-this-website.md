@@ -1,12 +1,12 @@
 ---
 layout: ../../layouts/PostLayout.astro
-title: "How to build this website"
+title: "Build this website"
 pubDate: 2025-04-01
 update: 2025-04-02
 category: "How-to"
 tags: ["HTML", "CSS", "Accessibility"]
-description: "Set goals, choose tools, design, and build the site."
-lede: "This is an opinionated, conversational, how-to guide for building this website. It is far from comprehensive — that would require a whole series — and it assumes this is not your first encounter with a lot of these concepts."
+description: "A limited and opinionated chat about the broad strokes."
+lede: "This is an opinionated and conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts."
 ---
 
 I love building websites. I spent some time working as a front-end developer before settling in to technical writing. My experience working on the front end still shapes my opinions and understanding of everything that I do.
@@ -95,9 +95,9 @@ Here's what I use these directories for:
 - <code>public/</code>: Unprocessed files and assets, such as <code>favicon.svg</code> and font files.
 - <code>src/components/</code>: Reusable pieces of code I want to use in many places. This is a familiar concept if you have worked with React.
 - <code>src/layouts/</code>: Reusable layouts. I have two — a layout for all of my pages and a layout that extends the base layout for blog posts.
-- <code>/src/pages/</code>: All of my pages and blog posts are here. I keep links and notes in JSON files next to their respective pages.
-- <code>/src/styles/</code>: CSS lives here. I go into detail about how I style my sites below.
-- <code>/src/utils/</code>: Reusable utility functions go here. For example, I have a function to format dates and a function that generates slugs from strings.
+- <code>src/pages/</code>: All of my pages and blog posts are here. I keep links and notes in JSON files next to their respective pages.
+- <code>src/styles/</code>: CSS lives here. I go into detail about how I style my sites below.
+- <code>src/utils/</code>: Reusable utility functions go here. For example, I have a function to format dates and a function that generates slugs from strings.
 
 You can see [this project on GitHub](https://github.com/z336/blog) for finer details.
 
