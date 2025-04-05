@@ -45,8 +45,8 @@ const { frontmatter, headings } = Astro.props;
 				</ol>
 			</nav>
 		</header>
-		<article class="wrapper prose flow" data-wrapper-type="inner">
-			<div class="flow">
+		<article class="wrapper prose flow">
+			<div class="border region flow">
 				{
 					/* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. */
 					frontmatter.lede && (
