@@ -24,7 +24,8 @@ header p {
 h1,
 h2,
 h3,
-h4 {
+h4,
+h5 {
   font-family: Alte, serif;
   font-weight: 800;
   line-height: 1.2;
@@ -106,14 +107,22 @@ details {
   }
 }
 
-pre {
-  padding: var(--gutter);
-  background-color: var(--color-less-light);
-}
-
 code {
   font-family: MonoLisa, monospace;
-  background-color: var(--color-less-light);
+  /*  Change the background color for all code that is not in a code block */
+  &:not(pre code) {
+    background-color: var(--color-yellow);
+  }
+}
+
+pre {
+  padding: var(--gutter);
+  color: var(--color-light);
+  background-color: var(--color-dark);
+  & ::selection {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
 }
 
 small {
@@ -147,14 +156,11 @@ del::after {
   background-color: var(--color-dark);
 }
 
-:focus {
+/* Use focus-visible instead of focus to prevent unwanted side effects */
+:focus-visible {
   z-index: 999;
   outline: 3px solid;
+  outline-offset: 3px;
   text-decoration: none;
   word-wrap: none;
-}
-
-/* Needed when changing default focus styles so outline is not visible on mouse click */
-:focus:not(:focus-visible) {
-  outline: none;
 }

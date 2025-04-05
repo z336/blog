@@ -1,5 +1,11 @@
 [
   {
+    "title": "Focus styles",
+    "pubDate": "2025-04-05",
+    "description": "Use <code>:focus-visible</code> instead of <code>:focus</code> to target focus styles — this prevents unwanted side effects like focus outlines showing on mouse clicks.",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible"
+  },
+  {
     "title": "Docs and AI",
     "pubDate": "2025-04-02",
     "description": "&ldquo;Augmentation? Yes. Substitution? Not gonna happen&rdquo;",
