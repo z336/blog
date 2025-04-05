@@ -8,24 +8,24 @@ const { frontmatter, headings } = Astro.props;
 <Layout pageTitle={frontmatter.title}>
 	<div class="wrapper">
 		<header class="article-grid border" data-wrapper-type="inner">
-			<div>
+			<section>
 				<p>{frontmatter.category}</p>
 				<h1>{frontmatter.title}</h1>
 				<small
-					>Updated on <time datetime={frontmatter.update}
+					>Updated <time datetime={frontmatter.update}
 						>{dateFormatter(frontmatter.update)}</time
-					>, originally posted on
+					>, originally posted
 					<time datetime={frontmatter.pubDate}
 						>{dateFormatter(frontmatter.pubDate)}</time
 					>
 				</small>
-			</div>
-			<div>
+			</section>
+			<section>
 				<p>Topics</p>
 				<ul>
 					{frontmatter.tags.map((tag: string) => <li>{tag}</li>)}
 				</ul>
-			</div>
+			</section>
 			<nav aria-label="article navigation">
 				<p>Table of contents</p>
 				<ol>

@@ -9,11 +9,11 @@ const date = new Date().toLocaleDateString("en-US", {
 <footer class="footer">
   <div class="wrapper region flow">
     <nav class="footer-grid" aria-label="footer navigation">
-      <div class="flow">
+      <section class="flow">
         <h3>Here</h3>
         <Navigation />
-      </div>
-      <div class="flow">
+      </section>
+      <section class="flow">
         <h3>Elsewhere</h3>
         <ul>
           <li>
@@ -25,16 +25,21 @@ const date = new Date().toLocaleDateString("en-US", {
             <small>(soon)</small>
           </li>
         </ul>
-      </div>
-      <div class="flow">
-        <h3>Meta</h3>
+      </section>
+      <section class="flow">
+        <h3>Contact</h3>
         <ul>
           <li><a href="mailto:jon@joncoleman.me">jon@joncoleman.me</a></li>
+        </ul>
+      </section>
+      <section class="flow">
+        <h3>Meta</h3>
+        <ul>
           <li><a href="/rss-writing.xml/">RSS - Writing</a></li><li>
             <a href="/rss-notes.xml/">RSS - Notes</a>
           </li>
         </ul>
-      </div>
+      </section>
     </nav>
     <p>Site and words by Jon Coleman</p>
     <p><a href="#top">Back to top</a></p>
