@@ -46,11 +46,13 @@
 @font-face {
   font-family: "Authentic";
   src: local("Authentic"), url("/AUTHENTICSans-90.woff");
+  font-display: swap;
 }
 
 @font-face {
   font-family: "Alte";
   src: local("Alte"), url("/AlteHaasGroteskBold.ttf");
+  font-display: swap;
 }
 
 @font-face {

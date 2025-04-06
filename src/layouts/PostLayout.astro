@@ -8,7 +8,7 @@ const { frontmatter, headings } = Astro.props;
 <Layout pageTitle={frontmatter.title}>
 	<div class="wrapper">
 		<header class="article-grid border" data-wrapper-type="inner">
-			<section>
+			<div>
 				<p>{frontmatter.category}</p>
 				<h1>{frontmatter.title}</h1>
 				<small
@@ -19,13 +19,13 @@ const { frontmatter, headings } = Astro.props;
 						>{dateFormatter(frontmatter.pubDate)}</time
 					>
 				</small>
-			</section>
-			<section>
+			</div>
+			<div>
 				<p>Topics</p>
 				<ul>
 					{frontmatter.tags.map((tag: string) => <li>{tag}</li>)}
 				</ul>
-			</section>
+			</div>
 			<nav aria-label="article navigation">
 				<p>Table of contents</p>
 				<ol>
