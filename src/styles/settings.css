@@ -56,4 +56,5 @@
 @font-face {
   font-family: "MonoLisa";
   src: local("MonoLisa"), url("/MonoLisa-Regular.woff");
+  font-display: swap;
 }
