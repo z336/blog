@@ -1,7 +1,7 @@
 export function slugGenerator(toSlug) {
   return toSlug
-    .toLowerCase() // Convert to lowercase
-    .replace(/\s+/g, "-") // Replace spaces with hyphens
-    .replace(/[^\w\-]+/g, "") // Remove non-word characters
-    .replace(/--+/g, "-"); // Replace multiple hyphens with a single hyphen
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/gi, "-") // Replace anything that's not a letter or number with a hyphen
+    .replace(/^-+|-+$/g, ""); // Remove any leading or trailing hyphens
 }

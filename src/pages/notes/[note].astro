@@ -2,13 +2,14 @@
 import Layout from "../../layouts/Layout.astro";
 import data from "./_notes.json";
 import { dateFormatter } from "../../utils/dateFormatter.mjs";
+import { slugGenerator } from "../../utils/slugGenerator.mjs";
 
 // Get all of the notes and generate paths (slugs) based on the title
 export async function getStaticPaths() {
   const allNotes = data;
 
   const paths = allNotes.map((note) => ({
-    params: { note: note.title.toLowerCase().replace(/\s+/g, "-") },
+    params: { note: slugGenerator(note.title) },
     props: { notes: allNotes },
   }));
 
@@ -21,7 +22,7 @@ const { notes } = Astro.props;
 
 // Find the original note object based on the slug
 const filteredNotes = notes.filter(
-  (noteItem) => noteItem.title.toLowerCase().replace(/\s+/g, "-") === note,
+  (noteItem) => slugGenerator(noteItem.title) === note,
 );
 
 // Get the first note after filtering
