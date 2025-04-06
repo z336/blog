@@ -35,17 +35,14 @@ h5 {
 
 h1 {
   font-size: var(--size-step-3);
-  /*  max-width: 20ch;*/
 }
 
 h2 {
   font-size: var(--size-step-2);
-  /*  max-width: 28ch;*/
 }
 
 h3 {
   font-size: var(--size-step-1);
-  /*  max-width: 28ch;*/
 }
 
 /* Flow space is first defined by .flow */
