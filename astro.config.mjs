@@ -9,4 +9,8 @@ export default defineConfig({
       theme: "none",
     },
   },
+  build: {
+    assetsInlineLimit: 1024, // Link styles externally above 1024 bytes
+    inlineStylesheets: "always", // Build the stylesheet inline in the header
+  },
 });
