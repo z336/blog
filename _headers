@@ -1,3 +1,0 @@
-# Add CORS headers for fonts
-/public/* 
-  Access-Control-Allow-Origin: *
