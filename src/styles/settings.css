@@ -45,18 +45,24 @@
 
 @font-face {
   font-family: "Authentic";
-  src: local("Authentic"), url("/AUTHENTICSans-90.woff");
+  src:
+    local("Authentic"),
+    url("/AUTHENTICSans-90.woff") format("woff");
   font-display: swap;
 }
 
 @font-face {
   font-family: "Alte";
-  src: local("Alte"), url("/AlteHaasGroteskBold.ttf");
+  src:
+    local("Alte"),
+    url("/AlteHaasGroteskBold.ttf") format("truetype");
   font-display: swap;
 }
 
 @font-face {
   font-family: "MonoLisa";
-  src: local("MonoLisa"), url("/MonoLisa-Regular.woff");
+  src:
+    local("MonoLisa"),
+    url("/MonoLisa-Regular.woff") format("woff");
   font-display: swap;
 }
