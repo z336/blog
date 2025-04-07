@@ -55,6 +55,6 @@
   font-family: "Alte";
   src:
     local("Alte"),
-    url("/AlteHaasGroteskBold.ttf") format("truetype");
+    url("/AlteHaasGroteskBold.woff2") format("woff2");
   font-display: swap;
 }
