@@ -10,10 +10,6 @@ const { pageTitle } = Astro.props;
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="theme-color" content="#2a2722" />
-    <title>{pageTitle} | Jon Coleman</title>
     <link
       rel="preload"
       href="/AUTHENTICSans-90.woff"
@@ -25,16 +21,13 @@ const { pageTitle } = Astro.props;
       rel="preload"
       href="/AlteHaasGroteskBold.ttf"
       as="font"
-      type="font/ttf"
+      type="font/truetype"
       crossorigin="anonymous"
     />
-    <link
-      rel="preload"
-      href="/MonoLisa-Regular.woff"
-      as="font"
-      type="font/woff"
-      crossorigin="anonymous"
-    />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#2a2722" />
+    <title>{pageTitle} | Jon Coleman</title>
   </head>
   <body>
     <Header />

@@ -104,12 +104,9 @@ details {
   }
 }
 
-code {
-  font-family: MonoLisa, monospace;
-  /*  Change the background color for all code that is not in a code block */
-  &:not(pre code) {
-    background-color: var(--color-yellow);
-  }
+/*  Change the background color for all code that is not in a code block */
+code:not(pre code) {
+  background-color: var(--color-yellow);
 }
 
 pre {
