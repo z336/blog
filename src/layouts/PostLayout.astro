@@ -13,10 +13,10 @@ const { frontmatter, headings } = Astro.props;
 				<h1>{frontmatter.title}</h1>
 				<small
 					>Updated <time datetime={frontmatter.update}
-						>{dateFormatter(frontmatter.update)}</time
+						><em>{dateFormatter(frontmatter.update)}</em></time
 					>, originally posted
 					<time datetime={frontmatter.pubDate}
-						>{dateFormatter(frontmatter.pubDate)}</time
+						><em>{dateFormatter(frontmatter.pubDate)}</em></time
 					>
 				</small>
 			</div>

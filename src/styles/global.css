@@ -121,6 +121,8 @@ pre {
 
 small {
   color: var(--color-less-dark);
+  display: inline-block;
+  text-wrap: balance;
 }
 
 /* Required for accessibility according to Mozilla 
