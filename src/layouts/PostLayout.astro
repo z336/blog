@@ -11,14 +11,19 @@ const { frontmatter, headings } = Astro.props;
 			<div>
 				<p>{frontmatter.category}</p>
 				<h1>{frontmatter.title}</h1>
-				<small
-					>Updated <time datetime={frontmatter.update}
-						><em>{dateFormatter(frontmatter.update)}</em></time
-					>, originally posted
-					<time datetime={frontmatter.pubDate}
-						><em>{dateFormatter(frontmatter.pubDate)}</em></time
-					>
-				</small>
+				{ 
+					/* Check for an update date, if it is not there just show post date */
+				  frontmatter.update ? (
+				    <small>
+				      Updated <time datetime={frontmatter.update}><em>{dateFormatter(frontmatter.update)}</em></time>, originally posted
+				      <time datetime={frontmatter.pubDate}><em>{dateFormatter(frontmatter.pubDate)}</em></time>
+				    </small>
+				  ) : (
+				    <small>
+				      Posted <time datetime={frontmatter.pubDate}><em>{dateFormatter(frontmatter.pubDate)}</em></time>
+				    </small>
+				  )
+				}
 			</div>
 			<div>
 				<p>Topics</p>
@@ -31,16 +36,16 @@ const { frontmatter, headings } = Astro.props;
 				<ol>
 					{
 						/* Check the h2s in the article and list them as links */
-						headings.map((heading: any) => {
-							if (heading.depth === 2)
-								return (
+						headings.map(
+							(heading: any) =>
+								heading.depth === 2 && (
 									<li>
 										<a href={`#${heading.slug}`}>
 											{heading.text}
 										</a>
 									</li>
-								);
-						})
+								),
+						)
 					}
 				</ol>
 			</nav>
