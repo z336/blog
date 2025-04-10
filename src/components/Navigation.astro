@@ -1,10 +1,28 @@
 ---
-
+const currentPath = Astro.url.pathname;
 ---
 
 <ul>
-	<li><a href="/">Home</a></li>
-	<li><a href="/writing/">Writing</a></li>
-	<li><a href="/notes/">Notes</a></li>
-	<li><a href="/links/">Links</a></li>
+	<li>
+		<a href="/" aria-current={currentPath === "/" ? "page" : undefined}
+			>Home</a>
+	</li>
+	<li>
+		<a
+			href="/writing/"
+			aria-current={currentPath === "/writing/" ? "page" : undefined}
+			>Writing</a>
+	</li>
+	<li>
+		<a
+			href="/notes/"
+			aria-current={currentPath === "/notes/" ? "page" : undefined}
+			>Notes</a>
+	</li>
+	<li>
+		<a
+			href="/links/"
+			aria-current={currentPath === "/links/" ? "page" : undefined}
+			>Links</a>
+	</li>
 </ul>
