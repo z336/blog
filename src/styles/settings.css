@@ -42,19 +42,3 @@
   --space-s-xl: clamp(1.125rem, 0.212rem + 4.5652vw, 3.75rem);
   --space-m-xl: clamp(1.6875rem, 0.9701rem + 3.587vw, 3.75rem);
 }
-
-@font-face {
-  font-family: "Authentic";
-  src:
-    local("Authentic"),
-    url("/AUTHENTICSans-90.woff") format("woff");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Alte";
-  src:
-    local("Alte"),
-    url("/AlteHaasGroteskBold.woff2") format("woff2");
-  font-display: swap;
-}

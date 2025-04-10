@@ -9,6 +9,7 @@ export default defineConfig({
       theme: "none",
     },
   },
+  // Instead of generating a random name based on a file deliberately set the css to /css/styles
   vite: {
     build: {
       rollupOptions: {

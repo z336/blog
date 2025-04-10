@@ -1,3 +1,20 @@
+/* Set fonts before anything else */
+@font-face {
+  font-family: "Authentic";
+  src:
+    local("Authentic"),
+    url("/AUTHENTICSans-90.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Alte";
+  src:
+    local("Alte"),
+    url("/AlteHaasGroteskBold.woff2") format("woff2");
+  font-display: swap;
+}
+
 /* Reset */ /* Box sizing rules */
 *, *: : before,
   *: : after {
