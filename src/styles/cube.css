@@ -129,6 +129,10 @@
   p {
     font-size: var(--size-step--1);
   }
+  h3 {
+    font-size: var(--size-step-0);
+    text-transform: uppercase;
+  }
 }
 
 /* Exception */
