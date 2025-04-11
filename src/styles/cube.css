@@ -143,7 +143,7 @@
   }
   /* Add space in reverse so that footer links are easier to click on mobile */
   li:not(:first-child) {
-    margin-block-start: var(--space-0-3xs);
+    margin-block-start: var(--space-0-4xs);
   }
 }
 
