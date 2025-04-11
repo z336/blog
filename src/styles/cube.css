@@ -124,6 +124,13 @@
   }
 }
 
+.footer {
+  ul,
+  p {
+    font-size: var(--size-step--1);
+  }
+}
+
 /* Exception */
 
 /* Use with .wrapper to shorten max-width */
