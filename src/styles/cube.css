@@ -49,7 +49,7 @@
   }
 }
 
-/* Use when all that is needed is vertical space and the inner wrapper is already in use */
+/* Use when all that is needed is vertical space */
 .region {
   padding-block: var(--space-s-l);
 }
@@ -93,8 +93,6 @@
 
 /* Use with site header and footer styles */
 .header {
-  padding-block: var(--gutter);
-  padding-inline: var(--space-3xs-xl);
   ul {
     display: flex;
     flex-direction: row;
@@ -103,6 +101,10 @@
     list-style: none;
     margin: 0;
     padding: 0;
+  }
+  /*  This is an exception to standard inner wrapper */
+  & [data-wrapper-type="inner"] {
+    padding-block: var(--gutter);
   }
 }
 
