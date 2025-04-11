@@ -3,8 +3,12 @@ import Navigation from "../components/Navigation.astro";
 ---
 
 <footer class="footer">
-  <div class="wrapper region flow">
-    <nav class="footer-grid" aria-label="footer navigation">
+  <div class="wrapper">
+    <nav
+      class="footer-grid border"
+      aria-label="footer navigation"
+      data-wrapper-type="inner"
+    >
       <section class="flow">
         <h3>Here</h3>
         <Navigation />
@@ -37,7 +41,9 @@ import Navigation from "../components/Navigation.astro";
         </ul>
       </section>
     </nav>
-    <p>Site and words by Jon Coleman</p>
-    <p><a href="#top">Back to top</a></p>
+    <div data-wrapper-type="inner">
+      <p>Site and words by Jon Coleman</p>
+      <p><a href="#top">Back to top</a></p>
+    </div>
   </div>
 </footer>

@@ -94,6 +94,7 @@
 /* Use with site header and footer styles */
 .header {
   padding-block: var(--gutter);
+  padding-inline: var(--space-3xs-xl);
   ul {
     display: flex;
     flex-direction: row;
@@ -109,7 +110,6 @@
 .footer {
   background: var(--color-dark);
   color: var(--color-light);
-  padding-inline: var(--space-3xs-xl);
   ul {
     list-style: none;
     padding: 0;
