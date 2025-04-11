@@ -59,6 +59,7 @@ ul {
   padding-inline-start: 1em;
 }
 
+/* Account for the font, numbers need more padding */
 ol {
   padding-inline-start: 1.25em;
 }

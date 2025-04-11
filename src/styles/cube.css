@@ -133,13 +133,17 @@
 }
 
 .footer {
+  h3 {
+    font-size: var(--size-step-0);
+    text-transform: uppercase;
+  }
   ul,
   p {
     font-size: var(--size-step--1);
   }
-  h3 {
-    font-size: var(--size-step-0);
-    text-transform: uppercase;
+  /* Add space in reverse so that footer links are easier to click on mobile */
+  li:not(:first-child) {
+    margin-block-start: var(--space-0-3xs);
   }
 }
 

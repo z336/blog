@@ -41,4 +41,8 @@
   --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vw, 2.5rem);
   --space-s-xl: clamp(1.125rem, 0.212rem + 4.5652vw, 3.75rem);
   --space-m-xl: clamp(1.6875rem, 0.9701rem + 3.587vw, 3.75rem);
+  --space-xl-3xs: clamp(0.25rem, 3.375rem - 1.7391vw, 1.875rem);
+  --space-xs-3xs: clamp(0.3125rem, 1.0707rem + -0.9783vw, 0.875rem);
+  --space-s-3xs: clamp(0.3125rem, 1.4076rem + -1.413vw, 1.125rem);
+  --space-0-3xs: clamp(0rem, 1.69rem - 2.26vw, 1.125rem);
 }
