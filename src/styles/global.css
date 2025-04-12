@@ -127,12 +127,7 @@ code:not(pre code) {
 
 pre {
   padding: var(--gutter);
-  color: var(--color-light);
-  background-color: var(--color-dark);
-  & ::selection {
-    color: var(--color-dark);
-    background-color: var(--color-light);
-  }
+  background-color: var(--color-less-light);
 }
 
 small {
