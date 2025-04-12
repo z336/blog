@@ -28,7 +28,7 @@ The footer layout uses [CSS grid](https://css-tricks.com/snippets/css/complete-g
 }
 ```
 
-This creates a grid layout that generates columns automatically, based on the content that exists in the HTML. As the screen becomes smaller, grid items drop below each other until all of them are stacked vertically.
+This creates a grid layout that generates columns automatically, based on the content that exists in the HTML. As the screen becomes smaller, grid items drop below each other until all of them are stacked vertically. No media queries or breakpoints are required for this magic, so I don't have to try to predict when and where the breaks should occur.
 
 It's an interesting pattern because typically grids are used for more rigid layouts, while [flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) might be used when the layout needs to be more fluid or it is less predictable. I could probably get the same effect on this site using flexbox, but this works well.
 
@@ -36,17 +36,17 @@ It's an interesting pattern because typically grids are used for more rigid layo
 
 All together, the fluid design pattern and the generative grid are solid. The font is sized appropriately to the screen and the grid takes up the space it is provided without using a media query. Everything is _fluid_ and _generative_ instead of trying to predict every layout scenario.
 
-That's great, but I noticed that the links in the footer navigation were difficult to press on my phone. Since the footer font is sized down a step, the default spacing between links was way too tight. I needed to figure out a way to make the links more accessible on phones and tablets without adding a ton of complexity.
+That's great, but I noticed that the links in the footer navigation were difficult to press on my phone. Since the footer font is sized down a step, the default spacing between links was way too tight. I needed to figure out a way to make the links more accessible on phones and tablets and I wanted to do it without adding more complexity or writing a lot more code.
 
 ## First thoughts
 
-The first idea I had to fix this was to increase the spacing between the links in the footer. That's easy enough and all I would have to do is add `margin-block-start` with a reasonable size to all of the `<li>`. When I tried this, it added the desired spacing, but it visually clashed with the styles of the site on desktop. Everything flowed nicely and then all of a sudden the links in the footer had way too much space.
+The first idea I had to fix this was to increase the spacing between the links in the footer. That's easy enough and all I would have to do is add `margin-block-start` with a reasonable size to all of the `<li>`. When I tried this, it added the desired spacing for smaller screens, but it visually clashed on desktop. It was simple, but it didn't solve all of the problems.
 
-The next idea I had was to style each of the lists with flexbox, but this didn't really solve the problem either. I wanted the default spacing on desktop and _more_ spacing on mobile — flexbox can't do that without media queries and I didn't want to try to predict when the best time to add spacing was going to be.
+The next idea I had was to style each of the lists with flexbox, but this added complexity if I wanted to do it well. I wanted to keep the default spacing on desktop and add _more_ spacing on mobile — flexbox can't do that without media queries and I didn't want to try to predict when to add spacing.
 
 ## The fix
 
-The solution that fixed the layout on small screens but didn't disrupt the layout on larger screens was to create a "custom space pair" that sized _up_ as the screen sized _down_. This is easy to do with the Utopia tool, but I did have to make some more calculations to figure out a "4xs" size that followed the "major third" sizing pattern:
+The solution that fixed the layout on small screens, didn't disrupt the layout on larger screens, and wasn't overly complex, was to create a "custom space pair" that sized _up_ as the screen sized _down_. This is easy to do with the Utopia tool, but I did have to make some more calculations to figure out a "4xs" size that followed the "major third" sizing pattern:
 
 ```css
 --space-0-4xs: clamp(0rem, 1.352rem - 1.808vw, 0.9rem);
