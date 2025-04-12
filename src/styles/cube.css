@@ -20,7 +20,7 @@
 
 .footer-grid {
   display: grid;
-  grid-gap: 1rem;
+  grid-gap: var(--gutter);
 }
 
 @supports (width: min(250px, 100%)) {
@@ -132,21 +132,6 @@
   /* Use the light svg for the footer */
   a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
     background-image: url("/external-link-inverse.svg");
-  }
-}
-
-.footer {
-  h3 {
-    font-size: var(--size-step-0);
-    text-transform: uppercase;
-  }
-  ul,
-  p {
-    font-size: var(--size-step--1);
-  }
-  /* Add space in reverse so that footer links are easier to click on mobile */
-  li:not(:first-child) {
-    margin-block-start: var(--space-0-4xs);
   }
 }
 
