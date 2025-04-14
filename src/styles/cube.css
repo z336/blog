@@ -40,7 +40,7 @@
 /* Utility */
 
 .wrapper {
-  max-width: 160ch;
+  max-width: 1680px;
   margin-inline: auto;
   padding-inline: var(--gutter);
   & [data-wrapper-type="inner"] {
@@ -94,6 +94,8 @@
 
 /* Use with site header and footer styles */
 .header {
+  font-family: Alte;
+  text-transform: uppercase;
   ul {
     display: flex;
     flex-direction: row;
@@ -106,6 +108,15 @@
   /*  This is an exception to standard inner wrapper */
   & [data-wrapper-type="inner"] {
     padding-block: var(--gutter);
+  }
+  a {
+    text-decoration: none;
+    &:hover,
+    &[aria-current="page"] {
+      text-decoration: underline;
+      text-decoration-thickness: 0.2ex;
+      text-underline-offset: 0.3ex;
+    }
   }
 }
 
@@ -120,14 +131,6 @@
   ::selection {
     color: var(--color-dark);
     background-color: var(--color-light);
-  }
-  a[aria-current="page"] {
-    text-decoration-line: underline;
-    text-decoration-style: double;
-    text-decoration-thickness: 0.15ex;
-    &:focus-visible {
-      text-decoration: none;
-    }
   }
   /* Use the light svg for the footer */
   a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
