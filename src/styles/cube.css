@@ -94,13 +94,15 @@
 
 /* Use with site header and footer styles */
 .header {
-  font-family: Alte;
+  /*  font-size: var(--size-step--1);*/
+  font-family: Alte, serif;
   text-transform: uppercase;
+  letter-spacing: 2px;
   ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 1rem 1rem;
+    gap: var(--gutter);
     list-style: none;
     margin: 0;
     padding: 0;
