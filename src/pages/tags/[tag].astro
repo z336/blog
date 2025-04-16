@@ -1,6 +1,5 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import PageHeader from "../../components/PageHeader.astro";
 
 export async function getStaticPaths() {
   const allPosts = Object.values(
@@ -22,23 +21,29 @@ export async function getStaticPaths() {
 
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const description = "All the posts with his tag.";
 ---
 
 <Layout pageTitle={tag}>
   <div class="wrapper">
-    <PageHeader heading={tag} description={description} />
-    <article data-wrapper-type="inner">
-      <ul>
-        {
-          posts.map((post: any) => (
-            <li>
-              <a href={post.url}>{post.frontmatter.title}</a>
-            </li>
-          ))
-        }
-      </ul>
-      <p>Or view all <a href="/tags/">Tags</a>.</p>
+    <header class="border flow" data-wrapper-type="inner">
+      <h1>{tag}</h1>
+      <p>All the posts with his topic.</p>
+    </header>
+    <article>
+      <div class="border region prose flow" data-wrapper-type="inner">
+        <ul>
+          {
+            posts.map((post: any) => (
+              <li>
+                <a href={post.url}>{post.frontmatter.title}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div class="region flow" data-wrapper-type="inner">
+        <p>View all <a href="/tags/">topics</a>.</p>
+      </div>
     </article>
   </div>
 </Layout>

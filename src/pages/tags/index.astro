@@ -8,9 +8,9 @@ const allPosts = Object.values(
 const tags = [
   ...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat()),
 ];
-const pageTitle = "Tag Index";
-const heading = "Tags";
-const description = "lorem description";
+const pageTitle = "Topics Index";
+const heading = "Topics";
+const description = "All of the topics.";
 ---
 
 <Layout pageTitle={pageTitle}>

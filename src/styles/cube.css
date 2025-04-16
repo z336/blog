@@ -30,7 +30,7 @@
 }
 
 .lede {
-  font-family: MonoLisa, monospace;
+  font-family: monospace;
 }
 
 .lede + * {
@@ -46,6 +46,16 @@
   & [data-wrapper-type="inner"] {
     padding-block: var(--space-s-l);
     padding-inline: var(--space-3xs-xl);
+  }
+}
+
+.topics {
+  ul {
+    list-style: none;
+    padding-inline: 0;
+  }
+  ul li::before {
+    content: "#";
   }
 }
 
