@@ -1,5 +1,11 @@
 [
   {
+    "title": "Never lose a z-index battle again",
+    "pubDate": "2025-04-16",
+    "description": "Hot tip for when you really need something to be at the top.",
+    "url": "https://matuzo.at/blog/2025/never-lose-a-z-index-battle-again"
+  },
+  {
     "title": "Focus styles",
     "pubDate": "2025-04-05",
     "description": "Use <code>:focus-visible</code> instead of <code>:focus</code> to target focus styles — this prevents unwanted side effects like focus outlines showing on mouse clicks.",
