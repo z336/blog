@@ -1,11 +1,11 @@
 ---
-import Layout from "../../layouts/Layout.astro";
-import PageHeader from "../../components/PageHeader.astro";
-import { slugGenerator } from "../../utils/slugGenerator.mjs";
+import Layout from "../layouts/Layout.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { slugGenerator } from "../utils/slugGenerator.mjs";
 
 // Get all of the posts
 const allPosts = Object.values(
-  import.meta.glob("../writing/*.md", { eager: true }),
+  import.meta.glob("./writing/*.md", { eager: true }),
 );
 
 // Create an object of flat arrays that include the tag and a generated slug, then sort it alphabetically by the title
