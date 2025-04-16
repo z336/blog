@@ -1,8 +1,7 @@
 ---
-const { heading, description } = Astro.props;
+const { heading } = Astro.props;
 ---
 
 <header class="border flow" data-wrapper-type="inner">
 	<h1 class="page-title">{heading}</h1>
-	{description ? <p>{description}</p> : null}
 </header>
