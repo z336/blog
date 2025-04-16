@@ -1,0 +1,7 @@
+.lede {
+  font-family: monospace;
+}
+
+.lede + * {
+  --flow-space: 2em;
+}

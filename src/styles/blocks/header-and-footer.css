@@ -1,0 +1,48 @@
+/* Use with site header and footer styles */
+.header {
+  /*  font-size: var(--size-step--1);*/
+  font-family: Alte, serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gutter);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    text-decoration: none;
+    &:hover,
+    &[aria-current="page"] {
+      text-decoration: underline;
+      text-decoration-thickness: 0.2ex;
+      text-underline-offset: 0.3ex;
+    }
+  }
+}
+
+/* This is an exception for the inner wrapper */
+.header nav[data-wrapper-type="inner"] {
+  padding-block: var(--gutter);
+}
+
+.header,
+.footer {
+  color: var(--color-less-light);
+  background-color: var(--color-dark);
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  ::selection {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+  /* Use the light svg for the footer */
+  a:not([href*="joncoleman.me/"]):not([href^="#"]):not([href^="/"]):after {
+    background-image: url("/external-link-inverse.svg");
+  }
+}

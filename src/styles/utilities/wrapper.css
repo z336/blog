@@ -1,0 +1,14 @@
+.wrapper {
+  max-width: 1680px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  & [data-wrapper-type="inner"] {
+    padding-block: var(--space-s-l);
+    padding-inline: var(--space-3xs-xl);
+  }
+}
+
+/* Use with .wrapper to shorten max-width */
+.prose {
+  max-width: 60ch;
+}

@@ -1,0 +1,5 @@
+/* Make h1s huge on pages but not posts */
+.page-title {
+  font-size: var(--size-step-5);
+  text-transform: uppercase;
+}

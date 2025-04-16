@@ -1,4 +1,8 @@
-@import url("reset.css");
-@import url("settings.css");
-@import url("global.css");
-@import url("cube.css");
+@import "reset.css";
+@import "fonts.css";
+@import "settings.css";
+@import "global.css";
+
+@import "./blocks/_index.css";
+@import "./compositions/_index.css";
+@import "./utilities/_index.css";
