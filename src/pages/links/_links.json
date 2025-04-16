@@ -1,7 +1,23 @@
 [
   {
-    "title": "How-to guides",
-    "description": "Guides for getting things done.",
+    "title": "Blogs",
+    "description": "Interesting writing — not always technical.",
+    "links": [
+      {
+        "title": "passo.uno",
+        "url": "https://passo.uno/",
+        "description": "A great resource for technical writers."
+      },
+      {
+        "title": "Pluralistic: Daily links from Cory Doctorow",
+        "url": "https://pluralistic.net/",
+        "description": "Science fiction author, activist, journalist, hero."
+      }
+    ]
+  },
+  {
+    "title": "Tips and tricks",
+    "description": "Help from smart people.",
     "links": [
       {
         "title": "Skip Links: what, why, and how",
@@ -12,6 +28,21 @@
         "title": "Some simple ways to make content look good",
         "url": "https://piccalil.li/blog/some-simple-ways-to-make-content-look-good/",
         "description": "A great guide to making content readable."
+      },
+      {
+        "title": "Never lose a z-index battle again",
+        "url": "https://matuzo.at/blog/2025/never-lose-a-z-index-battle-again",
+        "description": "Hot tip for getting everything in its right place."
+      },
+      {
+        "title": "Export a Sheet as a minimal HTML table",
+        "url": "https://stackoverflow.com/a/38648475",
+        "description": "Got a Sheet? Need a table? This saves a lot of time."
+      },
+      {
+        "title": "Set innerHTML in Astro",
+        "url": "https://docs.astro.build/en/reference/directives-reference/#sethtml",
+        "description": "Use <code>set:html</code> to inject an HTML string into an element — for example, I used this to pass HTML markup from JSON."
       }
     ]
   },
@@ -43,23 +74,6 @@
         "title": "CSS Transform Visualizer",
         "url": "https://css-transform.moro.es/",
         "description": "CSS transforms are confusing, figure them out visually."
-      }
-    ]
-  },
-
-  {
-    "title": "Writing",
-    "description": "Interesting writing — not always technical.",
-    "links": [
-      {
-        "title": "passo.uno",
-        "url": "https://passo.uno/",
-        "description": "A great resource for technical writers."
-      },
-      {
-        "title": "Pluralistic: Daily links from Cory Doctorow",
-        "url": "https://pluralistic.net/",
-        "description": "Science fiction author, activist, journalist, hero."
       }
     ]
   }

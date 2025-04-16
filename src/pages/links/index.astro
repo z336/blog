@@ -1,4 +1,5 @@
 ---
+import { Fragment } from "astro/jsx-runtime";
 import Layout from "../../layouts/Layout.astro";
 import PageHeader from "../../components/PageHeader.astro";
 import data from "./_links.json";
@@ -29,7 +30,10 @@ const description = "Links to resources and cool stuff.";
 												<a href={link.url}>
 													{link.title}
 												</a>{" "}
-												- {link.description}
+												- {/* Use Fragment to inject */}
+												<Fragment
+													set:html={link.description}
+												/>
 											</li>
 										))}
 								</ul>

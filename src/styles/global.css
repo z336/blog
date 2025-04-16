@@ -165,9 +165,7 @@ del::after {
 
 /* Use focus-visible instead of focus to prevent unwanted side effects */
 :focus-visible {
-  z-index: 999;
+  z-index: calc(infinity);
   outline: 3px solid;
   outline-offset: 3px;
-  text-decoration: none;
-  word-wrap: none;
 }
