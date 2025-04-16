@@ -20,13 +20,32 @@ const tagObjects = [
 
 const pageTitle = "Topics";
 const heading = pageTitle;
-const description = "All of the topics and their articles.";
 ---
 
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
-    <PageHeader heading={heading} description={description} />
+    <PageHeader heading={heading} />
     <article aria-labelledby="page title">
+      <nav
+        class="topics border"
+        aria-label="Table of contents"
+        data-wrapper-type="inner"
+      >
+        <div class="prose">
+          <details>
+            <summary>Jump to a topic</summary>
+            <ul>
+              {
+                tagObjects.map((tag) => (
+                  <li>
+                    <a href={`#${tag.slug}`}>#{tag.title}</a>
+                  </li>
+                ))
+              }
+            </ul>
+          </details>
+        </div>
+      </nav>
       {
         tagObjects.map((tag) => {
           const taggedPosts = allPosts.filter((post: any) =>
@@ -35,7 +54,7 @@ const description = "All of the topics and their articles.";
 
           return (
             <div class="border flow" data-wrapper-type="inner">
-              <h2 id={tag.slug}>{tag.title}</h2>
+              <h2 id={tag.slug}>#{tag.title}</h2>
               <ul>
                 {taggedPosts.map((post: any) => (
                   <li>

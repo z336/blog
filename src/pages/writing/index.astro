@@ -10,13 +10,12 @@ const sortedPosts = allPosts.sort((a: any, b: any) => {
 });
 
 const pageTitle = "Writing";
-const heading = "Writing";
-const description = "Essays, guides, and generally polished content.";
+const heading = pageTitle;
 ---
 
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
-    <PageHeader heading={heading} description={description} />
+    <PageHeader heading={heading} />
     <article aria-labelledby="page title">
       {
         sortedPosts.map((post: any) => (

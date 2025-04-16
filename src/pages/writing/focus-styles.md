@@ -4,7 +4,7 @@ title: "Focus styles"
 pubDate: 2025-04-16
 update:
 category: "Note"
-tags: ["Accessibility", "Focused Elements"]
+tags: ["accessibility", "css"]
 description: "How to style for focus."
 lede: 'You can style the way focusable elements look if you want to customize default accessibility styles in browsers. While you should be very cautious not to create any accessibility issues, you can safely modify the visual "focus ring" on focused elements to give it a bit more clarity and panache.'
 ---

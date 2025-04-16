@@ -42,7 +42,7 @@ const { frontmatter, headings } = Astro.props;
 						frontmatter.tags.map((tag: string) => (
 							<li>
 								<a href={`/topics/#${slugGenerator(tag)}`}>
-									{tag}
+									#{tag}
 								</a>
 							</li>
 						))

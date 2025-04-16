@@ -2,8 +2,7 @@
   --color-dark: #2a2722;
   --color-less-dark: #54524e;
   --color-light: #fafafa;
-  --color-less-light: #e7e7e7;
-  --color-yellow: #ffd700;
+  --color-less-light: #eeeeee;
   --wrapper-max-width: 1680px;
   --gutter: var(--space-s);
   background: var(--color-dark);

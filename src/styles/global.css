@@ -115,6 +115,9 @@ a:not([href*="joncoleman.me/"]):not([href^="mailto:"]):not([href^="#"]):not(
 }
 
 details {
+  padding: var(--gutter);
+  border: 1px solid;
+  border-radius: 0.5rem;
   summary {
     cursor: pointer;
   }
