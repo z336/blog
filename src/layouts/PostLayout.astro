@@ -1,6 +1,7 @@
 ---
 import Layout from "./Layout.astro";
 import { dateFormatter } from "../utils/dateFormatter.mjs";
+import { slugGenerator } from "../utils/slugGenerator.mjs";
 
 const { frontmatter, headings } = Astro.props;
 ---
@@ -40,7 +41,9 @@ const { frontmatter, headings } = Astro.props;
 					{
 						frontmatter.tags.map((tag: string) => (
 							<li>
-								<a href={`/tags/${tag}`}>{tag}</a>
+								<a href={`/tags/#${slugGenerator(tag)}`}>
+									{tag}
+								</a>
 							</li>
 						))
 					}

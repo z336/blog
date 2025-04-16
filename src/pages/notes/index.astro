@@ -13,36 +13,38 @@ const description = "Microblogs and today I learned (TIL).";
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
     <PageHeader heading={heading} description={description} />
-    {
-      data.map((note) => {
-        const slug = slugGenerator(note.title);
-        return (
-          <article class="border" aria-label="note" data-wrapper-type="inner">
-            <div class="prose flow">
-              <h2>
-                <a href={`/notes/${slug}`}>{note.title}</a>
-              </h2>
-              <div>
-                <small>
-                  <time datetime={note.pubDate}>
-                    {dateFormatter(note.pubDate)}
-                  </time>
-                </small>
+    <article aria-labelledby="page title">
+      {
+        data.map((note) => {
+          const slug = slugGenerator(note.title);
+          return (
+            <div class="border" data-wrapper-type="inner">
+              <div class="prose flow">
+                <h2>
+                  <a href={`/notes/${slug}`}>{note.title}</a>
+                </h2>
+                <div>
+                  <small>
+                    <time datetime={note.pubDate}>
+                      {dateFormatter(note.pubDate)}
+                    </time>
+                  </small>
+                </div>
+                {/* set:html allows passing HTML from the JSON string */}
+                <p set:html={note.description} />
+                {
+                  /* Only show external link if it exists in the JSON file */
+                  note.url && (
+                    <p>
+                      <a href={note.url}>{note.url}</a>
+                    </p>
+                  )
+                }
               </div>
-              {/* set:html allows passing HTML from the JSON string */}
-              <p set:html={note.description} />
-              {
-                /* Only show external link if it exists in the JSON file */
-                note.url && (
-                  <p>
-                    <a href={note.url}>{note.url}</a>
-                  </p>
-                )
-              }
             </div>
-          </article>
-        );
-      })
-    }
+          );
+        })
+      }
+    </article>
   </div>
 </Layout>

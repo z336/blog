@@ -11,33 +11,33 @@ const description = "Links to resources and cool stuff.";
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} description={description} />
-		{
-			data.map((section) => {
-				return (
-					<article
-						class="border"
-						aria-label="related links"
-						data-wrapper-type="inner"
-					>
-						<div class="prose flow">
-							<h2>{section.title}</h2>
-							<p>{section.description}</p>
-							<ul>
-								{section.links
-									.sort((a, b) =>
-										a.title.localeCompare(b.title),
-									) // Sort links alphabetically by title
-									.map((link) => (
-										<li>
-											<a href={link.url}>{link.title}</a>{" "}
-											- {link.description}
-										</li>
-									))}
-							</ul>
+		<article aria-label="related links">
+			{
+				data.map((section) => {
+					return (
+						<div class="border flow" data-wrapper-type="inner">
+							<div class="prose">
+								<h2>{section.title}</h2>
+								<p>{section.description}</p>
+								<ul>
+									{section.links
+										.sort((a, b) =>
+											a.title.localeCompare(b.title),
+										) // Sort links alphabetically by title
+										.map((link) => (
+											<li>
+												<a href={link.url}>
+													{link.title}
+												</a>{" "}
+												- {link.description}
+											</li>
+										))}
+								</ul>
+							</div>
 						</div>
-					</article>
-				);
-			})
-		}
+					);
+				})
+			}
+		</article>
 	</div>
 </Layout>
