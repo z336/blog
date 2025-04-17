@@ -26,26 +26,6 @@ const heading = pageTitle;
   <div class="wrapper">
     <PageHeader heading={heading} />
     <article aria-labelledby="page title">
-      <nav
-        class="topics"
-        aria-label="Table of contents"
-        data-wrapper-type="inner"
-      >
-        <div class="prose">
-          <details>
-            <summary>Jump to a topic</summary>
-            <ul>
-              {
-                tagObjects.map((tag) => (
-                  <li>
-                    <a href={`#${tag.slug}`}>#{tag.title}</a>
-                  </li>
-                ))
-              }
-            </ul>
-          </details>
-        </div>
-      </nav>
       {
         tagObjects.map((tag) => {
           const taggedPosts = allPosts.filter((post: any) =>
