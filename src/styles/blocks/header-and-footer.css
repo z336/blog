@@ -31,7 +31,7 @@
 
 .header,
 .footer {
-  color: var(--color-less-light);
+  color: var(--color-light);
   background-color: var(--color-dark);
   ul {
     list-style: none;
