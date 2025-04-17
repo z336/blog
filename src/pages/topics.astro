@@ -5,7 +5,7 @@ import { slugGenerator } from "../utils/slugGenerator.mjs";
 
 // Get all of the posts
 const allPosts = Object.values(
-  import.meta.glob("./notes/*.md", { eager: true }),
+  import.meta.glob("./blog/*.md", { eager: true }),
 );
 
 // Create an object of flat arrays that include the tag and a generated slug, then sort it alphabetically by the title

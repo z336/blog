@@ -3,7 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: "Build this website"
 pubDate: 2025-04-01
 update: 2025-04-02
-category: "How-to"
+category: "Article"
 tags: ["accessibility", "css", "html"]
 description: "A limited and subjective guide."
 lede: "This is a conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts. Feel free to disagree with any of this — my opinions may not overlap with yours!"

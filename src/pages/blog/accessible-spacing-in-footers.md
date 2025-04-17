@@ -3,7 +3,7 @@ layout: ../../layouts/PostLayout.astro
 title: "Accessible spacing with links"
 pubDate: 2025-04-11
 update:
-category: "Explanation"
+category: "Article"
 tags: ["accessibility", "css", "responsive design"]
 description: "Give links room to breathe."
 lede: "Link and button spacing on touch screens is an accessibility issue. If we place links too close together some users may find it difficult to tap the right thing. I noticed the links in the footer on this site were very close on my phone, so here are some of the considerations I had and the solution I came up with to fix this."
