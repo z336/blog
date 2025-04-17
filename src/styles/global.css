@@ -115,11 +115,18 @@ a:not([href*="joncoleman.me/"]):not([href^="mailto:"]):not([href^="#"]):not(
 }
 
 details {
-  padding: var(--gutter);
-  border: 1px solid;
+  background-color: var(--color-less-light);
+  padding-block: 0.75rem;
+  padding-inline: var(--gutter);
   border-radius: 0.5rem;
+  max-width: 28ch;
   summary {
     cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-thickness: 0.2ex;
+      text-underline-offset: 0.3ex;
+    }
   }
 }
 
