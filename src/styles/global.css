@@ -119,6 +119,7 @@ details {
   padding-block: 0.75rem;
   padding-inline: var(--gutter);
   border-radius: 0.5rem;
+  border: 0.2ex solid var(--color-less-dark);
   max-width: 28ch;
   summary {
     cursor: pointer;

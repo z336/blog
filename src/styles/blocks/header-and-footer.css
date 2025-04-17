@@ -1,6 +1,5 @@
 /* Use with site header and footer styles */
 .header {
-  /*  font-size: var(--size-step--1);*/
   font-family: Alte, serif;
   text-transform: uppercase;
   letter-spacing: 2px;
