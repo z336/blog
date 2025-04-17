@@ -1,10 +1,10 @@
 .border {
-  border-block-end: 0.3ex dotted var(--color-less-dark);
+  border-block-end: 0.1ex solid var(--color-less-dark);
   &:last-child {
     border-block-end: none;
   }
   /* Apply border to the first and only child if there is only one */
   &:first-child:only-child {
-    border-block-end: 0.3ex dotted var(--color-less-dark);
+    border-block-end: 0.1ex solid var(--color-less-dark);
   }
 }
