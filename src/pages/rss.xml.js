@@ -1,20 +1,17 @@
 import rss, { pagesGlobToRssItems } from "@astrojs/rss";
-import sanitizeHtml from "sanitize-html";
 
 export async function GET(context) {
-  const postImportResult = import.meta.glob("./writing/*.md", { eager: true });
-  const posts = Object.values(postImportResult);
+  const items = await pagesGlobToRssItems(import.meta.glob("./**/*.md"));
+
+  items.sort((a, b) => {
+    return new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime();
+  });
 
   return rss({
-    title: "Jon Coleman",
-    description: "Writing",
+    title: `Jon's digital garden`,
+    description: "Notes and links about technical writing and web development",
     site: context.site,
-    items: await Promise.all(
-      posts.map(async (post) => ({
-        link: post.url,
-        content: sanitizeHtml(await post.compiledContent()),
-        ...post.frontmatter,
-      })),
-    ),
+    items,
+    customData: `<language>en-us</language>`,
   });
 }
