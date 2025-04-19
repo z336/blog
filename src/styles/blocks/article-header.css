@@ -1,0 +1,17 @@
+/* Use with article header. This is nearly a composition class but since we style the ul and the grid is unique to this area, it's a block. */
+.article-header {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  ul {
+    list-style: none;
+    padding-inline: 0;
+  }
+}
+
+@media (min-width: 48rem) {
+  .article-header {
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 2rem;
+  }
+}

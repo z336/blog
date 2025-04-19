@@ -26,6 +26,10 @@ footer {
     font-size: var(--size-step-0);
     text-transform: uppercase;
   }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
   ul,
   p {
     font-size: var(--size-step--1);
