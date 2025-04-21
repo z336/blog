@@ -1,0 +1,12 @@
+/* Create a larger flow space for big layout pieces and add extra padding and a border on larger screens */
+
+.space > * + * {
+  margin-block-start: var(--space-m-xl);
+}
+
+@media (min-width: 64rem) {
+  .space {
+    padding-inline-start: var(--space-0-3xl);
+    border-inline-start: 0.2ex dotted var(--color-less-dark);
+  }
+}

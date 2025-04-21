@@ -11,12 +11,12 @@ const heading = pageTitle;
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} />
-		<article aria-label="related links">
-			{
-				data.map((section) => {
-					return (
-						<div class="border flow" data-wrapper-type="inner">
-							<div class="prose">
+		<article data-wrapper-type="inner" aria-label="related links">
+			<div class="space">
+				{
+					data.map((section) => {
+						return (
+							<div class="flow prose">
 								<h2>{section.title}</h2>
 								<p>{section.description}</p>
 								<ul>
@@ -37,10 +37,10 @@ const heading = pageTitle;
 										))}
 								</ul>
 							</div>
-						</div>
-					);
-				})
-			}
+						);
+					})
+				}
+			</div>
 		</article>
 	</div>
 </Layout>
