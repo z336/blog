@@ -12,11 +12,11 @@ const heading = pageTitle;
 	<div class="wrapper">
 		<PageHeader heading={heading} />
 		<article data-wrapper-type="inner" aria-label="related links">
-			<div class="space">
+			<div class="space stack">
 				{
 					data.map((section) => {
 						return (
-							<div class="flow prose">
+							<article class="flow prose">
 								<h2>{section.title}</h2>
 								<p>{section.description}</p>
 								<ul>
@@ -36,7 +36,7 @@ const heading = pageTitle;
 											</li>
 										))}
 								</ul>
-							</div>
+							</article>
 						);
 					})
 				}

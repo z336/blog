@@ -1,11 +1,7 @@
-/* Create a larger flow space for big layout pieces and add extra padding and a border on larger screens */
+/* Add extra padding and a border on larger screens */
 
 .space {
   padding-block-end: var(--space-m-xl);
-}
-
-.space > * + * {
-  margin-block-start: var(--space-m-xl);
 }
 
 @media (min-width: 64rem) {

@@ -17,22 +17,20 @@ const heading = pageTitle;
   <div class="wrapper">
     <PageHeader heading={heading} />
     <article data-wrapper-type="inner" aria-labelledby="page title">
-      <div class="space">
+      <div class="space stack">
         {
           sortedPosts.map((post: any) => (
-            <div class="flow">
+            <article class="flow">
               <h2>
                 <a href={post.url}>{post.frontmatter.title}</a>
               </h2>
-              <p>
-                <small>
-                  <time datetime={post.frontmatter.pubDate}>
-                    {dateFormatter(post.frontmatter.pubDate)}
-                  </time>
-                  | {post.frontmatter.category}
-                </small>
-              </p>
-            </div>
+              <small>
+                <time datetime={post.frontmatter.pubDate}>
+                  {dateFormatter(post.frontmatter.pubDate)}
+                </time>
+                | {post.frontmatter.category}
+              </small>
+            </article>
           ))
         }
       </div>

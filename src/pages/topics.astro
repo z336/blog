@@ -26,7 +26,7 @@ const heading = pageTitle;
   <div class="wrapper">
     <PageHeader heading={heading} />
     <article data-wrapper-type="inner" aria-labelledby="page title">
-      <div class="space">
+      <div class="space stack">
         {
           tagObjects.map((tag) => {
             const taggedPosts = allPosts.filter((post: any) =>
@@ -34,7 +34,7 @@ const heading = pageTitle;
             );
 
             return (
-              <div class="flow">
+              <article class="flow">
                 <h2 id={tag.slug}>#{tag.title}</h2>
                 <ul>
                   {taggedPosts.map((post: any) => (
@@ -43,7 +43,7 @@ const heading = pageTitle;
                     </li>
                   ))}
                 </ul>
-              </div>
+              </article>
             );
           })
         }
