@@ -15,23 +15,25 @@ const { frontmatter, headings } = Astro.props;
 				{
 					/* Check for an update date, if it is not there just show post date */
 					frontmatter.update ? (
-						<small>
-							Updated{" "}
-							<time datetime={frontmatter.update}>
-								<em>{dateFormatter(frontmatter.update)}</em>
-							</time>
-							, originally posted
-							<time datetime={frontmatter.pubDate}>
-								<em>{dateFormatter(frontmatter.pubDate)}</em>
-							</time>
-						</small>
+						<p>
+							<small>
+								Updated{" "}
+								<time datetime={frontmatter.update}>
+									<em>{dateFormatter(frontmatter.update)}</em></time>, originally posted
+								<time datetime={frontmatter.pubDate}>
+									<em>{dateFormatter(frontmatter.pubDate)}</em>
+								</time>
+							</small>
+						</p>
 					) : (
-						<small>
-							Posted{" "}
-							<time datetime={frontmatter.pubDate}>
-								<em>{dateFormatter(frontmatter.pubDate)}</em>
-							</time>
-						</small>
+						<p>
+							<small>
+								Posted{" "}
+								<time datetime={frontmatter.pubDate}>
+									<em>{dateFormatter(frontmatter.pubDate)}</em>
+								</time>
+							</small>
+						</p>
 					)
 				}
 			</div>

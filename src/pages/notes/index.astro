@@ -24,15 +24,14 @@ const heading = pageTitle;
               <h2>
                 <a href={post.url}>{post.frontmatter.title}</a>
               </h2>
-              <div>
+              <p>
                 <small>
                   <time datetime={post.frontmatter.pubDate}>
                     {dateFormatter(post.frontmatter.pubDate)}
                   </time>
                   | {post.frontmatter.category}
                 </small>
-              </div>
-              <p>{post.frontmatter.description}</p>
+              </p>
             </div>
           ))
         }

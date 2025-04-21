@@ -145,6 +145,7 @@ pre {
   background-color: var(--color-less-light);
 }
 
+/* Display as a block to get text wrap balance */
 small {
   color: var(--color-less-dark);
   display: inline-block;
