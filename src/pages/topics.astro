@@ -25,8 +25,8 @@ const heading = pageTitle;
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
     <PageHeader heading={heading} />
-    <section data-wrapper-type="inner" aria-labelledby="page title">
-      <div class="space stack">
+    <div data-wrapper-type="inner">
+      <section class="space stack">
         {
           tagObjects.map((tag) => {
             const taggedPosts = allPosts.filter((post: any) =>
@@ -47,7 +47,7 @@ const heading = pageTitle;
             );
           })
         }
-      </div>
-    </section>
+      </section>
+    </div>
   </div>
 </Layout>

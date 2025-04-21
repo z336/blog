@@ -11,16 +11,16 @@ const heading = pageTitle;
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} />
-		<section data-wrapper-type="inner" aria-label="related links">
-			<div class="space stack">
+		<div data-wrapper-type="inner">
+			<section class="space stack">
 				{
-					data.map((section) => {
+					data.map((category) => {
 						return (
 							<article class="flow prose">
-								<h2>{section.title}</h2>
-								<p>{section.description}</p>
+								<h2>{category.title}</h2>
+								<p>{category.description}</p>
 								<ul>
-									{section.links
+									{category.links
 										.sort((a, b) =>
 											a.title.localeCompare(b.title),
 										) // Sort links alphabetically by title
@@ -41,7 +41,7 @@ const heading = pageTitle;
 						);
 					})
 				}
-			</div>
-		</section>
+			</section>
+		</div>
 	</div>
 </Layout>
