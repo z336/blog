@@ -4,6 +4,7 @@ import { dateFormatter } from "../../utils/dateFormatter.mjs";
 import PageHeader from "../../components/PageHeader.astro";
 
 const allPosts = Object.values(import.meta.glob("./*.md", { eager: true }));
+
 // Sort the posts in most recent order
 const sortedPosts = allPosts.sort((a: any, b: any) => {
   return b.frontmatter.pubDate.localeCompare(a.frontmatter.pubDate);
