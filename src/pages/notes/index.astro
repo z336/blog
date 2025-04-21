@@ -16,7 +16,7 @@ const heading = pageTitle;
 <Layout pageTitle={pageTitle}>
   <div class="wrapper">
     <PageHeader heading={heading} />
-    <article data-wrapper-type="inner" aria-labelledby="page title">
+    <section data-wrapper-type="inner" aria-labelledby="page title">
       <div class="space stack">
         {
           sortedPosts.map((post: any) => (
@@ -34,6 +34,6 @@ const heading = pageTitle;
           ))
         }
       </div>
-    </article>
+    </section>
   </div>
 </Layout>

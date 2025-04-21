@@ -11,7 +11,7 @@ const heading = pageTitle;
 <Layout pageTitle={pageTitle}>
 	<div class="wrapper">
 		<PageHeader heading={heading} />
-		<article data-wrapper-type="inner" aria-label="related links">
+		<section data-wrapper-type="inner" aria-label="related links">
 			<div class="space stack">
 				{
 					data.map((section) => {
@@ -29,7 +29,8 @@ const heading = pageTitle;
 												<a href={link.url}>
 													{link.title}
 												</a>{" "}
-												- {/* Use Fragment to inject */}
+												-{" "}
+												{/* Use Fragment to inject HTML */}
 												<Fragment
 													set:html={link.description}
 												/>
@@ -41,6 +42,6 @@ const heading = pageTitle;
 					})
 				}
 			</div>
-		</article>
+		</section>
 	</div>
 </Layout>
