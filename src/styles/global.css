@@ -141,8 +141,9 @@ code:not(pre code) {
 }
 
 pre {
-  padding: var(--gutter);
   background-color: var(--color-less-light);
+  padding: var(--gutter);
+  border: 0.1ex solid var(--color-less-dark);
 }
 
 /* Display as a block to get text wrap balance */
@@ -152,7 +153,7 @@ small {
   text-wrap: balance;
 }
 
-/* Required for accessibility according to Mozilla 
+/* Required for accessibility according to Mozilla
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del#accessibility */
 
 del::before,
