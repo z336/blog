@@ -1,19 +1,19 @@
 /* Styles for the link that skips to the main content */
 .skip-link {
-    background: var(--color-dark);
-    position: absolute;
-    text-align: center;
-    margin-inline: auto;
-    &:focus {
-        left: var(--gutter);
-        right: var(--gutter);
-        top: var(--gutter);
-    }
-    &:not(:focus):not(:active) {
-        clip-path: inset(50%);
-        overflow: hidden;
-        height: 1px;
-        width: 1px;
-        white-space: nowrap;
-    }
+  background: var(--color-dark);
+  position: absolute;
+  text-align: center;
+  margin-inline: auto;
+  &:focus {
+    left: var(--gutter);
+    right: var(--gutter);
+    top: var(--gutter);
+  }
+  &:not(:focus):not(:active) {
+    clip-path: inset(50%);
+    overflow: hidden;
+    height: 1px;
+    width: 1px;
+    white-space: nowrap;
+  }
 }

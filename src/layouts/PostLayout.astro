@@ -7,88 +7,80 @@ const { frontmatter, headings } = Astro.props;
 ---
 
 <Layout pageTitle={frontmatter.title}>
-    <div class="wrapper">
-        <header class="article-header border" data-wrapper-type="inner">
-            <div>
-                <p>{frontmatter.category}</p>
-                <h1>{frontmatter.title}</h1>
-                {
-                    /* Check for an update date, if it is not there just show post date */
-                    frontmatter.update ? (
-                        <p>
-                            <small>
-                                Updated{" "}
-                                <time datetime={frontmatter.update}>
-                                    <em>{dateFormatter(frontmatter.update)}</em></time>, originally posted
-                                <time datetime={frontmatter.pubDate}>
-                                    <em>
-                                        {dateFormatter(frontmatter.pubDate)}
-                                    </em>
-                                </time>
-                            </small>
-                        </p>
-                    ) : (
-                        <p>
-                            <small>
-                                Posted{" "}
-                                <time datetime={frontmatter.pubDate}>
-                                    <em>
-                                        {dateFormatter(frontmatter.pubDate)}
-                                    </em>
-                                </time>
-                            </small>
-                        </p>
-                    )
-                }
-            </div>
-            <div>
-                <p>Topics</p>
-                <ul>
-                    {
-                        frontmatter.tags.map((tag: string) => (
-                            <li>
-                                <a href={`/topics/#${slugGenerator(tag)}`}>
-                                    #{tag}
-                                </a>
-                            </li>
-                        ))
-                    }
-                </ul>
-            </div>
-            <nav aria-label="article table of contents">
-                <p>Table of contents</p>
-                <ol>
-                    {
-                        /* Check the h2s in the article and list them as links */
-                        headings.map(
-                            (heading: any) =>
-                                heading.depth === 2 && (
-                                    <li>
-                                        <a href={`#${heading.slug}`}>
-                                            {heading.text}
-                                        </a>
-                                    </li>
-                                ),
-                        )
-                    }
-                </ol>
-            </nav>
-        </header>
-        <article class="wrapper prose flow">
-            <div class="border region flow">
-                {
-                    /* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. */
-                    frontmatter.lede && (
-                        <p class="lede">
-                            <em>{frontmatter.lede}</em>
-                        </p>
-                    )
-                }
-                <slot />
-            </div>
-            <div class="region">
-                <p><a href="/notes/">Back to notes</a></p>
-            </div>
-        </article>
-    </div>
+  <div class="wrapper">
+    <header class="article-header border" data-wrapper-type="inner">
+      <div>
+        <p>{frontmatter.category}</p>
+        <h1>{frontmatter.title}</h1>
+        {
+          /* Check for an update date, if it is not there just show post date */
+          frontmatter.update ? (
+            <p>
+              <small>
+                Updated{" "}
+                <time datetime={frontmatter.update}>
+                  <em>{dateFormatter(frontmatter.update)}</em></time>, originally posted
+                <time datetime={frontmatter.pubDate}>
+                  <em>{dateFormatter(frontmatter.pubDate)}</em>
+                </time>
+              </small>
+            </p>
+          ) : (
+            <p>
+              <small>
+                Posted{" "}
+                <time datetime={frontmatter.pubDate}>
+                  <em>{dateFormatter(frontmatter.pubDate)}</em>
+                </time>
+              </small>
+            </p>
+          )
+        }
+      </div>
+      <div>
+        <p>Topics</p>
+        <ul>
+          {
+            frontmatter.tags.map((tag: string) => (
+              <li>
+                <a href={`/topics/#${slugGenerator(tag)}`}>#{tag}</a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <nav aria-label="article table of contents">
+        <p>Table of contents</p>
+        <ol>
+          {
+            /* Check the h2s in the article and list them as links */
+            headings.map(
+              (heading: any) =>
+                heading.depth === 2 && (
+                  <li>
+                    <a href={`#${heading.slug}`}>{heading.text}</a>
+                  </li>
+                ),
+            )
+          }
+        </ol>
+      </nav>
+    </header>
+    <article class="wrapper prose flow">
+      <div class="border region flow">
+        {
+          /* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. */
+          frontmatter.lede && (
+            <p class="lede">
+              <em>{frontmatter.lede}</em>
+            </p>
+          )
+        }
+        <slot />
+      </div>
+      <div class="region">
+        <p><a href="/notes/">Back to notes</a></p>
+      </div>
+    </article>
+  </div>
 </Layout>
