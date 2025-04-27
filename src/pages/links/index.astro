@@ -9,39 +9,39 @@ const heading = pageTitle;
 ---
 
 <Layout pageTitle={pageTitle}>
-	<div class="wrapper">
-		<PageHeader heading={heading} />
-		<div data-wrapper-type="inner">
-			<section class="space stack">
-				{
-					data.map((category) => {
-						return (
-							<article class="flow prose">
-								<h2>{category.title}</h2>
-								<p>{category.description}</p>
-								<ul>
-									{category.links
-										.sort((a, b) =>
-											a.title.localeCompare(b.title),
-										) // Sort links alphabetically by title
-										.map((link) => (
-											<li>
-												<a href={link.url}>
-													{link.title}
-												</a>{" "}
-												-{" "}
-												{/* Use Fragment to inject HTML */}
-												<Fragment
-													set:html={link.description}
-												/>
-											</li>
-										))}
-								</ul>
-							</article>
-						);
-					})
-				}
-			</section>
-		</div>
-	</div>
+    <div class="wrapper">
+        <PageHeader heading={heading} />
+        <div data-wrapper-type="inner">
+            <section class="space stack">
+                {
+                    data.map((category) => {
+                        return (
+                            <article class="flow prose">
+                                <h2>{category.title}</h2>
+                                <p>{category.description}</p>
+                                <ul>
+                                    {category.links
+                                        .sort((a, b) =>
+                                            a.title.localeCompare(b.title),
+                                        ) // Sort links alphabetically by title
+                                        .map((link) => (
+                                            <li>
+                                                <a href={link.url}>
+                                                    {link.title}
+                                                </a>{" "}
+                                                -{" "}
+                                                {/* Use Fragment to inject HTML */}
+                                                <Fragment
+                                                    set:html={link.description}
+                                                />
+                                            </li>
+                                        ))}
+                                </ul>
+                            </article>
+                        );
+                    })
+                }
+            </section>
+        </div>
+    </div>
 </Layout>

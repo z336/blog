@@ -1,29 +1,29 @@
 /* Use with site header and footer styles */
 .site-header {
-  font-family: Alte, serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  ul {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: var(--gutter);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  a {
-    text-decoration: none;
-    &:hover,
-    &[aria-current="page"] {
-      text-decoration: underline;
-      text-decoration-thickness: 0.2ex;
-      text-underline-offset: 0.3ex;
+    font-family: Alte, serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--gutter);
+        list-style: none;
+        margin: 0;
+        padding: 0;
     }
-  }
+    a {
+        text-decoration: none;
+        &:hover,
+        &[aria-current="page"] {
+            text-decoration: underline;
+            text-decoration-thickness: 0.2ex;
+            text-underline-offset: 0.3ex;
+        }
+    }
 }
 
 /* This is an exception for the inner wrapper */
 .site-header nav[data-wrapper-type="inner"] {
-  padding-block: var(--gutter);
+    padding-block: var(--gutter);
 }

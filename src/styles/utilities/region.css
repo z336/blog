@@ -1,4 +1,4 @@
 /* Use when all that is needed is vertical space */
 .region {
-  padding-block: var(--space-s-l);
+    padding-block: var(--space-s-l);
 }
