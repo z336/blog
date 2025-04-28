@@ -23,9 +23,12 @@ header p {
 
 footer {
   h3 {
-    color: var(--color-less-light);
+    color: var(--color-dark);
+    background-color: var(--color-light);
     font-size: var(--size-step-0);
     text-transform: uppercase;
+    display: inline-block;
+    padding-inline: 0.25rem;
   }
   ul {
     list-style: none;
@@ -37,7 +40,7 @@ footer {
   }
   /* Add space in reverse so that footer links are easier to click on mobile */
   ul li {
-    margin-block-start: var(--space-0-4xs);
+    margin-block-start: var(--space-s-4xs);
   }
 }
 
