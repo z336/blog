@@ -1,6 +1,7 @@
 .grid {
   display: grid;
-  grid-gap: var(--gutter);
+  grid-column-gap: var(--gutter);
+  grid-row-gap: var(--space-m-l);
 }
 
 @supports (width: min(250px, 100%)) {

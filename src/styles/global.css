@@ -23,6 +23,7 @@ header p {
 
 footer {
   h3 {
+    color: var(--color-less-light);
     font-size: var(--size-step-0);
     text-transform: uppercase;
   }
