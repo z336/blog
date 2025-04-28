@@ -23,12 +23,8 @@ header p {
 
 footer {
   h3 {
-    color: var(--color-dark);
-    background-color: var(--color-light);
     font-size: var(--size-step-0);
     text-transform: uppercase;
-    display: inline-block;
-    padding-inline: 0.25rem;
   }
   ul {
     list-style: none;
