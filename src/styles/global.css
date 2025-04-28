@@ -35,7 +35,7 @@ footer {
     font-size: var(--size-step--1);
   }
   /* Add space in reverse so that footer links are easier to click on mobile */
-  ul li:not(:first-child) {
+  ul li {
     margin-block-start: var(--space-0-4xs);
   }
 }
