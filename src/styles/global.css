@@ -138,6 +138,9 @@ details {
 /*  Change the background color for all code that is not in a code block */
 code:not(pre code) {
   background-color: var(--color-less-light);
+  padding-block: 0.125em;
+  padding-inline: 0.25em;
+  border-radius: 4px;
 }
 
 pre {
