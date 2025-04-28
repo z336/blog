@@ -3,6 +3,7 @@ import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 import "../styles/styles.css";
+const currentPath = Astro.url.pathname;
 const { pageTitle } = Astro.props;
 ---
 
@@ -39,7 +40,9 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="theme-color" content="#2a2722" />
-    <title>{pageTitle} | Jon Coleman</title>
+    <title>
+      {currentPath === "/" ? `${pageTitle}` : `${pageTitle} | Jon Coleman`}
+    </title>
   </head>
   <body>
     <Header />
