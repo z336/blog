@@ -29,11 +29,11 @@ footer {
   ul {
     list-style: none;
     padding: 0;
+    --flow-space: 1.15rem;
   }
   ul,
   p {
     font-size: var(--size-step--1);
-    --flow-space: 1.15rem;
   }
   /* Add space in reverse so that footer links are easier to click on mobile */
   ul li {
