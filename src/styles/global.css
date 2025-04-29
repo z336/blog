@@ -147,7 +147,7 @@ code:not(pre code) {
 pre {
   background-color: var(--color-less-light);
   padding: var(--gutter);
-  border: 0.1ex solid var(--color-less-dark);
+  border-radius: 4px;
 }
 
 /* Display as a block to get text wrap balance */
