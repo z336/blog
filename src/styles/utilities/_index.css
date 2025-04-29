@@ -1,5 +1,6 @@
 @import "./border.css";
 @import "./inverse.css";
-@import "./prose.css";
 @import "./region.css";
 @import "./wrapper.css";
+/* Must import prose after wrapper to maintain its correct place in the cascade */
+@import "./prose.css";
