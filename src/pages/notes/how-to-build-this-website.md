@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: "Build this website"
 pubDate: 2025-04-01
-update: 2025-04-02
+update: 2025-04-29
 category: "Article"
 tags: ["accessibility", "css", "html"]
 lede: "This is a conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts. Feel free to disagree with any of this — my opinions may not overlap with yours!"
@@ -133,7 +133,7 @@ I import all of these files into <code>styles.css</code> in a specific order:
 
 I want to use the [CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade) to my advantage, so this import order applies the reset, adds the settings (variables), applies universal element selector styles, and then adds all of the specific CUBE styles. The result is the styles are applied in the preferred order to the document when it loads.
 
-Note that you can apply CSS in an Astro project in many ways, including using SASS, CSS-in-JS solutions (gross), etc. I love SASS but vanilla CSS is so good these days.
+Note that you can apply CSS in an Astro project in many ways, including using SCSS, CSS-in-JS solutions (gross), etc. I love SCSS but vanilla CSS is so good these days.
 
 ## Deploy the site
 

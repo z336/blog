@@ -7,8 +7,3 @@
     padding-inline: var(--space-3xs-xl);
   }
 }
-
-/* Use with .wrapper to shorten max-width */
-.prose {
-  max-width: 60ch;
-}
