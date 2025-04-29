@@ -1,12 +1,9 @@
 /* Add extra padding and a border on larger screens */
 
-.space {
-  padding-block-end: var(--space-m-xl);
-}
-
 @media (min-width: 64rem) {
   .space {
     padding-inline-start: var(--space-0-3xl);
+    padding-block-end: var(--space-m-xl);
     border-inline-start: 0.3ex dotted var(--color-less-dark);
   }
 }
