@@ -3,10 +3,17 @@ body {
   color: var(--color-dark);
   display: flex;
   flex-direction: column;
-  margin-inline: 0.75em;
+  margin-inline: 1em;
   font-family: Authentic, sans-serif;
   font-size: var(--size-step-0);
   line-height: 1.8;
+}
+
+/* Give back space on smaller screens */
+@media (max-width: 64rem) {
+  body {
+    margin-inline: 0;
+  }
 }
 
 main {
