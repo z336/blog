@@ -1,17 +1,49 @@
 /* Use with article header. This is nearly a composition class but since we style the ul and the grid is unique to this area, it's a block. */
+
 .article-header {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-areas:
+    "title"
+    "topics"
+    "toc";
+  gap: 1.5rem;
+
+  /* Find the block elements vs adding lots of classes */
+  & > *:nth-child(1) {
+    grid-area: title;
+  }
+  & > *:nth-child(2) {
+    grid-area: topics;
+  }
+  & > *:nth-child(3) {
+    grid-area: toc;
+  }
+
+  /* Not grid styles */
   ul {
     list-style: none;
     padding-inline: 0;
+  }
+
+  p {
+    color: var(--color-less-dark);
   }
 }
 
 @media (min-width: 48rem) {
   .article-header {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title title"
+      "topics toc";
+  }
+}
+
+@media (min-width: 72rem) {
+  .article-header {
     grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "title topics toc";
     gap: 2rem;
   }
 }

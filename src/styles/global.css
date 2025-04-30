@@ -24,30 +24,6 @@ main {
   }
 }
 
-header p {
-  color: var(--color-less-dark);
-}
-
-footer {
-  h3 {
-    font-size: var(--size-step-0);
-    text-transform: uppercase;
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    --flow-space: 1.15rem;
-  }
-  ul,
-  p {
-    font-size: var(--size-step--1);
-  }
-  /* Add space in reverse so that footer links are easier to click on mobile */
-  ul li {
-    margin-block-start: var(--space-s-4xs);
-  }
-}
-
 h1,
 h2,
 h3,
