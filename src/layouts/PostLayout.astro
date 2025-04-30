@@ -37,34 +37,36 @@ const { frontmatter, headings } = Astro.props;
           )
         }
       </div>
-      <div>
-        <p>Topics</p>
-        <ul>
-          {
-            frontmatter.tags.map((tag: string) => (
-              <li>
-                <a href={`/topics/#${slugGenerator(tag)}`}>#{tag}</a>
-              </li>
-            ))
-          }
-        </ul>
+      <div class="topics-and-toc">
+        <div>
+          <p>Topics</p>
+          <ul>
+            {
+              frontmatter.tags.map((tag: string) => (
+                <li>
+                  <a href={`/topics/#${slugGenerator(tag)}`}>#{tag}</a>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+        <nav aria-label="article table of contents">
+          <p>Table of contents</p>
+          <ol>
+            {
+              /* Check the h2s in the article and list them as links */
+              headings.map(
+                (heading: any) =>
+                  heading.depth === 2 && (
+                    <li>
+                      <a href={`#${heading.slug}`}>{heading.text}</a>
+                    </li>
+                  ),
+              )
+            }
+          </ol>
+        </nav>
       </div>
-      <nav aria-label="article table of contents">
-        <p>Table of contents</p>
-        <ol>
-          {
-            /* Check the h2s in the article and list them as links */
-            headings.map(
-              (heading: any) =>
-                heading.depth === 2 && (
-                  <li>
-                    <a href={`#${heading.slug}`}>{heading.text}</a>
-                  </li>
-                ),
-            )
-          }
-        </ol>
-      </nav>
     </header>
     <article class="post prose flow">
       <div class="border region flow">

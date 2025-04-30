@@ -1,6 +1,17 @@
-/* Mirrors wrapper for posts, but posts need to be center aligned */
+/* Mirrors wrapper, but aligns items left on smaller screens to line up with article header */
 
 .post {
-  padding-inline: var(--gutter);
-  margin-inline: auto;
+  padding-inline: var(--space-3xs-xl);
+}
+
+@media (min-width: 48rem) {
+  .post {
+    margin-inline: 0;
+  }
+}
+
+@media (min-width: 80rem) {
+  .post {
+    margin-inline: auto;
+  }
 }

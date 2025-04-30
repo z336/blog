@@ -1,12 +1,10 @@
-/* Use with article header. This is nearly a composition class but since we style the ul and the grid is unique to this area, it's a block. */
+/* Use with article header. It is somewhat rigid because we want to predict when the grid collapses to a single column so we can adjust the rest of the content */
 
 .article-header {
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-areas:
     "title"
-    "topics"
-    "toc";
+    "topics";
   column-gap: 1rem;
   row-gap: 1.5rem;
 
@@ -16,9 +14,6 @@
   }
   & > *:nth-child(2) {
     grid-area: topics;
-  }
-  & > *:nth-child(3) {
-    grid-area: toc;
   }
 
   /* Not grid styles */
@@ -34,16 +29,16 @@
 
 @media (min-width: 48rem) {
   .article-header {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-      "title title"
-      "topics toc";
+      "title"
+      "topics";
   }
 }
 
-@media (min-width: 72rem) {
+@media (min-width: 80rem) {
   .article-header {
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas: "title topics toc";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "title topics";
   }
 }
