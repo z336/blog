@@ -10,7 +10,7 @@ body {
 }
 
 /* Give back space on smaller screens */
-@media (max-width: 64rem) {
+@media (max-width: 48rem) {
   body {
     margin-inline: 0;
   }

@@ -1,3 +1,6 @@
+/* Mirrors wrapper for posts, but posts need to be center aligned */
+
 .post {
+  padding-inline: var(--gutter);
   margin-inline: auto;
 }
