@@ -13,3 +13,12 @@
     }
   }
 }
+
+/* Accommodate very small screens */
+@media (max-width: 22rem) {
+  .page-header {
+    h1 {
+      font-size: var(--size-step-4);
+    }
+  }
+}
