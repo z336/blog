@@ -1,5 +1,5 @@
 .wrapper {
-  max-width: 1680px;
+  max-width: 1469px;
   padding-inline: var(--gutter);
   margin-inline: auto;
   & [data-wrapper-type="inner"] {
