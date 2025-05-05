@@ -15,13 +15,14 @@ This site is built using fluid responsive design principles — the font sizes a
 The footer layout uses [CSS grid](https://css-tricks.com/snippets/css/complete-guide-grid/) and a design pattern (aptly named _The Grid_) from [Every Layout](https://every-layout.dev/). I can't link to The Grid directly because it is behind a paywall that you should very much consider paying to get by. But I think it's OK to share what I have done here:
 
 ```css
-.footer-grid {
+.grid {
   display: grid;
-  grid-gap: var(--gutter);
+  grid-column-gap: var(--gutter);
+  grid-row-gap: var(--space-m-l);
 }
 
 @supports (width: min(250px, 100%)) {
-  .footer-grid {
+  .grid {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
   }
 }
