@@ -73,7 +73,7 @@ const { frontmatter, headings } = Astro.props;
         {
           /* Check for lead (or "lede") text in the frontmatter, but it's OK if it's empty. */
           frontmatter.lede && (
-            <p class="lede">
+            <p class="lede balance">
               <em>{frontmatter.lede}</em>
             </p>
           )
