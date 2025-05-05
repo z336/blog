@@ -1,13 +1,15 @@
 {
   "name": "Jon Coleman",
   "short_name": "Jon",
+  "author": "Jon Coleman",
+  "url": "https://joncoleman.me",
   "start_url": "/",
-  "display": "standalone",
   "scope": "/",
+  "display": "standalone",
   "description": "Jon Coleman's personal website and blog.",
-  "lang": "en-US",
-  "background_color": "#fafafa",
-  "theme_color": "#2a2722",
+  "lang": "en-us",
+  "themeColor": "#2a2722",
+  "backgroundColor": "#fafafa",
   "icons": [
     {
       "src": "/icon-192.png",

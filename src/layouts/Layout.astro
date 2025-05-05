@@ -6,6 +6,9 @@ import "../styles/styles.css";
 
 const currentPath = Astro.url.pathname;
 const { pageTitle } = Astro.props;
+
+const getFullPageTitle =
+  currentPath === "/" ? `${pageTitle}` : `${pageTitle} | Jon Coleman`;
 ---
 
 <html lang="en">
@@ -52,20 +55,20 @@ const { pageTitle } = Astro.props;
     <meta name="author" content="Jon Coleman" />
 
     <title>
-      {currentPath === "/" ? `${pageTitle}` : `${pageTitle} | Jon Coleman`}
+      {getFullPageTitle}
     </title>
 
-    <meta property="og:title" content="Jon Coleman" />
+    <meta property="og:title" content={getFullPageTitle} />
     <meta
       property="og:description"
       content="Jon Coleman's personal website and blog."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://joncoleman.me" />
+    <meta property="og:url" content={`https://joncoleman.me${currentPath}`} />
     <meta property="og:image" content="/favicon.svg" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Jon Coleman" />
+    <meta name="twitter:title" content={getFullPageTitle} />
     <meta
       name="twitter:description"
       content="Jon Coleman's personal website and blog."
@@ -74,7 +77,7 @@ const { pageTitle } = Astro.props;
 
     <meta name="theme-color" content="#2a2722" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-title" content="Jon Coleman" />
+    <meta name="apple-mobile-web-app-title" content={getFullPageTitle} />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <link rel="manifest" href="/manifest.json" />
