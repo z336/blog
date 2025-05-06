@@ -42,7 +42,7 @@ const { frontmatter, headings } = Astro.props;
           <p>Topics</p>
           <ul>
             {
-              frontmatter.tags.map((tag: string) => (
+              frontmatter.tags.map((tag) => (
                 <li>
                   <a href={`/topics/#${slugGenerator(tag)}`}>#{tag}</a>
                 </li>
@@ -56,7 +56,7 @@ const { frontmatter, headings } = Astro.props;
             {
               /* Check the h2s in the article and list them as links */
               headings.map(
-                (heading: any) =>
+                (heading) =>
                   heading.depth === 2 && (
                     <li>
                       <a href={`#${heading.slug}`}>{heading.text}</a>
