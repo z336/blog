@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: "Build this website"
 pubDate: 2025-04-01
-update: 2025-04-29
+update: 2025-05-12
 category: "Article"
 tags: ["accessibility", "css", "html"]
 lede: "This is a conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts. Feel free to disagree with any of this — my opinions may not overlap with yours!"
@@ -94,7 +94,7 @@ Here's what I use these directories for:
 - <code>public/</code>: Unprocessed files and assets, such as <code>favicon.svg</code> and font files.
 - <code>src/components/</code>: Reusable pieces of code I want to use in many places. This is a familiar concept if you have worked with React.
 - <code>src/layouts/</code>: Reusable layouts. I have two — a layout for all of my pages and a layout that extends the base layout for blog posts.
-- <code>src/pages/</code>: All of my pages and blog posts are here. I keep links and notes in JSON files next to their respective pages.
+- <code>src/pages/</code>: All of my pages and posts are here. Notes live in Markdown files and I keep links for the [Links page](/links/) in JSON files.
 - <code>src/styles/</code>: CSS lives here. I go into detail about how I style my sites below.
 - <code>src/utils/</code>: Reusable utility functions go here. For example, I have a function to format dates and a function that generates slugs from strings.
 
@@ -102,21 +102,31 @@ You can see [this project on GitHub](https://github.com/z336/blog) for finer det
 
 ### Add styles
 
-It is time to style the site. Though, where I truly begin the style work can vary in practice sometimes, because I find it difficult to add functionality or copy without _some_ idea for how the site will look.
+It is time to style the site. Where I truly begin the style work can vary in practice sometimes, because I find it difficult to add functionality or copy without _some_ idea for how the site will look.
 
 Here is the file tree for the CSS:
 
 ```plaintext
 src/
 └── styles/
-    ├── cube.css
+    └── blocks/
+        ├── _index.css
+        └── # Other files...
+    └── compositions/
+        ├── _index.css
+        └── # Other files...
+    └── utilities/
+        ├── _index.css
+        └── # Other files...
+    ├── fonts.css
     ├── global.css
     ├── reset.css
     ├── settings.css
     └── styles.css
 ```
 
-- <code>cube.css</code>: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/).
+- <code>blocks/</code>, <code>compositions/</code>, and <code>utilities/</code>: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/). Each directory imports files into an <code>\_index.css</code> file, so I can import only _that_ file later. I use the underscore (\_) to keep this file at the top of the directory, but it also often used to signify a partial file — and I think that technically applies!
+- <code>fonts.css</code>: I keep all of my font-face rules here.
 - <code>global.css</code>: Styles applied primarily to _element selectors_ such as <code>&lt;p&gt;</code> — I want these styles to apply at the top level and be used everywhere.
 - <code>reset.css</code>: A CSS reset using Andy Bell's [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/).
 - <code>settings.css</code>: CSS variables applied to <code>:root</code>.
@@ -125,10 +135,14 @@ src/
 I import all of these files into <code>styles.css</code> in a specific order:
 
 ```css
-@import url("reset.css");
-@import url("settings.css");
-@import url("global.css");
-@import url("cube.css");
+@import "reset.css";
+@import "fonts.css";
+@import "settings.css";
+@import "global.css";
+
+@import "./blocks/_index.css";
+@import "./compositions/_index.css";
+@import "./utilities/_index.css";
 ```
 
 I want to use the [CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade) to my advantage, so this import order applies the reset, adds the settings (variables), applies universal element selector styles, and then adds all of the specific CUBE styles. The result is the styles are applied in the preferred order to the document when it loads.
