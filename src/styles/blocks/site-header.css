@@ -1,5 +1,6 @@
 /* Use with site header and footer styles */
 .site-header {
+  --max-wrapper-width: 100%;
   font-family: Alte, serif;
   text-transform: uppercase;
   letter-spacing: 2px;
