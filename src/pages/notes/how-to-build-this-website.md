@@ -2,7 +2,7 @@
 layout: ../../layouts/PostLayout.astro
 title: "Build this website"
 pubDate: 2025-04-01
-update: 2025-05-12
+update: 2025-05-13
 category: "Article"
 tags: ["accessibility", "css", "html"]
 lede: "This is a conversational how-to guide for building this website. It is far from comprehensive and it assumes this is not your first encounter with a lot of these concepts. Feel free to disagree with any of this — my opinions may not overlap with yours!"
@@ -12,7 +12,7 @@ I love building websites. I spent some time working as a front-end developer bef
 
 I approach documentation from an almost visual point of view. A help article (web page) is a bunch of boxes and landmarks with a lot of words and details placed in between. If a help article is poorly presented and not accessible for everyone, it doesn't matter what you write — your audience's understanding will suffer.
 
-With all that said, let's take a look at how to build this website.
+Let's take a look at how to build _this_ website.
 
 ## Set goals for the project
 
@@ -28,14 +28,14 @@ I choose my tools for a variety of reasons, and sometimes those reasons do not i
 
 Here are the tools I use often:
 
-1. [Sublime Text](https://www.sublimetext.com/): I'm back on my Sublime Text bullshit after years of Visual Studio Code. VS Code is robust, but bloated, and I'm tired of Microsoft tracking everything I do. It might require some hacking here and there but Sublime Text is still one sharp editor.
+1. [Sublime Text](https://www.sublimetext.com/): I'm back on Sublime Text after years of using Visual Studio Code. VS Code is robust, but bloated, and I'm tired of Microsoft tracking everything I do. It might require some hacking here and there but Sublime Text is still one sharp editor.
 2. [Hyper](https://hyper.is/): You should enjoy the terminal you stare at for many hours a day.
 3. [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/): I'm kind of a Firefox lifer, even though they seem to be selling out at the time of writing. The developer tools are top notch and they still let me use [uBlock Origin](https://ublockorigin.com/).
 4. [Astro](https://www.astro.build/): It feels familiar if you have ever built anything with React, but unlike React, it does not ship any JavaScript to the client unless you intentionally add it.
 
 ## Design in HTML and CSS
 
-I like to think I have an eye for design but I am not a designer. So step 0 is to shop around for inspiration and see if it can help me to create something new. These sites look great and (perhaps obviously) inspire the design here on my own site:
+I like to think I have an eye for design but I am not a designer. So step 0 for design is to shop around for inspiration and see if it can help me to create something new. These sites look great and (perhaps obviously) inspire the design here on my own site:
 
 - [HeydonWorks](https://heydonworks.com/)
 - [Henry from Online](https://henry.codes/)
@@ -43,15 +43,15 @@ I like to think I have an eye for design but I am not a designer. So step 0 is t
 
 I design my sites with a text editor and a browser because it is where I feel the most confident. Designing this way has the following side-effects:
 
-1. I can write semantic HTML without any distractions — let's worry about what a framework wants later.
-2. I can write pretty much all of my CSS, though surprises and changes are inevitable.
+1. I can write semantic HTML without any distractions — let's worry about framework complexities later.
+2. I can write nearly all of my CSS, though surprises and changes are inevitable in the full project.
 3. I don't have to translate visual designs to code.
 
 This method is not foolproof! Without fail, I always have more to figure out when I move to the framework than I probably would using traditional design methods. Also, if I were building websites _for a living_, I would simply invest in more design skills. But this works for my small projects.
 
 ## Create the project
 
-Check out this [tutorial](https://docs.astro.build/en/tutorial/0-introduction/) to build your own Astro blog. Below are the broad strokes for my own process:
+Check out this [tutorial](https://docs.astro.build/en/tutorial/0-introduction/) for the specific steps you should follow when you build an Astro site. Below are the broad strokes for my own process:
 
 1. [Run the setup wizard](#run-the-setup-wizard)
 2. [Create pages, layouts, and components](#create-pages-layouts-and-components)
@@ -125,7 +125,7 @@ src/
     └── styles.css
 ```
 
-- <code>blocks/</code>, <code>compositions/</code>, and <code>utilities/</code>: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/). Each directory imports files into an <code>\_index.css</code> file, so I can import only _that_ file later. I use the underscore (\_) to keep this file at the top of the directory, but it also often used to signify a partial file — and I think that technically applies!
+- <code>blocks/</code>, <code>compositions/</code>, and <code>utilities/</code>: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/). Each directory imports files into an <code>\_index.css</code> file, so I can import only _that_ file later. I use the underscore (\_) naming convention to keep this file at the top of the directory and to signify it as a partial file.
 - <code>fonts.css</code>: I keep all of my font-face rules here.
 - <code>global.css</code>: Styles applied primarily to _element selectors_ such as <code>&lt;p&gt;</code> — I want these styles to apply at the top level and be used everywhere.
 - <code>reset.css</code>: A CSS reset using Andy Bell's [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/).
@@ -145,7 +145,7 @@ I import all of these files into <code>styles.css</code> in a specific order:
 @import "./utilities/_index.css";
 ```
 
-I want to use the [CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade) to my advantage, so this import order applies the reset, adds the settings (variables), applies universal element selector styles, and then adds all of the specific CUBE styles. The result is the styles are applied in the preferred order to the document when it loads.
+I want to use the [CSS cascade](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_cascade/Cascade) to my advantage, so the import order applies the reset, adds the settings (variables), applies universal element selector styles, and then adds all of the specific CUBE styles. The result is the styles are applied in the preferred order to the document when it loads.
 
 Note that you can apply CSS in an Astro project in many ways, including using SCSS, CSS-in-JS solutions (gross), etc. I love SCSS but vanilla CSS is so good these days.
 
