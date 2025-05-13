@@ -61,13 +61,13 @@ Let's break these down:
 
 ### Run the setup wizard
 
-I use Astro's <code>create astro</code> setup wizard in my terminal:
+I use Astro's `create astro` setup wizard in my terminal:
 
 ```bash
 npm create astro@latest -- --template minimal
 ```
 
-Astro also supports <code>pnpm</code> and <code>Yarn</code>, so knock yourself out if you would rather work with one of those tools.
+Astro also supports `pnpm` and `Yarn`, so knock yourself out if you would rather work with one of those tools.
 
 ### Create pages, layouts, and components
 
@@ -87,16 +87,16 @@ I create the directories and files for the content. Here is a simplified version
     └── utils/
 ```
 
-Note that there are many other files and folders up and down the tree, but generally these are what I work with in a project like this. Some of these are absolutely required (<code>src/pages/</code>, for example) and some are used out of convention. See [Project structure](https://docs.astro.build/en/basics/project-structure/) for a more detailed explanation from Astro.
+Note that there are many other files and folders up and down the tree, but generally these are what I work with in a project like this. Some of these are absolutely required (`src/pages/`, for example) and some are used out of convention. See [Project structure](https://docs.astro.build/en/basics/project-structure/) for a more detailed explanation from Astro.
 
 Here's what I use these directories for:
 
-- <code>public/</code>: Unprocessed files and assets, such as <code>favicon.svg</code> and font files.
-- <code>src/components/</code>: Reusable pieces of code I want to use in many places. This is a familiar concept if you have worked with React.
-- <code>src/layouts/</code>: Reusable layouts. I have two — a layout for all of my pages and a layout that extends the base layout for blog posts.
-- <code>src/pages/</code>: All of my pages and posts are here. Notes live in Markdown files and I keep links for the [Links page](/links/) in JSON files.
-- <code>src/styles/</code>: CSS lives here. I go into detail about how I style my sites below.
-- <code>src/utils/</code>: Reusable utility functions go here. For example, I have a function to format dates and a function that generates slugs from strings.
+- `public/`: Unprocessed files and assets, such as `favicon.svg` and font files.
+- `src/components/`: Reusable pieces of code I want to use in many places. This is a familiar concept if you have worked with React.
+- `src/layouts/`: Reusable layouts. I have two — a layout for all of my pages and a layout that extends the base layout for blog posts.
+- `src/pages/`: All of my pages and posts are here. Notes live in Markdown files and I keep links for the [Links page](/links/) in JSON files.
+- `src/styles/`: CSS lives here. I go into detail about how I style my sites below.
+- `src/utils/`: Reusable utility functions go here. For example, I have a function to format dates and a function that generates slugs from strings.
 
 You can see [this project on GitHub](https://github.com/z336/blog) for finer details.
 
@@ -125,14 +125,14 @@ src/
     └── styles.css
 ```
 
-- <code>blocks/</code>, <code>compositions/</code>, and <code>utilities/</code>: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/). Each directory imports files into an <code>\_index.css</code> file, so I can import only _that_ file later. I use the underscore (\_) naming convention to keep this file at the top of the directory and to signify it as a partial file.
-- <code>fonts.css</code>: I keep all of my font-face rules here.
-- <code>global.css</code>: Styles applied primarily to _element selectors_ such as <code>&lt;p&gt;</code> — I want these styles to apply at the top level and be used everywhere.
-- <code>reset.css</code>: A CSS reset using Andy Bell's [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/).
-- <code>settings.css</code>: CSS variables applied to <code>:root</code>.
-- <code>styles.css</code>: And finally, this is where I import all of the other CSS files. This is the file Astro compiles and adds to the <code>&lt;head&gt;</code>.
+- `blocks/`, `compositions/`, and `utilities/`: Specific, custom CSS classes written using the [CUBE CSS methodology](https://cube.fyi/). Each directory imports files into an `_index.css` file, so I can import _only_ that file later. I use the underscore (`_`) naming convention to keep this file at the top of the directory and to signify it as a partial file.
+- `fonts.css`: I keep all of my font-face rules here.
+- `global.css`: Styles applied primarily to _element selectors_ such as `<p>` — I want these styles to apply at the top level and be used everywhere.
+- `reset.css`: A CSS reset using Andy Bell's [A (more) Modern CSS Reset](https://piccalil.li/blog/a-more-modern-css-reset/).
+- `settings.css`: CSS variables applied to `:root`.
+- `styles.css`: And finally, this is where I import all of the other CSS files. This is the file Astro compiles and adds to the `<head>`.
 
-I import all of these files into <code>styles.css</code> in a specific order:
+I import all of these files into `styles.css` in a specific order:
 
 ```css
 @import "reset.css";
