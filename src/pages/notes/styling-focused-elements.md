@@ -8,9 +8,9 @@ tags: ["accessibility", "css"]
 lede: 'You can style the way focusable elements look if you want to customize default accessibility styles in browsers. While you should be very cautious not to create any accessibility issues, you can safely modify the visual "focus ring" on focused elements to give it a bit more clarity and panache.'
 ---
 
-In the past, we would always use the `:focus` pseudo-class to style focused elements, but now we can use `:focus-visible` to target only _visual_ styles. In other words, `:focus` targets a whole range of functionality beyond just visual styles, while `:focus-visible` targets the styles you can see when an element has focus.
+In the past, you could only use the `:focus` pseudo-class to style focused elements. Now it's possible to use `:focus-visible` when you only want to target _visual_ styles and leave other functionality alone.
 
-Targeting <code>:focus-visible</code> is especially helpful when you only want to style the focus ring on focused elements but you do not want to add unwanted visual focus styles to other events, like mouse clicks, as a side effect.
+`:focus-visible` is especially helpful when you only want to style the focus ring on focused elements but you do not want to add unwanted visual focus styles to other events, like mouse clicks, as a side effect.
 
 For a deeper explanation of the differences between `:focous` and `:focus-visible`, check out the [:focus-visible article on MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/:focus-visible#focus_vs_focus-visible).
 
@@ -32,4 +32,4 @@ Let's break these down:
 2. `outline: 3px solid;` adds a thick outline to the focus ring and suggests that it should be the current color of the link instead of default blue color.
 3. `outline-offset: 3px;` pushes the outline away from the element a bit — this works a lot better than trying to add padding.
 
-All together this creates a nice focus style that is big and bold but not disruptive or broken.
+All together this creates a nice focus style that is bold and useful but not disruptive to other events.
