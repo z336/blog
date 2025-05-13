@@ -5,9 +5,8 @@ import { defineConfig } from "astro/config";
 export default defineConfig({
   site: "https://joncoleman.me/",
   markdown: {
-    shikiConfig: {
-      theme: "none",
-    },
+    // Necessary to remove a bunch of junk code injected into pre styles
+    syntaxHighlight: false,
   },
   // Instead of generating a random name based on a file deliberately set the css to /css/styles
   vite: {

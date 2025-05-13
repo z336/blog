@@ -130,7 +130,7 @@ code:not(pre code) {
 pre {
   background-color: var(--color-less-light);
   padding: var(--gutter);
-  border-radius: 4px;
+  overflow-x: auto;
 }
 
 /* Display as a block to get text wrap balance */
