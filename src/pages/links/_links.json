@@ -43,6 +43,11 @@
         "title": "Set innerHTML in Astro",
         "url": "https://docs.astro.build/en/reference/directives-reference/#sethtml",
         "description": "Use <code>set:html</code> to inject an HTML string into an element — for example, I used this to pass HTML markup from JSON."
+      },
+      {
+        "title": "When to use map() vs. forEach()",
+        "url": "https://allthingssmitty.com/2025/04/21/when-to-use-map-vs-foreach/",
+        "description": "A quick guide so I can stop forgetting."
       }
     ]
   },
