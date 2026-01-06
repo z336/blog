@@ -10,8 +10,6 @@ lede:
   This method allows multiple containers to share access to the same dataset with minimal complexity. It is ideal for shared media libraries or data pools that multiple services may access."
 ---
 
-Unprivileged LXC containers map User Identifiers (UIDs) starting at `100000` on the host. To give the container access to a host dataset, the host user/group should have IDs in this range.
-
 ## Requirements
 
 - A Proxmox host with ZFS storage configured
@@ -21,7 +19,7 @@ Unprivileged LXC containers map User Identifiers (UIDs) starting at `100000` on 
 
 ## Create a user on the host
 
-Create a user on the host so you can map the dataset to the LXC. Create a group for the user, then create the user, and finally change the ownership of the dataset to the user.
+To give an unprivileged container access to a host dataset, you must create a host user within the container's mapped ID range. Unprivileged LXC containers map User Identifiers (UIDs) starting at `100000` on the host.
 
 <aside class="callout">
 <p>This guide uses placeholders in <code>&lt;ALL_CAPS&gt;</code>. Before running the commands, choose names for your user and group and use them consistently throughout the guide. For example:</p>
