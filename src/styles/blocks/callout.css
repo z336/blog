@@ -1,0 +1,6 @@
+.callout {
+  padding: 1em;
+  border-inline-start: 0.3em solid var(--color-less-dark);
+  border-inline-end: 0.03em solid var(--color-less-dark);
+  border-block: 0.03em solid var(--color-less-dark);
+}
